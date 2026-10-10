@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: potato-doctor-ai-api
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: CORS_ORIGINS
+        value: "*"

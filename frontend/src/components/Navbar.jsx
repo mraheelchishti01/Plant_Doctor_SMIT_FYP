@@ -1,30 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Activity, ShieldCheck, Sparkles } from 'lucide-react';
+import React from 'react';
+import { Settings, ShieldCheck, Server } from 'lucide-react';
 
-export default function Navbar({ apiBaseUrl }) {
-  const [apiOnline, setApiOnline] = useState(false);
-  const [modelLoaded, setModelLoaded] = useState(false);
+export default function Navbar({ apiBaseUrl, apiOnline, modelLoaded, onOpenSettings }) {
+  const getStatusText = () => {
+    if (!apiOnline) return 'API Offline';
+    if (modelLoaded) return 'AI Model Online';
+    return 'API Connected';
+  };
 
-  useEffect(() => {
-    const checkHealth = async () => {
-      try {
-        const res = await fetch(`${apiBaseUrl}/health`);
-        if (res.ok) {
-          const data = await res.json();
-          setApiOnline(true);
-          setModelLoaded(data.model_loaded);
-        } else {
-          setApiOnline(false);
-        }
-      } catch (err) {
-        setApiOnline(false);
-      }
-    };
-
-    checkHealth();
-    const interval = setInterval(checkHealth, 10000);
-    return () => clearInterval(interval);
-  }, [apiBaseUrl]);
+  const getStatusColor = () => {
+    if (!apiOnline) return '#ef4444'; // Red for offline
+    if (modelLoaded) return '#10b981'; // Green for online & verified
+    return '#f59e0b'; // Amber for connected without model
+  };
 
   return (
     <nav className="navbar">
@@ -46,10 +34,30 @@ export default function Navbar({ apiBaseUrl }) {
           <a href="#scanner" className="nav-link">Diagnostic Studio</a>
           <a href="#model-specs" className="nav-link">Model Specs</a>
           
-          <div className="status-pill" title={apiOnline ? "Backend Connected" : "Local API Connecting..."}>
-            <span className={`status-dot ${apiOnline ? '' : 'offline'}`} style={!apiOnline ? { background: '#f59e0b', boxShadow: '0 0 10px #f59e0b' } : {}} />
-            <span>{apiOnline ? (modelLoaded ? 'AI Model Online' : 'API Connected') : 'Offline / Standby'}</span>
-          </div>
+          <button
+            type="button"
+            className="status-pill"
+            onClick={onOpenSettings}
+            title={apiOnline ? "Backend Connected & Verified (Click to configure)" : "API Offline: Click to connect live server"}
+            style={{
+              cursor: 'pointer',
+              background: 'rgba(0, 0, 0, 0.4)',
+              border: `1px solid ${apiOnline ? 'rgba(16, 185, 129, 0.35)' : 'rgba(239, 68, 68, 0.35)'}`,
+              transition: 'all 0.2s ease'
+            }}
+          >
+            <span 
+              className={`status-dot ${apiOnline ? '' : 'offline'}`} 
+              style={{
+                background: getStatusColor(),
+                boxShadow: `0 0 10px ${getStatusColor()}`
+              }} 
+            />
+            <span style={{ color: apiOnline ? '#fff' : '#fca5a5' }}>
+              {getStatusText()}
+            </span>
+            <Settings size={13} style={{ marginLeft: '4px', opacity: 0.6 }} />
+          </button>
         </div>
       </div>
     </nav>

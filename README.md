@@ -90,19 +90,23 @@ npm run dev
 
 ---
 
-## ☁️ Vercel Deployment
+## ☁️ Deployment Architecture
 
-1. The frontend is built using Vite and configured via root [`vercel.json`](file:///d:/SMIT%20FYP/vercel.json):
-```json
-{
-  "framework": "vite",
-  "buildCommand": "npm --prefix frontend run build",
-  "outputDirectory": "frontend/dist"
-}
-```
-2. In your Vercel Project Settings, add the environment variable:
-   - `VITE_API_BASE_URL`: URL of your deployed Python inference backend (e.g. on Render, Railway, or Hugging Face Spaces).
-3. Deploy frontend with `vercel` CLI or by connecting your GitHub repository to Vercel.
+### 1. Backend Inference Server (Render / Railway / Docker)
+Because TensorFlow / Keras deep learning weights exceed Vercel's 250MB serverless limit, the Python FastAPI backend is containerized:
+- **Render (Recommended Free Tier)**:
+  - Connect your GitHub repo to [Render](https://render.com).
+  - Select **Web Service** -> Docker (or Render Blueprint via [`render.yaml`](file:///d:/SMIT%20FYP/render.yaml)).
+  - Build command uses [`Dockerfile`](file:///d:/SMIT%20FYP/Dockerfile).
+  - Copy your live backend URL (e.g., `https://plant-doctor-backend.onrender.com`).
+- **Railway / Fly.io / VPS**:
+  - Deploy using the provided [`Dockerfile`](file:///d:/SMIT%20FYP/Dockerfile) or [`Procfile`](file:///d:/SMIT%20FYP/Procfile).
+
+### 2. Frontend (Vercel)
+1. Deploy frontend to Vercel via GitHub integration.
+2. In Vercel Project Settings -> **Environment Variables**:
+   - `VITE_API_BASE_URL`: `https://your-backend-service.onrender.com`
+3. If no environment variable is set or you need to switch backend servers on the fly, click the **Status Pill / Settings** icon in the navbar of the live app to test and connect any live API URL dynamically.
 
 ---
 

@@ -42,17 +42,26 @@ app = FastAPI(
     version="1.1.0"
 )
 
-# CORS configuration
-origins_env = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,https://potato-doctor-ai.vercel.app")
-allow_origins = [o.strip() for o in origins_env.split(",") if o.strip()]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=allow_origins if allow_origins else ["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# CORS configuration - Allow all origins by default so any Vercel preview or production deployment can connect
+origins_env = os.getenv("CORS_ORIGINS", "*")
+if origins_env == "*":
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=False,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+else:
+    allow_origins = [o.strip() for o in origins_env.split(",") if o.strip()]
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=allow_origins,
+        allow_origin_regex=r"https://.*\.vercel\.app",
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 # Global model caches
 _tf_model = None
@@ -161,19 +170,26 @@ def health_check():
     val_exists = VALIDATOR_MODEL_PATH.exists()
     val_size_mb = round(VALIDATOR_MODEL_PATH.stat().st_size / (1024 * 1024), 2) if val_exists else 0
 
+    disease_ready = model is not None
+    validator_ready = validator is not None
+    both_ready = disease_ready and validator_ready
+
     return {
-        "status": "healthy",
+        "status": "healthy" if both_ready else "degraded",
         "service": "Potato Doctor AI Inference API",
         "version": "1.1.0",
+        "api_online": True,
+        "model_loaded": both_ready,
+        "models_loaded": both_ready,
         "target_crop": "Potato",
         "disease_classifier": {
-            "loaded": model is not None,
+            "loaded": disease_ready,
             "file_exists": disease_exists,
             "size_mb": disease_size_mb,
             "supported_classes": list(get_class_mapping().get("friendly_names", {}).values())
         },
         "potato_validator": {
-            "loaded": validator is not None,
+            "loaded": validator_ready,
             "file_exists": val_exists,
             "size_mb": val_size_mb,
             "thresholds": config.get("thresholds", {
