@@ -136,6 +136,7 @@ Automated verification in `tests/test_local_system.py` executes 13 rigorous inte
 
 ### 7. Deployment Configuration
 
-- **Frontend Deployment:** Vercel via root `vercel.json` pointing build commands to `npm --prefix frontend run build` and output to `frontend/dist`.
+- **Frontend Deployment:** Vercel via root `vercel.json` with explicit `installCommand: "npm --prefix frontend install"`, build command `npm --prefix frontend run build`, and output `frontend/dist`.
+- **Root & Frontend Workspace Integration:** Configured root `package.json` with `workspaces: ["frontend"]`, root `postinstall: "npm --prefix frontend install"`, root `package-lock.json`, and direct `vite` dependencies to ensure Vercel installs all build tooling prior to invoking `vite build`.
 - **Backend Deployment:** Decoupled FastAPI server deployable to Render, Railway, AWS ECS, or Hugging Face Spaces.
 - **Environment Variables:** `VITE_API_BASE_URL` in frontend; `CORS_ORIGINS` and optional `OPENAI_API_KEY` in backend.
