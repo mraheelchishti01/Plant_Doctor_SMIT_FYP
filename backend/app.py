@@ -25,17 +25,21 @@ MODELS_DIR = WORKSPACE_ROOT / "models"
 REPORTS_DIR = WORKSPACE_ROOT / "reports"
 KNOWLEDGE_BASE_PATH = Path(__file__).resolve().parent / "knowledge_base.json"
 
+# Separate Disease and Validation Models
 MODEL_PATH = MODELS_DIR / "potato_model.keras"
 CLASS_MAPPING_PATH = MODELS_DIR / "class_mapping.json"
 MODEL_CONFIG_PATH = MODELS_DIR / "model_config.json"
+
+VALIDATOR_MODEL_PATH = MODELS_DIR / "potato_validator.keras"
+VALIDATOR_CONFIG_PATH = MODELS_DIR / "validator_config.json"
 
 IMG_HEIGHT = 224
 IMG_WIDTH = 224
 
 app = FastAPI(
     title="Potato Doctor AI API",
-    description="Precision Potato Leaf Pathology & Crop Disease Diagnostic System",
-    version="1.0.0"
+    description="Precision Potato Leaf Pathology & Crop Disease Diagnostic System with Strict Species Validation",
+    version="1.1.0"
 )
 
 # CORS configuration
@@ -50,10 +54,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Global model cache
+# Global model caches
 _tf_model = None
+_validator_model = None
 _class_mapping = None
 _knowledge_base = None
+_validator_config = None
 
 def get_knowledge_base() -> Dict[str, Any]:
     global _knowledge_base
@@ -91,41 +97,90 @@ def get_class_mapping() -> Dict[str, Any]:
             }
     return _class_mapping
 
+def get_validator_config() -> Dict[str, Any]:
+    global _validator_config
+    if _validator_config is None:
+        if VALIDATOR_CONFIG_PATH.exists():
+            with open(VALIDATOR_CONFIG_PATH, "r", encoding="utf-8") as f:
+                _validator_config = json.load(f)
+        else:
+            _validator_config = {
+                "thresholds": {
+                    "high_confidence_potato": 0.80,
+                    "low_confidence_rejection": 0.35
+                }
+            }
+    return _validator_config
+
 def get_model():
+    """Load and cache the 3-class Potato Disease Classifier model"""
     global _tf_model
     if _tf_model is None and MODEL_PATH.exists():
         try:
             import tensorflow as tf
-            print(f"[Backend] Loading TensorFlow model from {MODEL_PATH}...")
+            print(f"[Backend] Loading Disease Classifier from {MODEL_PATH}...")
             _tf_model = tf.keras.models.load_model(str(MODEL_PATH))
-            print("[Backend] Model loaded successfully.")
+            print("[Backend] Disease Classifier loaded successfully.")
         except Exception as e:
-            print(f"[Backend Warning] Failed to load model: {e}")
+            print(f"[Backend Warning] Failed to load disease classifier: {e}")
             _tf_model = None
     return _tf_model
+
+def get_validator_model():
+    """Load and cache the separate Binary Potato-Leaf Validator model"""
+    global _validator_model
+    if _validator_model is None and VALIDATOR_MODEL_PATH.exists():
+        try:
+            import tensorflow as tf
+            print(f"[Backend] Loading Binary Potato Validator from {VALIDATOR_MODEL_PATH}...")
+            _validator_model = tf.keras.models.load_model(str(VALIDATOR_MODEL_PATH))
+            print("[Backend] Binary Potato Validator loaded successfully.")
+        except Exception as e:
+            print(f"[Backend Warning] Failed to load validator model: {e}")
+            _validator_model = None
+    return _validator_model
 
 @app.on_event("startup")
 def startup_event():
     get_class_mapping()
     get_knowledge_base()
-    # Attempt lazy model preload
+    get_validator_config()
+    # Preload both independent models
+    get_validator_model()
     get_model()
 
 @app.get("/health")
 def health_check():
     model = get_model()
-    model_exists = MODEL_PATH.exists()
-    model_size_mb = round(MODEL_PATH.stat().st_size / (1024 * 1024), 2) if model_exists else 0
+    validator = get_validator_model()
+    config = get_validator_config()
+
+    disease_exists = MODEL_PATH.exists()
+    disease_size_mb = round(MODEL_PATH.stat().st_size / (1024 * 1024), 2) if disease_exists else 0
+
+    val_exists = VALIDATOR_MODEL_PATH.exists()
+    val_size_mb = round(VALIDATOR_MODEL_PATH.stat().st_size / (1024 * 1024), 2) if val_exists else 0
 
     return {
         "status": "healthy",
         "service": "Potato Doctor AI Inference API",
-        "version": "1.0.0",
-        "model_file_exists": model_exists,
-        "model_loaded": model is not None,
-        "model_size_mb": model_size_mb,
+        "version": "1.1.0",
         "target_crop": "Potato",
-        "supported_classes": list(get_class_mapping().get("friendly_names", {}).values())
+        "disease_classifier": {
+            "loaded": model is not None,
+            "file_exists": disease_exists,
+            "size_mb": disease_size_mb,
+            "supported_classes": list(get_class_mapping().get("friendly_names", {}).values())
+        },
+        "potato_validator": {
+            "loaded": validator is not None,
+            "file_exists": val_exists,
+            "size_mb": val_size_mb,
+            "thresholds": config.get("thresholds", {
+                "high_confidence_potato": 0.80,
+                "low_confidence_rejection": 0.35
+            })
+        }
     }
 
 @app.get("/classes")
@@ -183,7 +238,9 @@ def list_classes():
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
-    # 1. Validation: File presence & extension
+    # -------------------------------------------------------------
+    # 1. Validation Pre-Checks: File presence, extension, size limit
+    # -------------------------------------------------------------
     if not file or not file.filename:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -198,7 +255,6 @@ async def predict(file: UploadFile = File(...)):
             detail=f"Unsupported file format '{ext}'. Allowed formats: JPG, JPEG, PNG, WEBP, BMP."
         )
 
-    # 2. Read bytes with size limit (15MB)
     try:
         contents = await file.read()
     except Exception as e:
@@ -219,62 +275,137 @@ async def predict(file: UploadFile = File(...)):
             detail="Image file size exceeds the 15MB limit. Please upload a smaller image."
         )
 
-    # 3. PIL Image integrity & corruption check
+    # -------------------------------------------------------------
+    # 2. PIL Image Integrity & Image Corruption / Quality Checks
+    # -------------------------------------------------------------
     try:
         image = Image.open(io.BytesIO(contents))
-        image.verify() # Verify file integrity
+        image.verify()  # Verify underlying file integrity
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"The uploaded image file is corrupt or unreadable: {str(e)}"
         )
 
-    # Re-open for processing
+    # Re-open for image arrays and dimensions
     image = Image.open(io.BytesIO(contents)).convert("RGB")
-    original_dims = image.size # (width, height)
+    original_dims = image.size  # (width, height)
 
-    # Simple green-ratio heuristic to warn if image is completely non-plant
-    img_np_small = np.array(image.resize((64, 64)))
-    r = img_np_small[:, :, 0].astype(float)
-    g = img_np_small[:, :, 1].astype(float)
-    b = img_np_small[:, :, 2].astype(float)
-    total_rgb = r + g + b + 1e-6
-    green_ratio = np.mean(g / total_rgb)
-    is_likely_foliage = green_ratio > 0.28 or np.mean(g) > 40.0
+    # Check minimum resolution
+    if original_dims[0] < 32 or original_dims[1] < 32:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="The uploaded image resolution is too low. Please upload an image with at least 100x100 pixels."
+        )
 
-    # 4. Resize and exact MobileNetV2 preprocessing
+    # Blank / Solid Color / Zero-Variance Image Check
+    img_sample = np.array(image.resize((64, 64)), dtype=np.float32)
+    pixel_std = float(np.std(img_sample))
+    if pixel_std < 8.0:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="The uploaded image appears to be blank, solid, or uninformative. Please upload a clear photograph of a leaf."
+        )
+
+    # Preprocess image for MobileNetV2: [-1.0, 1.0]
     img_resized = image.resize((IMG_WIDTH, IMG_HEIGHT), Image.Resampling.BILINEAR)
     img_arr = np.array(img_resized, dtype=np.float32)
-
-    # MobileNetV2 preprocessing: tf.keras.applications.mobilenet_v2.preprocess_input
-    # maps [0, 255] -> [-1, 1] via (x / 127.5) - 1.0
     img_preprocessed = (img_arr / 127.5) - 1.0
     img_batch = np.expand_dims(img_preprocessed, axis=0)
 
-    # 5. Run inference
-    model = get_model()
+    # -------------------------------------------------------------
+    # 3. STAGE 1: BOTANICAL POTATO-LEAF VALIDATION
+    # -------------------------------------------------------------
+    validator_model = get_validator_model()
+    val_config = get_validator_config()
+    thresholds = val_config.get("thresholds", {})
+    high_thresh = float(thresholds.get("high_confidence_potato", 0.80))
+    low_thresh = float(thresholds.get("low_confidence_rejection", 0.35))
+
+    if validator_model is None:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Potato Doctor AI leaf validator is currently initializing on this server."
+        )
+
+    try:
+        val_pred = float(validator_model.predict(img_batch, verbose=0)[0][0])
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Inference error during potato-leaf validation: {str(e)}"
+        )
+
+    # Scenario A: REJECT OTHER PLANTS & UNRELATED IMAGES (p < low_thresh)
+    if val_pred < low_thresh:
+        return {
+            "success": False,
+            "status": "REJECTED_NOT_POTATO",
+            "title": "Potato Leaf Not Detected",
+            "message": "This image does not appear to show a potato leaf. Potato Doctor AI currently supports potato leaves only. Please upload a clear image of a potato leaf.",
+            "validation": {
+                "is_potato_leaf": False,
+                "confidence_raw": round(val_pred, 4),
+                "confidence_pct": round(val_pred * 100, 2),
+                "verdict": "Potato Leaf Not Detected",
+                "threshold_required": high_thresh
+            },
+            "crop": "Potato",
+            "image_metadata": {
+                "filename": file.filename,
+                "original_width": original_dims[0],
+                "original_height": original_dims[1]
+            }
+        }
+
+    # Scenario B: UNCERTAIN / INCONCLUSIVE LEAF (low_thresh <= p < high_thresh)
+    if val_pred < high_thresh:
+        return {
+            "success": False,
+            "status": "UNCERTAIN_LEAF",
+            "title": "Unable to Verify Potato Leaf",
+            "message": "We could not confidently verify that this is a potato leaf. Please upload a clear, well-lit image showing the leaf.",
+            "validation": {
+                "is_potato_leaf": False,
+                "confidence_raw": round(val_pred, 4),
+                "confidence_pct": round(val_pred * 100, 2),
+                "verdict": "Unable to Verify Potato Leaf",
+                "threshold_required": high_thresh
+            },
+            "crop": "Potato",
+            "image_metadata": {
+                "filename": file.filename,
+                "original_width": original_dims[0],
+                "original_height": original_dims[1]
+            }
+        }
+
+    # -------------------------------------------------------------
+    # 4. STAGE 2: POTATO DISEASE PREDICTION
+    #    (Executes ONLY if Stage 1 passed with p >= high_thresh)
+    # -------------------------------------------------------------
+    disease_model = get_model()
     mapping = get_class_mapping()
     idx_to_class = {int(k): v for k, v in mapping["indices_to_classes"].items()}
     friendly_names = mapping["friendly_names"]
 
-    if model is None:
+    if disease_model is None:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-            detail="Potato Doctor AI model is currently initializing or not yet trained on this server."
+            detail="Potato Doctor AI disease model is currently initializing on this server."
         )
 
     try:
-        preds = model.predict(img_batch, verbose=0)[0]
+        preds = disease_model.predict(img_batch, verbose=0)[0]
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Inference error during model prediction: {str(e)}"
+            detail=f"Inference error during disease diagnosis: {str(e)}"
         )
 
-    # 6. Parse predictions
     pred_idx = int(np.argmax(preds))
     predicted_class = idx_to_class.get(pred_idx, "Potato___Early_blight")
-    confidence = float(preds[pred_idx])
+    disease_confidence = float(preds[pred_idx])
 
     probabilities = {}
     for i, p in enumerate(preds):
@@ -285,26 +416,27 @@ async def predict(file: UploadFile = File(...)):
     kb = get_knowledge_base()
     advice_data = kb.get(predicted_class, {})
 
-    # Non-foliage warning flag
-    relevance_warning = None
-    if not is_likely_foliage and confidence < 0.85:
-        relevance_warning = "Note: Image appears to have low foliage content. Please ensure the photograph clearly frames a potato leaf."
-
     return {
         "success": True,
+        "status": "VERIFIED_POTATO_LEAF",
+        "validation": {
+            "is_potato_leaf": True,
+            "confidence_raw": round(val_pred, 4),
+            "confidence_pct": round(val_pred * 100, 2),
+            "verdict": "Verified Potato Leaf"
+        },
         "crop": "Potato",
         "predicted_class": predicted_class,
         "disease_name": friendly_names.get(predicted_class, predicted_class),
-        "confidence": round(confidence * 100, 2),
-        "confidence_raw": confidence,
+        "confidence": round(disease_confidence * 100, 2),
+        "confidence_raw": disease_confidence,
         "severity": advice_data.get("severity", "Unknown"),
         "scientific_name": advice_data.get("scientific_name", "Solanum tuberosum"),
         "probabilities": probabilities,
         "image_metadata": {
             "filename": file.filename,
             "original_width": original_dims[0],
-            "original_height": original_dims[1],
-            "relevance_warning": relevance_warning
+            "original_height": original_dims[1]
         },
         "guidance": advice_data
     }
@@ -317,72 +449,56 @@ async def get_advice(payload: Dict[str, Any]):
 
     kb = get_knowledge_base()
     if class_name not in kb:
-        # Fallback to closest match
         matching = [k for k in kb if class_name.lower() in k.lower()]
         class_name = matching[0] if matching else "Potato___Early_blight"
 
     base_advice = kb.get(class_name, {})
     openai_api_key = os.getenv("OPENAI_API_KEY", "").strip()
 
-    # If OpenAI API Key is provided, enrich with AI Agronomist response
     if openai_api_key:
         try:
             import urllib.request
-            user_question = payload.get("question", "Provide detailed actionable treatment and cultural management advice.")
-            
-            system_prompt = (
-                "You are an expert plant pathologist and potato agronomist assistant at Potato Doctor AI. "
-                f"The image classifier has confirmed the diagnosis as: {base_advice.get('common_name', class_name)} "
-                f"(Pathogen: {base_advice.get('scientific_name', 'N/A')}).\n"
-                "STRICT RULES:\n"
-                "1. You must NEVER alter, second-guess, or fabricate the predicted diagnosis.\n"
-                "2. Provide evidence-based, scientifically verified cultural and biological management practices.\n"
-                "3. Do not invent unapproved pesticide formulations, home-brew chemical concoctions, or precise unregistered dosages.\n"
-                "4. Always mention safety precautions, pre-harvest intervals, and consulting local agricultural extension agents.\n"
-                "5. Format your response cleanly with bullet points and clear sections."
-            )
-
-            req_body = {
+            req_data = {
                 "model": "gpt-4o-mini",
                 "messages": [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": f"The leaf has been diagnosed with {base_advice.get('common_name')}. {user_question}"}
+                    {
+                        "role": "system",
+                        "content": "You are a senior agricultural plant pathologist and certified potato agronomist. Provide actionable, concise, field-proven advice."
+                    },
+                    {
+                        "role": "user",
+                        "content": f"The farmer has detected {base_advice.get('name', class_name)} on their potato crop. Question: {payload.get('question', 'How should I treat this disease?')}"
+                    }
                 ],
-                "temperature": 0.3,
-                "max_tokens": 600
+                "temperature": 0.4
             }
-
             req = urllib.request.Request(
                 "https://api.openai.com/v1/chat/completions",
-                data=json.dumps(req_body).encode("utf-8"),
+                data=json.dumps(req_data).encode("utf-8"),
                 headers={
                     "Content-Type": "application/json",
                     "Authorization": f"Bearer {openai_api_key}"
                 }
             )
-
-            with urllib.request.urlopen(req, timeout=12) as response:
-                res_data = json.loads(response.read().decode("utf-8"))
-                ai_text = res_data["choices"][0]["message"]["content"]
-                
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                res_json = json.loads(resp.read().decode("utf-8"))
+                ai_text = res_json["choices"][0]["message"]["content"]
                 return {
-                    "source": "OpenAI Plant Pathology Consultant",
-                    "ai_advice": ai_text,
-                    "verified_knowledge": base_advice
+                    "source": "OpenAI Plant Pathologist",
+                    "response": ai_text,
+                    "reference": base_advice
                 }
         except Exception as e:
-            print(f"[Backend Warning] OpenAI call failed ({e}); falling back to verified agricultural knowledge base.")
+            print(f"[Backend Warning] OpenAI call failed: {e}")
 
-    # Standard verified agricultural knowledge base return
+    # Fallback response using curated agricultural knowledge base
     return {
-        "source": "Verified Agricultural Extension Knowledge Base",
-        "ai_advice": None,
-        "verified_knowledge": base_advice
+        "source": "Local Verified Knowledge Base",
+        "response": (
+            f"Official treatment protocol for {base_advice.get('name', class_name)}: "
+            f"{' '.join(base_advice.get('immediate_actions', []))} "
+            f"Cultural management: {' '.join(base_advice.get('cultural_management', []))} "
+            f"Fungicide timing: {base_advice.get('chemical_options', {}).get('timing', 'Follow label instructions.')}"
+        ),
+        "reference": base_advice
     }
-
-if __name__ == "__main__":
-    import uvicorn
-    port = int(os.getenv("PORT", 8000))
-    host = os.getenv("HOST", "0.0.0.0")
-    print(f"Starting Potato Doctor AI backend on http://{host}:{port}...")
-    uvicorn.run("backend.app:app", host=host, port=port, reload=True)

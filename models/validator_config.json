@@ -1,0 +1,95 @@
+{
+  "model_file": "potato_validator.keras",
+  "architecture": "MobileNetV2-BinaryClassifier",
+  "input_dimensions": [
+    224,
+    224,
+    3
+  ],
+  "classes": [
+    "not_potato_leaf",
+    "potato_leaf"
+  ],
+  "thresholds": {
+    "high_confidence_potato": 0.8,
+    "low_confidence_rejection": 0.35
+  },
+  "response_templates": {
+    "rejected_not_potato": {
+      "title": "Potato Leaf Not Detected",
+      "message": "This image does not appear to show a potato leaf. Potato Doctor AI currently supports potato leaves only. Please upload a clear image of a potato leaf."
+    },
+    "uncertain_leaf": {
+      "title": "Unable to Verify Potato Leaf",
+      "message": "We could not confidently verify that this is a potato leaf. Please upload a clear, well-lit image showing the leaf."
+    }
+  },
+  "performance_metrics": {
+    "roc_auc": 0.9971,
+    "high_thresh_eval": {
+      "accuracy": 0.9435,
+      "precision": 0.9825,
+      "recall": 0.9032,
+      "f1_score": 0.9412,
+      "confusion_matrix": [
+        [
+          61,
+          1
+        ],
+        [
+          6,
+          56
+        ]
+      ],
+      "false_positives_other_plants": 1,
+      "total_other_plants": 38,
+      "other_plants_fp_rate": 0.0263,
+      "false_positives_unrelated": 0,
+      "total_unrelated": 20,
+      "unrelated_fp_rate": 0.0
+    },
+    "scores_by_subtype": {
+      "edge_synthetic": {
+        "count": 4,
+        "mean": 0.0001,
+        "median": 0.0001,
+        "min": 0.0,
+        "max": 0.0002,
+        "pct_above_high_thresh": 0.0,
+        "pct_below_low_thresh": 100.0,
+        "pct_uncertain_zone": 0.0
+      },
+      "other_plant_leaf": {
+        "count": 38,
+        "mean": 0.1396,
+        "median": 0.0729,
+        "min": 0.0,
+        "max": 0.8357,
+        "pct_above_high_thresh": 2.63,
+        "pct_below_low_thresh": 89.47,
+        "pct_uncertain_zone": 7.89
+      },
+      "unrelated_object": {
+        "count": 20,
+        "mean": 0.0088,
+        "median": 0.0019,
+        "min": 0.0,
+        "max": 0.0901,
+        "pct_above_high_thresh": 0.0,
+        "pct_below_low_thresh": 100.0,
+        "pct_uncertain_zone": 0.0
+      },
+      "potato": {
+        "count": 62,
+        "mean": 0.9505,
+        "median": 0.9958,
+        "min": 0.4977,
+        "max": 1.0,
+        "pct_above_high_thresh": 90.32,
+        "pct_below_low_thresh": 0.0,
+        "pct_uncertain_zone": 9.68
+      }
+    }
+  },
+  "training_date": "2026-10-10T17:31:30Z"
+}

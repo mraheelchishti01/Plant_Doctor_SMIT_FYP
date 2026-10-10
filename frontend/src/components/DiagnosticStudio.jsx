@@ -105,11 +105,11 @@ export default function DiagnosticStudio({ onAnalyze, onReset, isAnalyzing, erro
                   <button
                     key={idx}
                     type="button"
-                    className="preset-chip"
+                    className={`preset-chip ${s.category === 'negative' ? 'preset-negative' : (s.category === 'uncertain' ? 'preset-uncertain' : '')}`}
                     onClick={() => loadSample(s)}
                     title={`Load ${s.label}`}
                   >
-                    <span>🍃</span> {s.label.replace('Potato ', '')}
+                    <span>{s.category === 'negative' ? '🚫' : (s.category === 'uncertain' ? '⚠️' : '🍃')}</span> {s.label}
                   </button>
                 ))}
               </div>

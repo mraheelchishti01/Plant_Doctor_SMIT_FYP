@@ -1,0 +1,4941 @@
+{
+  "train": [
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_b1efda88-84a3-4d96-b3bf-48d7e12155e9___FREC_Scab 3009.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_613b5b7f-225d-4df8-8893-0f30111925ae___RS_LB 4243.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_5674826f-aeb6-4142-809e-ea9e4fd391c3___RS_LB 2940.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_2bf70a8f-ba33-4405-89d2-8135dbea2b9d___GHLB2 Leaf 9064.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_964b9fb3-8919-4a08-967d-ae652d1d4bd7___JR_HL 8285.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02112350_keeshond.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04399382_teddy.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_9b6483fe-95eb-464b-a73d-0cac6f777994___Crnl_L.Mold 8632.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_2d98cbc8-cbe6-423c-b2ab-3f7f8bcea5d5___RS_HL 1945.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_5cf3cf9d-0f81-4c75-b1d4-2defb49033c4___RS_Early.B 6806.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_b06d301b-8cae-475a-9de3-80a42e908ae5___RS_Erly.B 9375.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_noise_0.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2166.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_002a55fb-7a3d-4a3a-aca8-ce2d5ebc6925___RS_Early.B 8170.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_48494df9-56ac-4220-b00c-a12dd303aa63___FAM_B.Rot 3189.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03041632_cleaver.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_0f735e65-a30d-47b3-bf2f-d857a8e5a7d7___R.S_HL 8042 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_8fcea4b7-97df-428e-a0ac-635108307e88___RS_Early.B 9229.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_907f26b7-a14f-463f-a41e-f35d6e0f1417___RS_HL 1757.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_43fd6ace-3712-494a-9aba-de5482d22561___RS_HL 1968.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_02a3e0cd-04da-4e08-b929-167bcb7f46f4___GHLB2 Leaf 8731.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_799b10e8-ba67-4e08-9abe-748789572ad1___RS_HL 1881.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_8c5dbb8f-90fb-4ec7-9563-11e54723687e___GH_HL Leaf 190.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_ff03a125-445b-40e1-a7ed-0bb9b155dfd8___RS_LB 5039.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_45a699f2-a02d-4f1f-b628-6d445c58a595___FREC_Scab 3291.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1811.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_04fe5855-ec9c-40b3-9893-ca8addc236bd___RS_LB 4913.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_c8dd6713-727e-4811-b951-e70e44d0c483___RS_Erly.B 7817.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_517e3352-9e28-4b42-970b-2aa198203960___JR_B.Spot 8855.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_f7065117-14b1-44f1-b9ec-953b61fd3368___RS_Erly.B 9544.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_d5673be4-4d62-4287-b9a4-3653b88d1604___RS_Early.B 8304.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1871.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01981276_king_crab.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_ui_diagram_2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04435653_tile_roof.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_7f0c3ad4-67f7-4a6e-81da-5cdbe1c5ff8b___RS_Early.B 8453.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_81453f31-6152-44e0-bfaf-fcd1336fc064___GH_HL Leaf 479.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_document_screenshot_2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_8b30edb3-09a7-4419-a06a-9dddb5194a38___Crnl_L.Mold 8847.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_7a587206-10d9-4f16-9398-8e97a41d44ec___FAM_B.Rot 0349.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_5e19b1f4-fd65-4c4d-bcd2-18c8c519eddb___RS_HL 1965.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_42ef04d9-9bea-4bd2-9ea4-54cb16c9be24___RS_Erly.B 9616.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_bc91cb1b-aece-4108-92db-839a106351a5___RS_LB 3087.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_2f81d148-c62f-4d3c-baf4-72b77abea41a___RS_Early.B 7493.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_1131b92e-ef46-441e-ac5f-c18ac09bf69a___RS_Early.B 8064.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_7bfda067-6e35-4af5-a9c4-4b3b5f357871___RS_HL 1813.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_c6204cb3-cd9f-4d7b-92a6-9773fe562cab___RS_HL 1939.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_9e979a65-61bf-4d07-a444-7c22ae1a58b1___RS_LB 4886.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_390d7221-7639-43fb-9789-b3b35fc869d8___Rut._Bact.S 0851.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_f0fdde26-78b4-46f0-9eb8-7c2a743d34aa___RS_HL 4165.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_d340704d-cc00-4068-bb8a-ae70840b7bfa___RS_HL 1773.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02089973_English_foxhound.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02730930_apron.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_91c943e8-a79e-4a0d-b882-f372655f571b___Crnl_L.Mold 9132.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_a5ed05d8-9815-41b7-b481-332e48cfde56___FREC_Scab 3415.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_a3fe02f0-6d49-4e9a-ba9a-ac26e8b65ca9___RS_Early.B 7560.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_11a5e2cc-e9fd-4b62-85d6-7c674de253e1___Rutg._Bact.S 2059.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_414f6249-9f78-4af5-9593-9d5a7e7d979f___RS_HL 1918.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_82a3d470-940b-431f-9d79-3963b4e41028___GH_HL Leaf 475.1.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_a1abff90-34e5-464d-b4d3-0c09f5924900___RS_HL 5414.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04548280_wall_clock.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03786901_mortar.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_4a7c680d-9c18-4065-a6e0-70cd2d0a3207___RS_Early.B 8107.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_2e0b8b4b-e900-408b-b760-730690bbd382___RS_HL 1901.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_ee18e688-a12c-45aa-bd18-74df670c71bb___RS_Erly.B 7776.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_06471eca-3cac-4cc9-afc3-1841af0ba672___GHLB2 Leaf 8893.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04392985_tape_player.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_762a9cd9-7da1-4885-b677-870da1e41768___RS_LB 2592.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_a02b6205-b40a-4178-8b34-3494f84b9d1f___RS_HL 1958.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03794056_mousetrap.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_af15ac00-67ff-4114-ace8-6dca48b94665___RS_HL 1865.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_23f4d3b1-23f4-43fb-96c2-dae37224ec74___RS_HL 1803.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_aceeb511-1332-4d25-b9fe-64d53445396a___RS_LB 4837.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_35621849-08fd-442a-a94e-139b2657106e___RS_LB 4055.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_49739c44-199a-4420-b257-986abbe5d108___Rut._Bact.S 3456.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_a5c6b475-da4f-4f43-a383-20fbaae78616___R.S_HL 7950 copy.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_12a7bc09-8d7f-4790-8046-6e3f12f71399___RS_Early.B 7973.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_2d53efe9-0845-4091-97b5-9ca7001e04c9___JR_HL 7758.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_57c2663b-5d1d-4476-b067-38b2149c3b2d___RS_HL 1796.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_9e6ab532-2a3a-4415-98b5-a1be716eef9c___Crnl_L.Mold 6619.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_56aa566a-41be-4109-91bc-0cc99c385b7f___RS_LB 3843.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02113023_Pembroke.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03291819_envelope.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_aa04db6d-645f-4e8a-88dc-c9f9396f0800___RS_HL 1975.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01944390_snail.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_c3caa84b-6078-4489-80ac-919d92d25ff7___RS_HL 1772.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1563.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01797886_ruffed_grouse.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01917289_brain_coral.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_849aa978-c7b9-4344-9ca8-129219a65f8e___RS_HL 1874.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01806143_peacock.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_432f1b02-9493-4cf1-8ef7-a40f817e43ff___RS_Early.B 8497.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03759954_microphone.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_gradient_4.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_40dfa3e5-617d-46bb-9eab-eb2b114e5367___RS_HL 0079.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_7b6f5f09-cea5-4b1c-91c7-18207527c837___JR_HL 8652.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_5884d88f-3d41-4ab4-a1c6-de61192d67c6___Rutg._Bact.S 1757.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_7e322351-379f-4b07-8001-01baf6bf589c___RS_Late.B 7038.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_c30ce1e1-5f05-4cb7-a95a-f22d3621c54f___RS_Early.B 6964.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_8a14060f-b831-48a4-aa6c-6c1d74c3a6c5___FAM_B.Rot 3527.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_0984b7ed-2a64-40fe-b0fa-ff440b0fc8e4___JR_HL 8600.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1857.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_2e0b8b4b-e900-408b-b760-730690bbd382___RS_HL 1901.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_d340704d-cc00-4068-bb8a-ae70840b7bfa___RS_HL 1773.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_a440233c-0ef8-408f-8ebb-1c12e8bc4464___RS_LB 4768.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_f56f07b9-9f3a-4c80-a4f8-daf49f479db2___RS_Early.B 8741.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_046641c1-f837-49eb-b5f2-4109910a027c___RS_HL 1878.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_02212653-e92b-49aa-96b7-9497af51e502___RS_LB 3151.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_3e9a67e4-492b-4306-be1b-0a2624ea5c3e___GH_HL Leaf 175.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_884c2da1-3b43-46aa-85bb-0f72ed25c266___JR_B.Spot 8906.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_b2e21749-afe2-4392-8d5d-23088d37873c___RS_Early.B 9028.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_5d9bfd9d-330d-4be1-8369-d4ff27bd4473___Crnl_L.Mold 6852.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_af454559-8f93-4b2d-b961-80bafe6bf43b___RS_Erly.B 8367.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_5fcbde8f-52af-4963-b324-ff7f4dd6bd4c___RS_HL 1762.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_efd88799-7fbc-4638-b66b-4e49c7bf7b9f___RS_Erly.B 9390.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02056570_king_penguin.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_61b8a692-91d8-40f5-a4a4-4d910875a638___RS_HL 1966.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_ee052892-e935-4fbb-9344-4d23c57c6890___RS_HL 5400.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_44722935-fb60-4ecf-8503-f8258aa4e3e7___RS_LB 3225.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_4989156a-6b39-4a12-940e-fbd068ecbb65___JR_HL 8145.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_62e9114f-1382-48c5-a829-ac7527e5f10f___JR_HL 7993.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_66785df0-db24-4c3d-821b-8ab94e7e6a06___RS_Early.B 7086.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_a5050bde-febc-4931-b31d-45c9652df318___RS_HL 5373.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_629303c0-a89e-4f67-9ac8-aa769cf3a163___RS_LB 3945.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_ui_diagram_4.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_22b28f50-4141-4ca7-be3f-ccb1c521c2df___RS_Early.B 8285.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_d032b2d0-3c5b-4f1d-9532-4fd09cbd5482___RS_Erly.B 7689.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_4be9d1d9-2170-4856-a81e-e53e7aa5dbf7___FREC_Scab 3082.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_3edf7c3f-73e0-439c-870d-76cfd7c3bc45___RS_HL 1859.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_29e99d11-44d0-4c6c-8183-c3e7be56ce58___RS_Late.B 7093.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n12998815_agaric.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_6c7243ea-1e4b-4166-ae4c-9f99bb84fe4d___GHLB2 Leaf 128.2.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_50d0c9c6-94ad-46aa-a94f-5a595eb65998___NREC_B.Spot 1946.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_7a5fe2a0-ac85-4a37-b0f6-8cfc8fb21c9c___RS_HL 9865.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04263257_soup_bowl.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_b4adb8c4-2cea-4027-b0fd-528406b14c86___RS_LB 4066.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01532829_house_finch.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_8bf37a1e-4535-4919-953e-69376f5be48a___RS_LB 2611.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_fe2a7818-f2ec-4255-93f0-586c88a41624___RS_Early.B 7043.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_526f929e-e9c1-4ca5-a493-c0bcf4898b04___Crnl_L.Mold 9129.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_da70a983-649d-4262-a78f-4b5be677167e___Crnl_L.Mold 9168.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_d8efc91f-6e85-4508-8d49-9c4a11c4c71a___RS_Early.B 7484.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_35cd5191-8efa-44ea-a77c-90f86344962d___Rutg._Bact.S 1618.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_8583c4ff-2d8b-4b6f-89a8-fcc98917ce9b___RS_HL 1961.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_b6b937ed-f629-4136-8d5a-38b734f7f662___RS_LB 4595.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03393912_freight_car.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_e2e1bccc-15ec-47f8-8ee7-d33be16fac07___RS_Erly.B 9523.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_e36ccebd-29c6-466d-b46f-41fa38f6e9c0___RS_LB 5047.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_5abfa537-636f-41df-a833-311a3018aac9___RS_Early.B 8176.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_74277267-6a9f-44d0-95fe-7f52f89630a0___RS_LB 5074.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_107827b3-faa5-457c-97fd-3e34d2657f6b___RS_Early.B 7162.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_e6aec621-1699-433a-8cf5-7310ec895810___RS_Early.B 8764.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_91d11576-f040-43ab-8e08-e7ef4926707a___RS_Early.B 8054.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_377e9523-f375-4c0c-9d66-5abf2abfaefb___RS_LB 2504.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_1def69ef-c2f3-4052-8f02-b397428c7580___GHLB2 Leaf 8627.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_f15637d3-829d-46f9-b45e-1e1768d6b8c9___RS_Early.B 7635.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_0ad3ba53-f01b-403b-a99d-5991eed85045___RS_Early.B 7600.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_60418916-8278-448a-af45-21ee8ef60a95___RS_Early.B 7957.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_4e478f6a-b8cf-425f-85e8-d80d6aaab8e1___RS_Early.B 9026.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_e34e563f-7a4a-4b44-bdf2-b6f96cbcd929___RS_HL 5370.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_468d3107-f09a-4f0d-8b9d-f08d7c49738f___RS_HL 1747.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_30920583-57a6-4cc2-81d6-84879ec3af46___RS_LB 4930.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_62c3478f-3ab0-48df-962f-9d7782ec364d___FREC_Scab 2925.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n07697537_hotdog.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_34b0f33c-be8b-4338-9334-5418a5f84f28___RS_Early.B 7532.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_02282fee-ba3f-460e-91e0-630204ab96c2___RS_LB 5031.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_91decba3-10b0-4d3e-974c-bcc7729e867d___FREC_Scab 3527.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_6e230511-861d-4ae8-8212-374417841b4c___Crnl_L.Mold 8894.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_876bb85d-838f-431c-a7e4-3878c139db3b___FAM_B.Rot 3506.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03976467_Polaroid_camera.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_b64f0fd8-4000-4675-81f9-e692a477a3ac___R.S_HL 8067 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03065424_coil.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_9001b18c-b659-4c56-9dfb-0d0bf64a7b4a___RS_LB 4987.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_092442ed-3ad2-4195-8cd5-cc2ba74469e1___Crnl_L.Mold 6578.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_51a03694-82cd-43a5-9877-ddce42c1a5ad___RS_HL 1779.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_bb04f738-1848-4dda-8834-384a48b335cd___RS_HL 1765.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03481172_hammer.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01773797_garden_spider.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_774fb249-80b5-4575-ab5a-5459a9c14ef6___FREC_Scab 3024.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_477c3ef0-ab1e-44fb-852d-6b3ce74c93a2___RS_Early.B 7257.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_420da335-510d-4e55-ac9c-2cad3530ad68___RS_Erly.B 8442.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02107142_Doberman.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_a440233c-0ef8-408f-8ebb-1c12e8bc4464___RS_LB 4768.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03777754_modem.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_80e39105-97cd-4368-9e3a-b5498ae1c0a2___RS_LB 4474.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04509417_unicycle.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_6a62fd77-1091-43ad-86a7-f42c56615e5f___RS_LB 4871.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_ad9b6cf4-e065-496d-91c7-5713ce14e19e___RS_HL 1926.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03661043_library.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_f5ec4428-6e58-4bc6-9ba2-3a6f5b4f374e___RS_Erly.B 6365.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_496bcc16-a0f1-47cb-bf86-db0c959fc0d0___JR_HL 7614.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_9a6eb7c4-6b43-477a-89e0-69f62ef67991___RS_HL 1846.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_c6204cb3-cd9f-4d7b-92a6-9773fe562cab___RS_HL 1939.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_75306d8b-d8f7-440a-9084-7f1dc02fe794___JR_HL 8552.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02690373_airliner.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_d325e580-5faa-4aea-927d-2700f52cc343___RS_HL 1872.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_7ee00267-be66-4b6a-a207-0bf0046d28b6___RS_Late.B 6909.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_774875d3-438a-4305-afe2-7d59e2925dc4___RS_HL 1759.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_774875d3-438a-4305-afe2-7d59e2925dc4___RS_HL 1759.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_bbab7c92-4287-4e69-82b0-5c37fea5897c___FREC_Scab 3017.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_07baabd8-e118-47dd-9d8d-132d4347836a___RS_Early.B 8555.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_5551d3fa-ed55-46df-8a35-b3c53ffdcd31___RS_LB 4138.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_f6144504-015b-426e-a967-0712cf7621e4___FREC_Scab 3420.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_ba96aab6-adb5-4021-b6ad-3305f50aec12___RS_Early.B 7317.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_1b7342d7-5d89-4ee3-8b4f-587d79187511___RS_LB 4416.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_093cf670-66a2-4bc6-bdb5-0c3d2ea6dab2___R.S_HL 8302 copy.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_1a77c047-7ed8-4f02-bfaf-a19e7a67c3dd___RS_Early.B 7076.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_25fa2bdf-15e3-4330-8e54-1cbf6b714d3d___GHLB2 Leaf 133.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_blank_solid_3.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_7a3630ed-a43c-4957-a604-1de05e8e7f32___RS_Early.B 6795.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_2b3e46d9-09dd-4966-99c6-fe44c741b94c___RS_Early.B 8290.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03207743_dishrag.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_gradient_3.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_37c47f95-2216-4f78-87a1-504b198a4f4c___RS_LB 4327.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03742115_medicine_chest.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02667093_abaya.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_715cc508-e609-4ff4-968b-3953be3b9ace___Rut._Bact.S 0755.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01819313_sulphur-crested_cockatoo.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_90b246e8-9cf6-440f-a867-3c32a697f284___JR_HL 8041.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_422802e1-cee5-43b7-b735-7f90b5e5d4e2___RS_Erly.B 7349.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_573be558-1fa3-4889-88d6-4c733f4c79d6___GHLB2 Leaf 8598.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_4c5a712f-aed9-462c-af79-4a5e215c3bf2___R.S_HL 8175 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_a5050bde-febc-4931-b31d-45c9652df318___RS_HL 5373.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_f6d8c094-970c-41c5-9f5d-3ded7c8f7b15___RS_Early.B 6846.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04517823_vacuum.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_7aebe4e4-237e-46b0-9c0d-fc3bd9ba11c3___NREC_B.Spot 9132.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_af15ac00-67ff-4114-ace8-6dca48b94665___RS_HL 1865.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_a6dbc59a-ca8a-40e0-a896-3e2270d771bb___RS_Early.B 7195.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_29f5538a-fda9-4040-81c2-02269a45ad68___RS_Erly.B 7670.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_8c1e1281-5937-4559-a02f-02817de6e122___RS_HL 4173.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_0f1fb568-1b12-45ef-ad99-c59fa9075693___RS_LB 3242.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_b4021eae-d195-400a-b7b7-9888367f5f2f___RS_Early.B 7881.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02992529_cellular_telephone.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04086273_revolver.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_d1752ed4-a0a7-4075-917d-205c0e785dcf___RS_HL 1911.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_29d84246-f2a5-4c18-8ddc-2f2d38046ae2___RS_LB 2625.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_04481ca2-f94c-457e-b785-1ac05800b7ec___RS_HL 1930.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04562935_water_tower.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n07836838_chocolate_sauce.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02815834_beaker.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_799b10e8-ba67-4e08-9abe-748789572ad1___RS_HL 1881.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_de9a8669-d437-40f0-aa56-fe2d8276a1e0___RS_HL 1910.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02408429_water_buffalo.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_413bc2e9-eb2a-48fd-ba65-48b5121fd85c___RS_HL 4200.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_56ae1281-5ee5-4f2a-8678-c2e4491878c6___RS_HL 1869.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_08392b44-ecc6-4f38-8566-361b552cfe21___RS_Early.B 7393.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_12826416-efc5-49d3-b615-731629c95435___RS_Early.B 7215.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_99064106-3789-4de4-b109-ebc83a20d94b___RS_LB 2757.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_201186ce-cec5-47ef-9f88-bd8c4abab2c8___RS_LB 2813.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_f166d436-6e53-469e-b5ce-ff0e5ed73086___Crnl_L.Mold 6524.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_3b241fa8-12f2-4c80-afe2-0a4cdc8f34a1___RS_LB 5138.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04026417_purse.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01641577_bullfrog.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_20116670-5108-4cd0-a941-b51046151c43___FAM_B.Rot 3551.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_6d31cafb-4cf9-455b-ac89-487444b650f7___RS_LB 4236.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_5fa21fbf-774d-48ec-916d-c1d7b8c11c82___RS_LB 4795.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_07dfb451-4378-49d1-b699-33a5fc49ff07___RS_HL 5399.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_7733f764-a68f-4221-ae43-c096f03ce5d3___RS_Late.B 5985.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n07684084_French_loaf.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_b9ea902d-e557-4fa5-893b-39a7a57c0121___RS_HL 1893.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_b0eebb8f-c322-4b56-8897-2cc98d474440___RS_LB 5286.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_61b8a692-91d8-40f5-a4a4-4d910875a638___RS_HL 1966.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03259280_Dutch_oven.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_53e30623-2023-4bbf-b904-ba39426f8628___RS_Early.B 7613.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02415577_bighorn.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02091831_Saluki.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_eb5ff6de-b988-42d7-87bf-374a4b938af9___RS_LB 4234.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_8be5bc25-febc-4bde-bd2b-01a54d3c6e3c___RS_Early.B 8760.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n10565667_scuba_diver.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01773549_barn_spider.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n07860988_dough.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_f8b3542b-559a-4aa4-9f4a-ec4d22f4386f___RS_Early.B 7309.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_a7b2215c-8b70-48ac-8155-89177a4ae26a___FAM_B.Rot 3255.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_5ebe5b4f-c3e3-435d-b2d5-49fa1002dbaa___RS_LB 2955.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04370456_sweatshirt.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_b574ad16-1c07-4f70-bf1d-e2314d2dd81f___RS_LB 2849.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_b86274d3-554a-495d-8304-76484e3c4d15___RS_LB 4442.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_2586a260-ecf6-40e8-aa11-4b8a50845575___RS_Erly.B 7833.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_f400079a-ff67-45c2-8a50-5c5b1e08dc25___RS_Early.B 8491.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_42cd0719-199a-40a8-aaa0-228bb80e1832___RS_LB 4440.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_5104e988-bef6-45fe-9677-095a045239ad___GH_HL Leaf 449.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_56dfc698-989d-4515-b7de-1c2ac6283bb3___GHLB2 Leaf 8923.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_16ac8a43-f720-4fd9-ac41-016523612f38___RS_Late.B 4898.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_793aaf75-3085-4bbb-bace-33a9593c3c94___RS_LB 4847.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_document_screenshot_1.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03062245_cocktail_shaker.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_1ae826e2-5148-47bd-a44c-711ec9cc9c75___RS_HL 1954.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_16a6f216-6d2a-48fe-b8bc-ff385c96d0d3___RS_Early.B 7220.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_bde33d08-678c-4f84-b80e-fcb986a9a446___RS_HL 5415.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02708093_analog_clock.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_c4dd703b-1d4c-4e4c-8064-0e1d743c47ae___RS_Early.B 7050.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_9e501de6-b39a-4a9c-b5f7-f55a246c02b6___NREC_B.Spot 9207.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_gradient_0.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_6da6abeb-addd-4e7a-8d2b-01173f0e0e0d___Rut._Bact.S 3391.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_04c8e6b9-7710-4cdd-b259-2d78b15d1036___RS_Early.B 7066.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1975.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_85626b40-beca-4bc0-90ed-fc6090c6b18e___RS_Early.B 8598.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n07747607_orange.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_0a0744dc-8486-4fbb-a44b-4d63e6db6197___RS_Early.B 7575.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_4b7b3611-d9b9-40c8-b0f5-d730fcd76679___RS_Early.B 6937.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01630670_common_newt.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_16e37160-9dca-4110-a914-955304e7daf5___RS_LB 3033.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_cf3169aa-b842-46ed-bb1a-3e02b6858c86___RS_Early.B 7566.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_b4031970-60ea-4739-9fed-6c81be1bad1c___RS_HL 1752.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_6efc332c-d320-44c9-bffc-52aa866a549e___Rutg._Bact.S 1627.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_5aab6778-8eb7-4397-8912-0ef8a54d8c01___JR_HL 8046.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_fdb4e132-c71b-413f-93c0-c863dd4582a7___RS_LB 2582.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_7188d286-5201-40b6-925a-52af6e6c7c03___GH_HL Leaf 479.1.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_5df30492-0b54-474d-8883-bba9474ca88f___RS_HL 1801.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_2d02a0d6-0734-4ac7-957f-44f2a011fdc3___RS_HL 0375.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_3221ccec-f264-4046-8252-77a8a357562b___RS_LB 4637.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02172182_dung_beetle.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_2cafa90e-af46-4d0a-9137-9780d816b96a___RS_Early.B 7731.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_686938d8-5fcc-4482-850f-0e8720206046___RS_Early.B 7769.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_1375f445-5685-45b8-b309-25bfa15e1665___FAM_B.Rot 3351.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_b64e4518-147a-4a75-9f9b-33db8902aa12___RS_LB 3202.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02130308_cheetah.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_3d16ce8b-81ef-4be2-aec6-d1deab7282b4___RS_HL 0089.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_bb328d40-e4e6-4b84-a92a-e7cb3922c19d___RS_HL 1829.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_68c910fc-3e1a-4db6-b225-d94ee5c60bbf___RS_HL 9713.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_65cb29a7-d70b-4e0d-a6c6-812a28232243___JR_HL 8879.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_267d6db0-95db-4945-a6b0-bf05b11ef8ff___RS_LB 3231.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_6d0a4eb6-2a48-4fd6-9bb5-df05eeeb05a8___GH_HL Leaf 316.2.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_9f5e1d6f-380f-4b88-a376-780f1fe8f8f9___JR_B.Spot 8852.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_85d29f87-cb27-4ffa-9ad8-9c47f9a53b33___RS_LB 4437.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_78071f69-3d02-4576-bd46-28732dd528aa___RS_Early.B 9228.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_e0b8d24b-c115-49d8-8e87-67f35681d181___JR_B.Spot 8877.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04179913_sewing_machine.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_77c75478-e1f0-4aaa-9cbc-af1fed928a74___RS_HL 1748.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_70e40ed3-9913-451d-8484-8155d38dac04___R.S_HL 7916 copy.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_7e0b313f-bffb-436c-975f-1566645abfe6___Crnl_L.Mold 7182.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_1dcfeaa9-006d-470c-b3e5-d67609d07d4e___RS_HL 1808.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n07693725_bagel.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_2a4fd894-0c4f-471b-b80b-d362a7b513f4___RS_Early.B 8038.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_08ce9666-2dda-4fa8-8d58-55bb9fa19484___RS_LB 3318.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_08cf1add-91f8-41ea-bc13-54e7d1cb6da0___RS_Early.B 6865.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04118776_rule.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_4c439043-1b03-485d-8d88-e0b52177c248___Crnl_L.Mold 9145.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03770439_miniskirt.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_882798ca-67c3-45a3-86cf-4aed69388145___RS_HL 1750.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_aacfa124-e30f-491c-91df-d51f2ff78a00___FAM_B.Rot 0562.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_8622ae63-5380-4a2a-b747-8e7d678c8594___JR_HL 8182.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01774750_tarantula.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_d3a1b356-0ffa-4d47-9f52-410bbd0e3e3d___RS_Early.B 8884.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_3a5a5775-fd2c-43ea-ad6b-ce2e50b36dcf___RS_Erly.B 6469.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04286575_spotlight.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_16f3a461-aafc-49e9-8973-39a52190985a___RS_HL 9803.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_8f78af6a-aec1-4e63-a27b-bada4a56d636___RS_Early.B 7643.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_e9642678-b019-4ac2-a960-66fcccb2ccaa___RS_LB 2948.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_2c5500a4-cfa4-4b46-8db4-443b995d39dd___RS_Early.B 8768.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_7e1b19fc-c79d-4898-9e69-9843dd8aa1b6___RS_LB 3137.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_69a9dfab-d6fd-42da-a0fe-6f46b4bb0a1e___R.S_HL 8272 copy 3.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_4fe2965c-9f81-4e97-84d3-d179dec6fab0___Rut._Bact.S 3402.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_5a3fc4bb-a78c-4276-8934-f0b037ffb860___RS_HL 5412.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_3aea17a1-9413-4312-bcf2-e9aadb7371ab___RS_Early.B 8237.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_370bcf52-9f80-463b-b272-f73dfe711e54___Rutg._Bact.S 1253.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_357bfc61-bb46-4e77-b9eb-eafdd3af7f6f___RS_LB 3082.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_4f12205c-0035-48ed-b6b0-56f347fe2ab0___RS_Late.B 5085.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_b89db9d3-a413-4781-bc88-5f6c2085ab5f___RS_HL 1909.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02486261_patas.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_97c1fe0d-72f6-421d-bb82-542f0766176c___RS_Early.B 7448.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_fe93615b-4160-4956-a65c-cdbc79af2052___RS_LB 5131.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_dea6a6e4-cfb0-4c00-a0f7-bdd1e52f82e0___RS_Early.B 7246.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_71cbb155-74cd-42f9-97ac-abca4a10ad79___RS_LB 4456.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_1f9870b3-899e-46fb-98c9-cfc2ce92895b___RS_HL 1816.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_265e32dc-44f3-40f8-8c5d-8bc223dd0f52___RS_LB 4859.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_6dfdd5be-0999-4a5c-a35d-c760043fec23___RS_Early.B 8701.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_1e69b122-3920-4c4a-bfff-a18f3d6c3f89___RS_LB 4766.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_7853cc96-2ac8-479e-83f5-353b88a351a2___GH_HL Leaf 514.3.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_20421747-c083-48a1-aed5-b1097ae50491___RS_Early.B 8203.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_683b04ad-7941-4819-9965-ba32c725eb22___RS_HL 1861.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_3a1dbeee-089c-43f0-8f51-a92d3687a515___RS_HL 1754.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_38fa4c3b-0541-4d14-80e7-84a1153b9e5f___RS_LB 4713.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_983cf28c-872f-423a-a774-41ed2939f249___RS_Early.B 7660.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_203d84bc-4acc-4cad-b4f9-f659ae641876___RS_Erly.B 7615.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_6f566315-ae34-49ad-b00a-be421af17746___JR_HL 8746.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02110627_affenpinscher.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02105505_komondor.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02229544_cricket.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_d01b3a25-c172-42b5-a269-43b46e40b2fd___NREC_B.Spot 9144.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1725.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_96ec6dc6-c3fb-4261-93ae-77d5dfaf8478___Crnl_L.Mold 8909.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_53471454-9f9a-4182-91a3-c2c6c1268c56___RS_HL 0209.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_63385691-5de8-4652-abe5-15727fdcab4b___RS_Late.B 5342.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_bbdf98a1-9e54-4afd-bdfc-870d91627a52___RS_LB 2853.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_438176fc-2e4a-45d1-9014-3eb2391c5832___RS_Early.B 8147.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03710193_mailbox.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_38a72c90-ed53-4432-b625-01c1f962f791___RS_Early.B 7302.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_document_screenshot_4.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_4c234632-b720-420d-934f-95b83f2dd59d___JR_B.Spot 3131.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_c7fb1eeb-741c-4583-ad3f-ed46d5c2c920___RS_Early.B 8865.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_9cb0c796-fde2-406b-87fe-3926b722f8f7___RS_Early.B 8300.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_f0036dfd-9f46-4f2f-9001-5973495f2171___RS_HL 1849.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_6bb48ab5-6f0d-4bd8-a3c0-bf2b6d5ed936___RS_Early.B 7281.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_36be3b48-82d7-4a96-8ef1-87355cfa2c59___FAM_B.Rot 0426.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_3a728bc7-b08d-4a11-bb49-b25d803c3336___RS_LB 4074.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_ui_diagram_3.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_6cc5252d-0b5d-4f06-969d-8317150c355d___RS_Late.B 5012.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_3de47a70-4a74-462f-8b56-2088507be4ef___RS_Early.B 8832.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02447366_badger.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_750584fd-72e0-45c8-b37c-97208bd559cc___RS_HL 1885.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_def9c9e1-fd12-44d9-92ae-18c5ff0f52da___RS_LB 2605.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_882f3f71-6ff3-42ce-9aa1-bad47c7b18f3___JR_HL 8615.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_40b67c0a-5dd8-435c-80ed-764593d2147a___RS_Erly.B 7577.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04592741_wing.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_7e6c8297-dfe1-4826-826e-01d696cc263b___RS_HL 1863.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02791270_barbershop.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_58a98860-86d8-41e7-9f8c-cc2ca5e90012___RS_HL 1758.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02417914_ibex.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_1b434c52-7be4-40c4-90d5-13220f1a3eba___RS_HL 5418.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_94eb2aa6-7f9e-4a5a-b519-2106984e9a7d___RS_Early.B 8770.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_31a09d39-6791-4ecb-8f44-af2ed85dbd33___RS_HL 1970.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_f1017472-d391-4a66-b9b2-d52916cd0c0b___FREC_Scab 3176.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_ui_diagram_0.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_36f84bc9-df52-44b6-b420-29c3881dea1e___RS_LB 4485.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_04481ca2-f94c-457e-b785-1ac05800b7ec___RS_HL 1930.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_b475147c-92bc-419a-b2c3-7d5aabbb79ec___RS_Early.B 7379.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_01a8cc9f-074a-4866-87c8-bb5a9e3895b4___RS_LB 2968.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03498962_hatchet.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_8ace7694-6cdd-495e-a987-f9c0ee82bcab___RS_Early.B 9016.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_1132bee0-fe6b-41a9-9583-7b959c2ca25f___RS_Early.B 7482.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03888257_parachute.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_d94eae91-7d2e-4394-b892-8c8c7fa9cf11___RS_LB 4864.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02871525_bookshop.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_c98f3c66-a408-4db6-a7bb-83be981ff1cc___FAM_B.Rot 3168.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_b8578828-0e34-4511-9739-9ef0170774b2___RS_Early.B 7416.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_bc378ba0-533d-42db-a8b2-82decc73f4d5___RS_Early.B 9092.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_b81b4276-e0c9-460a-ab94-79b6a5d0f2d6___RS_Erly.B 7538.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_8665efd2-fa3d-45f8-b1c0-746c99fb7d1e___RS_HL 1924.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_6fcaba16-dfce-431a-b268-e0826a101553___RS_Early.B 6695.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_f2a56e13-438e-4bef-a3ea-beb9f347d481___RS_Early.B 6691.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_1f9870b3-899e-46fb-98c9-cfc2ce92895b___RS_HL 1816.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_c4b16bb7-f358-4010-a04c-10206bad02e9___RS_Early.B 8391.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_6f37a2b1-e63c-4d82-aec2-9ff036473867___RS_Early.B 7585.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_35390f28-2e9e-4f2c-b84e-cc1a7ad55fa8___JR_HL 8708.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_8b2ce6b6-f00a-4f25-ac6d-4249dd7dc5f6___RS_HL 1890.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_17a06d03-8a7b-48a8-aaf9-3300741c65de___RS_Early.B 7625.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_blank_solid_1.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_3d4ddc33-b13b-4f7e-8689-1cf82532ef8e___RS_LB 3162.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_2414f9df-91fd-4aed-b772-bd6b5311eb0b___JR_B.Spot 3141.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_08bbd7f1-169d-4e38-946f-8d91589b263e___RS_Early.B 7106.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02892767_brassiere.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_11e974fa-928f-45f6-b983-e74c74c7d163___RS_Early.B 7992.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_c73b4c12-ccbf-4ba9-8dd9-aba377680518___R.S_HL 5497 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_cafa778c-9b8b-45e7-8ffe-bc6fb3eec439___NREC_B.Spot 1923.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_78fe147d-b9c8-460d-ba04-65fa82b39184___RS_LB 4870.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_8e92b724-a066-4039-a090-2699c5cfed4e___Crnl_L.Mold 6724.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_3c0d6888-c7e1-4cf8-9c25-9a0b8c62ba72___RS_HL 1780.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_5ba52ca6-9cd2-4fad-914a-af2f8fea65c6___RS_LB 4740.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_639728f8-1d6b-4f6f-860c-2c48653eb564___FAM_B.Rot 3547.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_468629f7-6ca2-4823-9a39-d42b4d92c4bb___RS_LB 5312.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_noise_4.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_b1565e81-b8c3-4ba3-8b57-94395f82a3f2___R.S_HL 0595 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_224d9d63-c097-4142-b1a6-56f88a7bae2e___RS_LB 2630.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_805f68c3-b0a9-4072-8ef6-4c48d804e888___RS_LB 5159.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_a6623827-bcdc-40ed-81e6-5cde1a1da997___RS_LB 3179.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_5face5cd-e150-42f5-8ae6-eef79c43b05b___R.S_HL 8010 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_9184edd2-6056-4da1-aaeb-bc9dc92d5247___NREC_B.Spot 9155.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_1e0326a5-b208-447f-9d60-f788ec4b6e3f___RS_LB 4526.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02480855_gorilla.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_60b03301-a2d3-4063-9b4f-1840c9288c08___GHLB Leaf 23.6 Day 13.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_2e400707-ea59-4355-889a-32d5e56c1e1c___NREC_B.Spot 1936.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_71ab124e-93ba-4d4e-ae53-68ac12fcb858___RS_Early.B 8129.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03494278_harmonica.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_e6d543a1-8e5e-4709-9329-b93d63f52edf___RS_Early.B 8324.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_0f4ebc5a-d646-436a-919d-961342997cde___RS_HL 4183.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_99d75573-472e-4f57-ab82-b49b78853d03___RS_Early.B 7847.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02095314_wire-haired_fox_terrier.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_28d91e73-4362-4a5f-bceb-980f5a0e1f8e___RS_Late.B 6228.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_4ddd0823-ecf4-4a0b-81d5-9844705e5694___RS_Early.B 8936.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_6c5ac624-844c-4d01-b030-38e1130e890a___RS_LB 3973.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2148.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_dd1e0739-c899-4c1e-99c8-fd83a6d55694___RS_Early.B 7862.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_16dafd55-385c-414e-8e54-d7424b8e508f___Rutg._Bact.S 1835.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03729826_matchstick.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_485e0319-4f79-4504-b3eb-8c3f2dcc0c3e___Rut._Bact.S 0750.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_5990ed9f-ffe8-4622-bd26-e536ea5e1109___FREC_Scab 3042.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_163ada72-4288-4f85-a3c1-feed23c8d1de___RS_HL 1940.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_9b5be0c5-7d7e-493d-88ba-c721c85f73ca___RS_HL 5405.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02219486_ant.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_762672f4-17e6-4fd6-84f1-3bcb091b3ca5___RS_HL 5417.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_6f4b9acd-f34d-4771-a6bc-2001de2dd1d3___RS_HL 1898.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_485022b7-b861-4234-a906-1034b3d0bda6___RS_Late.B 5984.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_d42061d8-9da0-4190-8dd0-d3629f0cfa53___RS_LB 3954.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_87c99be5-a930-410f-8529-e79e030cba0c___RS_LB 5294.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_36555aa6-0ca3-412c-be9f-50f12500861f___RS_LB 3907.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_57e24d88-fd01-4422-b8b5-d688d2296184___RS_HL 5401.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_cdc5ed26-b023-41cb-9cd8-07e62df1e369___RS_Early.B 6864.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_blank_solid_0.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_08a723e4-6b51-4395-8013-b1f3f03709b8___GHLB2 Leaf 8967.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_4cda1135-6cad-421b-9648-d00f9f3cd16f___JR_B.Spot 3304.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_c54dad18-5802-41e3-a03e-28f31b4bb30a___FAM_B.Rot 5010.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_fc603fb2-e2a0-4990-8a75-0e4f80f40694___RS_Early.B 7584.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_4ae82355-6885-40e7-9807-dabe46ed3441___RS_HL 5410.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_4d56ef9d-bc69-489c-92de-d2fad01d762d___RS_LB 3890.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_9caba61f-ea63-4ea5-9d85-1f22b6a1a006___RS_LB 4451.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04296562_stage.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_22322780-95b4-4b45-b626-26b22965d55e___RS_HL 1880.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02089867_Walker_hound.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_357bfc61-bb46-4e77-b9eb-eafdd3af7f6f___RS_LB 3082.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02804610_bassoon.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_03000565-29dc-4d56-8132-a5d0d36a8359___R.S_HL 0602.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_aec9d65a-57ec-4b2d-b22e-f80ca8cffbaf___NREC_B.Spot 9059.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_5dbb2c15-fc42-4611-b590-9d92d4ce2a85___RS_Early.B 7312.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_1b875461-1cca-41b8-bc3b-34b5940f33a8___R.S_HL 8036 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_d0efac0c-12e0-4481-bf88-a99d9407b31b___RS_Erly.B 6466.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02108551_Tibetan_mastiff.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_d159f020-15f7-45c5-9808-a8ef0e5914f5___Crnl_L.Mold 9105.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_f9d861a9-0217-4de2-844f-fd23ccaa9def___RS_LB 3067.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01770081_harvestman.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_1dc41475-aa79-43f1-8648-0c8733d246ca___RS_LB 3319.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_7bedea19-5d9f-4bee-a1a1-091a168d4672___R.S_HL 8139 copy.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_d3bc40cd-beca-449a-9ec3-f50981efe749___FAM_B.Rot 0702.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_1e671694-5713-4568-b8ad-06f15688d25e___RS_Early.B 7659.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_1650365d-437c-4d36-b110-113a88c1090a___RS_LB 5459.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03777568_Model_T.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_6a140ba2-7c14-4a2b-b822-e5b80302e61e___JR_HL 8605.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_30e6be40-743f-49c1-a736-e279d53ffdd7___RS_Erly.B 7862.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_1dcfeaa9-006d-470c-b3e5-d67609d07d4e___RS_HL 1808.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_d6ffc732-27cc-4391-9820-be9d386fb245___RS_Early.B 7032.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_9cd7c33b-e29a-4300-ba19-183fb6c82aca___RS_LB 4124.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_d0719ccc-a4c3-406e-bf73-94115fefde12___RS_Early.B 8569.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_415ac4a2-8f16-4052-880e-1e1f208965f0___RS_HL 1884.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_0997fbc9-8297-4a33-ab73-6f8096f5bc04___R.S_HL 8186 copy 3.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_38fa1e81-3369-40e6-83a7-399deb35dee1___Rut._Bact.S 1222.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_b14e0de2-ab48-45b5-9d4d-e45e7c88b68f___RS_Early.B 8554.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_cc63b147-ad2a-4bc1-aa05-a07b3c6b7761___RS_Early.B 7091.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_60e9a878-13e0-4345-964c-fd807cd20bbb___RS_HL 1876.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_fdc86644-2491-4ace-b7e3-190e1d68ebba___RS_LB 5129.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_2f6382f7-12fc-4309-b7db-b034b8165c67___RS_LB 4955.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_30b7e451-e892-4773-9f40-025979db2bef___Rut._Bact.S 1247.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_d036af36-99a4-4b25-aa40-2477883e73cf___RS_Early.B 8269.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_5d505af8-3f73-4781-980c-a4a696a04550___RS_HL 1934.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_8c01f338-2648-4bcf-99cb-853978b39014___RS_Early.B 6742.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02643566_lionfish.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2565.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_4857420e-b28e-4bb5-aa03-5e333cf27af0___RS_Early.B 6847.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_afab688d-242c-4e62-abef-ba277df5a76d___FREC_Scab 3188.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_d83ea494-b075-49d2-9c86-07e988bd6033___R.S_HL 8095 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_170f1f57-0fd4-421f-9c82-3b1804be63ad___RS_HL 1771.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_90c2a92c-9e38-49a3-aefe-e1805fe64537___RS_LB 3016.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_6395653e-67bb-45ae-97cb-9adf19a9ae62___GHLB_PS Leaf 16 Day 8.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_0ba474dd-0cfd-4fd2-a58c-8e3d18dbe7c3___JR_HL 8395.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1786.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_ef7005dc-1d44-412e-b858-145a2d7a6fa9___RS_HL 1951.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_b3123a68-bf01-4d71-a561-e1e7363a6419___RS_LB 2586.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1924.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1687.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03131574_crib.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_d51f3036-3389-4f44-96f6-e88f5f04604d___R.S_HL 8058 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_7bfda067-6e35-4af5-a9c4-4b3b5f357871___RS_HL 1813.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_454203b9-0376-4db3-92ed-047545daa7c6___RS_Early.B 6953.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_46ff56ce-bf5d-48b9-89d8-d096a288f62b___RS_HL 9630.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_e09c5edb-1e38-44bb-bb55-260fa32d6a58___RS_Early.B 7340.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_7e1b19fc-c79d-4898-9e69-9843dd8aa1b6___RS_LB 3137.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02113624_toy_poodle.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_1a674846-9d13-4a7f-ba03-8931c5dd3d2c___RS_LB 2768.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_203357f4-1deb-42b2-99ed-32df34aa166c___RS_Early.B 6780.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_425e5f26-56b0-404d-b537-dc3353ecee09___RS_Early.B 7058.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_45bc0b37-ca59-4a89-8531-705af42a6fd5___RS_HL 1946.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_919f1400-c9b6-4343-9708-0e70deabb85d___FREC_Scab 2941.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_43c48ef9-6312-48e2-a6c6-1282ad331cf5___R.S_HL 7960 copy 3.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02071294_killer_whale.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_e4b0f6ac-2b1e-4e10-8733-de421a01c390___RS_Early.B 8254.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_9a1fc5b3-476a-4565-ad69-e054accd2dd6___Crnl_L.Mold 9030.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_baac20f4-7978-4258-8cd0-f3f8fe98bf83___RS_LB 4774.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_a38df468-bb4a-4bb3-9ee9-a2dffae718e9___RS_Early.B 8690.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_6bd5ef2c-da52-4962-b933-528eaa9afa6c___JR_HL 7757.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_965d2fb1-0fc2-46ff-86a6-3d72c176187f___R.S_HL 5550 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2313.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_5fcbde8f-52af-4963-b324-ff7f4dd6bd4c___RS_HL 1762.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_d378a0c5-d275-44a4-9f00-f7f180270f4d___RS_LB 2781.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_9b5d313a-6815-4b9d-ad5d-27114e767112___R.S_HL 8268 copy.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_7e6c8297-dfe1-4826-826e-01d696cc263b___RS_HL 1863.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    }
+  ],
+  "val": [
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_document_screenshot_0.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_86323439-ca8d-4819-ae81-800e50f85770___RS_LB 2826.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_53dfd9b5-4486-48c6-96c7-08cf93e0aff2___GHLB2 Leaf 9022.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_977cefff-6bb2-41d4-9496-d30e03c71112___RS_LB 3287.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_7b95c3ad-d550-4cc8-96e0-549ec04c7dea___RS_Early.B 7342.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_5fcb921d-3329-443c-a708-37c3943f5493___FREC_Scab 2987.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03995372_power_drill.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_61a602c4-02e3-49e5-9858-5b1d4d4795f7___RS_Early.B 7875.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_5e1b5fa9-892b-4e60-91f9-4647d6d9574c___JR_HL 7633.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_fd92bd9c-02cb-4599-8673-9316159504a1___RS_HL 1927.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_aeb5a5ed-0672-49e9-a805-74b9390d4972___RS_Erly.B 9529.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_692ec0f1-65f7-4173-971e-0b5f5505aeb6___Rut._Bact.S 1455.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_224d9d63-c097-4142-b1a6-56f88a7bae2e___RS_LB 2630.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_5eaf5201-8fc1-48ed-ae25-7570796044f9___RS_HL 9993.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_6c08e57d-670b-4a01-b123-09d8cf36316c___Rutg._Bact.S 2383.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_2377f6d5-3660-4b5a-b5b3-eea448e7a143___RS_LB 2729.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_bf2bffbb-cd8f-4d36-bd58-847808397c75___RS_HL 1786.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_ede5199d-4bf1-4bd0-a460-2168350ed05a___RS_Early.B 8773.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_b61b9d33-59ea-41b0-a554-c382eb6128c5___RS_HL 1919.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01751748_sea_snake.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_31d61797-f3dd-4452-8db9-cdfd8be9ebf2___RS_LB 4823.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_6cab0a2b-a2d9-4798-8043-f6ef416ed745___RS_LB 4993.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_fdc58f83-8a94-4f0c-aefe-c6f2b5028682___FREC_Scab 3014.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2071.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_gradient_2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_f73f0a24-d25e-4a0c-9e68-3b57d467090d___JR_B.Spot 8829.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_c68c7fc3-d2a7-4ccd-91a8-410b0e15f405___FAM_B.Rot 3549.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_c9e80cc7-a928-42a6-a84d-0fd112c538a7___FAM_B.Rot 0520.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_b301c9cd-7624-4261-ab4f-962936ebb92a___RS_Early.B 7632.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_d1625c19-c90f-4a5f-bfc8-cb406ad20753___RS_Early.B 8649.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_f5bd2732-197b-4d8e-bb50-a4966dc416f5___RS_HL 1840.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_43851153-bb56-46c3-b61c-b4e84baf0516___RS_HL 9935.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04019541_puck.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_b11189c8-ab6f-4d69-9ffa-e52749d2a3a5___RS_LB 4537.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_461f1af8-a71f-446d-b59c-b7f31dde1c74___RS_LB 2833.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_6cb9a452-597b-4e9f-8bdc-f48aa398874d___FAM_B.Rot 0678.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02894605_breakwater.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_8a1d3598-cd1d-4978-9e18-b5e205108540___RS_Erly.B 8315.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2152.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_5dd2be45-9c02-4b82-a7be-ecbac29981a9___RS_Early.B 7947.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_f7438ce7-c12a-40df-83a1-1ab0cde13bb0___RS_LB 3847.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_bf2bffbb-cd8f-4d36-bd58-847808397c75___RS_HL 1786.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02102040_English_springer.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_c448ff18-fa6f-4efa-a7f5-813d57279a26___FAM_B.Rot 3059.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_351386f8-c501-45f6-ab0d-e9c1d1584204___RS_LB 5195.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02834397_bib.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02509815_lesser_panda.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_9b5be0c5-7d7e-493d-88ba-c721c85f73ca___RS_HL 5405.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_noise_1.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_51a03694-82cd-43a5-9877-ddce42c1a5ad___RS_HL 1779.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_52dd2fdd-6966-450c-a42b-ee14428d4271___RS_HL 1955.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_ef7005dc-1d44-412e-b858-145a2d7a6fa9___RS_HL 1951.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_a4d1d8cb-26a2-413f-a229-021e2eea87ac___RS_HL 1819.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01735189_garter_snake.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_a877ca65-3824-4d1a-a438-a32be1beb7ad___NREC_B.Spot 1967.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_de54e40d-4c5f-48d9-9b6d-bc96bde09898___RS_LB 4086.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_5fa695b2-89f6-4c5e-b62f-2be61e2ad23a___RS_Early.B 7232.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02088466_bloodhound.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_30937333-8898-4634-8c00-af57d3020ba6___RS_HL 1922.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_b825544a-33a3-4bf7-8568-506acca8eaf5___Crnl_L.Mold 8826.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_c5cb3e89-f00f-4032-80ca-eb39bead0796___RS_Early.B 8645.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_d51a4307-22ad-4959-a7f9-c02caa7ae675___R.S_HL 8188 copy 3.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_8183f4e9-fa24-4e80-be93-42983b086b7d___GHLB2 Leaf 8782.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_noise_3.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_80bdc2a3-66b8-4d95-abe7-65c7806f7cbf___RS_LB 3073.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_a29ed5b2-153c-4f0e-a633-f698c9ff51d2___RS_Early.B 8840.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_f887b059-f797-442d-b2b6-a9cab0f76f43___FREC_Scab 3169.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1964.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_2f81d148-c62f-4d3c-baf4-72b77abea41a___RS_Early.B 7493.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_43aa27d3-3a37-4245-8b20-984512abfc6c___JR_B.Spot 3386.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_a02b6205-b40a-4178-8b34-3494f84b9d1f___RS_HL 1958.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_aa04db6d-645f-4e8a-88dc-c9f9396f0800___RS_HL 1975.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_5fe37f29-fe15-42ac-93b5-90aa5337bd55___RS_LB 2514.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_36fc1631-634b-42d3-a865-cc858557a8a8___RS_LB 4427.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_97294a06-04ae-440f-b130-ddff2817c727___FREC_Scab 3372.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_1e3e04cc-3778-4d78-b8f9-d60faa0534b0___RS_LB 5246.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_1a482d0c-d3a9-4e79-b412-f2288dc5067f___JR_HL 5852.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02486410_baboon.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03837869_obelisk.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_a5a6ebeb-2535-441d-acf5-33bce305fa14___RS_LB 3304.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_36bdc44c-96a4-40bb-86f7-63a91d706e96___RS_HL 4203.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_915745f2-1da9-4e98-aba1-8a892cb1a863___R.S_HL 0597 copy.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_4ab9d59b-57ee-4e22-a6bb-d8152710fd28___RS_Early.B 6857.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_9d7d1bb9-1b10-4a8f-a961-e404b9d5acf8___RS_HL 1960.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_fcbc5323-1679-416c-bb10-534e686f21bd___RS_Erly.B 7801.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_3fdcf34b-cddd-4428-912b-251f982ec0da___R.S_HL 5542 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_2dee1571-ef6b-40ef-8c46-334e89aad3f1___RS_HL 1950.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_c4aec622-2e7b-49f6-bab3-6c4dce29f155___RS_LB 3118.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_a3ec91aa-8503-4711-a912-0d1427e25686___RS_HL 5409.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_71c06efe-089f-49b3-beed-095bd7640e32___RS_HL 1947.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_38e76f0a-63cb-460a-b0fa-f20e561dc2c0___FREC_Scab 3481.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_36d2885d-0bc7-4346-8a13-383e1533a68c___RS_LB 5098.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_514076ce-e366-4b68-a736-9346cd9a5f61___NREC_B.Spot 9190.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_ui_diagram_1.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_document_screenshot_3.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_13b1b19c-6720-4238-b384-4c86ea119ace___RS_LB 2765.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_2ccb9ee9-faac-4d32-9af5-29497fa2e028___RS_HL 1837.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_cf38c261-5bae-4b5d-92b4-16c634557d2a___RS_Early.B 7169.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_d3cbf715-a2a3-4024-ac5d-c6ae21a77720___RS_LB 2735.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03908618_pencil_box.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_880150d7-bc9d-46bf-a91c-d7fcacbc1e50___JR_HL 5869.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_58268d35-a896-406d-9686-5f2f2b9a5b10___RS_Erly.B 7433.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_d0e16874-80b3-4f2a-8511-15d5e69d33c6___R.S_HL 8056 copy.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_86944800-4984-44f9-9c72-53fcb7324a3b___RS_LB 4015.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_c777a0ce-5d2b-4e87-8cc4-d5f8847a4553___RS_Early.B 8239.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_2446ca09-aa29-4ae4-8d34-45115c32cde7___RS_Early.B 8971.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04501370_turnstile.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1826.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04613696_yurt.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_f0a1af30-47b5-430b-b563-ef9a32a55dc7___RS_Early.B 6781.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_b89db9d3-a413-4781-bc88-5f6c2085ab5f___RS_HL 1909.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_56223cf2-b449-4088-afef-74476af7f93a___JR_HL 7604.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_30126310-39de-4c02-b10a-23409417a4f6___RS_HL 1826.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_99e03a3c-c68f-4648-af09-877c57d6b115___FREC_Scab 3054.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_43fd6ace-3712-494a-9aba-de5482d22561___RS_HL 1968.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_7141e8d1-1554-4030-85dc-be5e984eb6ef___GH_HL Leaf 471.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_9c620128-2872-4bbb-bc14-d5b785242cf6___RS_HL 1751.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04330267_stove.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_d325e580-5faa-4aea-927d-2700f52cc343___RS_HL 1872.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03272562_electric_locomotive.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_c82e587c-a0f2-451e-9057-e3719a3d9562___RS_Early.B 6824.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_2f9b46c7-fa77-4196-9ed1-f3f316182340___JR_B.Spot 8943.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    }
+  ],
+  "test": [
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_cf761f3d-755a-42b2-83cb-729443246c6a___RS_Early.B 7319.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_d84ba2ee-6ef5-45b7-a15a-b677b99cd3f6___RS_Early.B 6772.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_a63a23d0-2830-4962-b5a8-2776e9c3ba1d___R.S_HL 8184 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_43dde1e0-8c73-45af-8fbf-d500e450a154___RS_LB 3270.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_db973ce3-7198-4ae8-910a-bb1a3046e353___RS_LB 5152.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_8c1960cd-20e2-4a9c-a1ee-9800289b884f___RS_LB 3941.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_a0c129b8-4fb3-406d-b2f6-1309fec50c70___RS_LB 5139.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_71cbb155-74cd-42f9-97ac-abca4a10ad79___RS_LB 4456.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Apple___Apple_scab_2f1e68c0-c059-46fd-bbf3-f160817abdc3___FREC_Scab 3535.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_d287be3d-cac6-4485-8c31-674fb8b459be___RS_HL 1973.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_12429fa8-02ea-4017-88ef-b2d219b892f7___RS_Early.B 6916.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_e304fbf5-d145-433c-8f67-7b486581166a___RS_Early.B 7434.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_noise_2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_bb4aa884-a811-4229-bfc0-1df1e7330877___RS_LB 5049.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_4f249e3b-92a0-43e5-a70d-fe3045630437___RS_LB 3913.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_9699b511-4dd6-4037-8cfe-c96c12a7b029___Crnl_L.Mold 8725.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02088632_bluetick.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04023962_punching_bag.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_edc5f476-dd30-4fab-a8a1-71faf6210420___RS_Early.B 7315.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_ea5fc080-37a7-4954-ba8c-a5d67b6a0962___RS_LB 2888.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_762672f4-17e6-4fd6-84f1-3bcb091b3ca5___RS_HL 5417.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2161.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04270147_spatula.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_5720f8b8-4fd7-451f-af18-a48730691c2d___RS_Early.B 7155.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_7afbee91-43f6-444f-a26d-9bcd9219b72b___FAM_B.Rot 3563.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n09399592_promontory.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_d031102c-679d-4323-a5ee-4c52ed2d5740___RS_Early.B 6947.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01945685_slug.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_c7c82b7c-078f-4ba9-90e3-db36a73bda22___RS_LB 5430.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2363.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_0f6eac3b-d674-4c4d-ab3a-88689feec07f___RS_LB 5232.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_fb91b663-6a03-4165-8125-afc96e41ab5c___RS_LB 5130.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_c3134b97-50a1-4aa2-937d-1e15405b9803___RS_LB 4565.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_3edf7c3f-73e0-439c-870d-76cfd7c3bc45___RS_HL 1859.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_gradient_1.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_68f056c9-4989-4809-b597-3739ff66afc3___RS_Early.B 8748.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_3a00204c-5e53-4e5d-95a6-f8819031744e___RS_HL 5420.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_b21bc878-7b63-481e-a6d1-7e972627210e___RS_Early.B 7656.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_1dd236c3-5ff0-4a03-996f-e832b50dff82___JR_HL 8787.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_53367bb0-3f38-4c90-a71d-05592341e4aa___RS_LB 4149.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_e4a264b9-fbae-4f38-86ce-d0a7d70e92e1___RS_LB 5211.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_22322780-95b4-4b45-b626-26b22965d55e___RS_HL 1880.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_blank_solid_4.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_215565cf-2897-40f6-97b3-3dd63045242f___GHLB2 Leaf 8800.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_ff700844-68ad-4e99-8427-58a39c07f817___RS_HL 1860.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_04158c05-5a58-4b81-97db-578e98cc992c___Rutg._Bact.S 1870.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_729ddd12-6c56-4f8d-bf95-ce3a066c9f29___GH_HL Leaf 188.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_8934ec44-9624-4e9e-af58-29ec2f1d88a7___GH_HL Leaf 494.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03459775_grille.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_583fa343-d5be-414b-bd95-f674313bd882___RS_Early.B 7681.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_967a677a-712c-447f-ba27-f59818944af0___RS_LB 4353.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_119fca56-2a51-4c1f-9ba3-85977da1fd3b___Crnl_L.Mold 6898.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_fdf53f6c-db92-48b9-9e06-0358e4114be6___RS_LB 2656.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_30126310-39de-4c02-b10a-23409417a4f6___RS_HL 1826.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Late_blight_2dc5d67b-cfe6-4337-b966-4a499bfad825___GHLB2 Leaf 8761.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04532670_viaduct.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_6a74ff09-be5a-4412-a192-2370a37c0751___RS_Early.B 8584.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_574dab67-daab-46c8-918f-beb10b427cd5___RS_HL 9974.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_01700b46-3800-46c6-ab81-09a5f50af525___RS_HL 0108.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_dca8ac5c-b925-435a-a5e9-da09fa8938a1___RS_HL 4182.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04258138_solar_dish.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_539b8a7d-f257-49ff-81b8-76f39b5ac752___NREC_B.Spot 1805.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_de0ae213-3479-4f07-b7f8-d59607a2caa8___RS_LB 2528.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2235.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03868242_oxcart.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_296be9fb-0c43-48a4-9d05-8d906fee9c16___JR_HL 8643.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n04550184_wardrobe.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01768244_trilobite.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03627232_knot.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_9a6eb7c4-6b43-477a-89e0-69f62ef67991___RS_HL 1846.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_f0036dfd-9f46-4f2f-9001-5973495f2171___RS_HL 1849.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n01748264_Indian_cobra.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02787622_banjo.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02074367_dugong.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_b28c43f9-5844-4e9b-86bf-36bc114cae07___RS_HL 1736.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_668eb327-8298-40ed-ba97-f1a6e16dd2e6___Rut._Bact.S 3486.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_58334b81-9aab-4b5c-b655-f7078a81135b___RS_LB 3846.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___healthy_1b09df7a-eb13-4192-b211-900898ab21b4___JR_HL 8533.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_c8bfd67e-892e-4502-982a-adba5505be5d___RS_LB 4444.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_fc603fb2-e2a0-4990-8a75-0e4f80f40694___RS_Early.B 7584.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_42148e3c-34d6-484e-a4b8-8dc037667a4c___RS_Early.B 8235.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___healthy_3a7861a7-1fc8-4986-8c21-5bef0ebeb3cb___R.S_HL 8087 copy 2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_b0eebb8f-c322-4b56-8897-2cc98d474440___RS_LB 5286.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1706.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_03da9931-e514-4cc7-b04a-8f474a133ce5___RS_HL 1830.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Leaf_Mold_da6cc51a-6ba2-4b1d-aa4f-5d699860da6b___Crnl_L.Mold 6767.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_7dfb162c-0384-46b3-bbf7-f0929bd00921___RS_LB 5235.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_38d82b6e-16ec-4ac6-b42f-29ff524b4e43___RS_LB 5269.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_0ab59fda-d57f-484c-9f21-80d854957d7e___Rut._Bact.S 0869.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_ae805316-66e9-4aaf-b938-8460734b90ec___RS_LB 3004.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_26d2af6a-f52e-457c-8006-fa106ad39fbe___RS_Early.B 8586.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1867.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_8ddc8178-4609-4267-bd55-028de3f759c8___RS_HL 0004.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_72485a02-60b9-424a-ba1f-de8078b07176___RS_LB 3148.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1715.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 1838.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02099712_Labrador_retriever.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03899768_patio.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_91b84b7f-2132-4d72-897b-95c763ce5397___JR_B.Spot 9067.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___healthy_3be50742-0fe9-404a-809e-9597793748a8___GH_HL Leaf 191.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_9d7d1bb9-1b10-4a8f-a961-e404b9d5acf8___RS_HL 1960.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_f7210adf-ebd1-44d7-9104-40244572d722___NREC_B.Spot 1807.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_a2900ade-54bd-43db-a003-7c468d9b0a1e___FAM_B.Rot 0489.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_6319585f-ed2f-4657-ae79-a23db65d0fce___RS_Early.B 7033.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_1b73d0ec-bad1-4d2d-878e-6aa209aa39d2___JR_B.Spot 9086.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_4215b9d5-c554-4249-80e1-aeaf2106e966___RS_LB 2977.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n02870880_bookcase.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Grape___Black_rot_3b840038-8831-4158-ab4a-8eeee954d136___FAM_B.Rot 3307.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03016953_chiffonier.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Pepper__bell___Bacterial_spot_177e323a-7c1d-41f2-a6b3-8ea30795054f___JR_B.Spot 8941.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\edge_cases\\edge_blank_solid_2.jpg",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "edge_synthetic"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Corn_(maize)___Common_rust__RS_Rust 2536.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_2639ad26-c7e9-4bd6-8000-c002f676a4c6___RS_Early.B 7150.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_cdad6bf9-1ca8-4feb-87b6-960dd55acf2e___RS_LB 3186.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_31d0ecc8-045d-4a4a-ac33-431556c83e4c___RS_Early.B 8692.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_c10de41b-4c38-41c4-b278-600071051453___RS_Early.B 8093.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_ea403e5a-34b3-4b06-a94d-65ad2e78831f___RS_Early.B 8136.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Peach___Bacterial_spot_6fd36516-50c0-4840-81ad-ad499016137e___Rutg._Bact.S 1370.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Early_blight_dbdf96e5-2f8c-475b-b2dd-40a5862e10f7___RS_Early.B 8017.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\unrelated_objects\\unrelated_n03958227_plastic_bag.JPEG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "unrelated_object"
+    },
+    {
+      "path": "validation_dataset\\not_potato_leaf\\other_plants\\Tomato___Early_blight_25b96058-36c9-4213-bb16-088e76cb30b1___RS_Erly.B 9417.JPG",
+      "label": 0,
+      "class": "not_potato_leaf",
+      "subtype": "other_plant_leaf"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_37dbf454-f189-4fae-a9e7-a088e7be3f2e___RS_LB 4530.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___healthy_bb328d40-e4e6-4b84-a92a-e7cb3922c19d___RS_HL 1829.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    },
+    {
+      "path": "validation_dataset\\potato_leaf\\Potato___Late_blight_ab9b15fb-d4cc-4d67-a5bb-8b88f066c1db___RS_LB 4825.JPG",
+      "label": 1,
+      "class": "potato_leaf",
+      "subtype": "potato"
+    }
+  ],
+  "counts": {
+    "total_potato_leaf": 410,
+    "total_not_potato_leaf": 410,
+    "train_total": 574,
+    "val_total": 122,
+    "test_total": 124,
+    "test_breakdown": {
+      "potato_leaf": 62,
+      "other_plant_leaf": 38,
+      "unrelated_object": 20,
+      "edge_synthetic": 4
+    }
+  }
+}

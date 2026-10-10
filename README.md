@@ -8,9 +8,13 @@ An AI-powered diagnostic and evidence-based crop management web platform designe
 ## 🌟 Key Capabilities
 
 - **Native Dataset Training**: Trained directly on the existing workspace dataset in `Potato dataset/Potato Diseases/` without redownloading or moving files.
-- **Strict Crop Scope**:
-  - **Potato**: Fully active disease detection across **Early Blight**, **Late Blight**, and **Healthy** foliage.
-  - **Tomato, Corn, Pepper**: Marked as **Coming Soon**; prediction functionality disabled to prevent false diagnoses.
+- **Strict Potato-Leaf Botanical Validation**: Two-stage sequential diagnostic workflow. An independent binary classifier (`models/potato_validator.keras`, MobileNetV2, ROC AUC 0.9971) screens uploads to verify *Solanum tuberosum* foliage before running disease classification.
+- **Strict Crop Scope & False Inference Defense**:
+  - **Potato**: Disease detection across **Early Blight**, **Late Blight**, and **Healthy** foliage executes **only** when verified as a potato leaf.
+  - **Other Crops (Tomato, Corn, Pepper, etc.)**: Prediction is halted with: **"Potato Leaf Not Detected"** (*“This image does not appear to show a potato leaf. Potato Doctor AI currently supports potato leaves only. Please upload a clear image of a potato leaf.”*).
+  - **Uncertain / Blurry Uploads**: Prediction is halted with: **"Unable to Verify Potato Leaf"** (*“We could not confidently verify that this is a potato leaf. Please upload a clear, well-lit image showing the leaf.”*).
+  - **Invalid Uploads**: Blank images, non-plant objects, and corrupt uploads are safely rejected.
+  - **Upcoming Crops**: Tomato, Corn, and Pepper remain guarded as **Coming Soon** in the interface.
 - **Deep Learning Backbone**: MobileNetV2 transfer learning with inverted residual feature extraction, batch normalization, dropout regularization, and dense classification head.
 - **Verified Agricultural Guidance**: Curated pathology treatment plans (Immediate 24-48h steps, Cultural management, FRAC-compliant fungicides, Biocontrol options) with optional OpenAI AI Agronomist enrichment.
 - **Modern Responsive Web UI**: Dark emerald glassmorphic interface with interactive scanner animation, sample leaf presets, probability breakdown bars, and transparency telemetry.

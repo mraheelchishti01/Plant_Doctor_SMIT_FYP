@@ -1,5 +1,6 @@
 # Datasets
 Potato dataset/
+validation_dataset/
 *.zip
 *.tar.gz
 

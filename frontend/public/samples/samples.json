@@ -1,20 +1,44 @@
 [
   {
-    "class": "Potato___Early_blight",
     "name": "early_blight.JPG",
+    "label": "Potato Early Blight",
+    "badge": "Potato Leaf",
     "src": "/samples/early_blight.JPG",
-    "label": "Potato Early blight"
+    "category": "potato"
   },
   {
-    "class": "Potato___Late_blight",
     "name": "late_blight.JPG",
+    "label": "Potato Late Blight",
+    "badge": "Potato Leaf",
     "src": "/samples/late_blight.JPG",
-    "label": "Potato Late blight"
+    "category": "potato"
   },
   {
-    "class": "Potato___healthy",
     "name": "healthy.JPG",
+    "label": "Potato Healthy Leaf",
+    "badge": "Potato Leaf",
     "src": "/samples/healthy.JPG",
-    "label": "Potato healthy"
+    "category": "potato"
+  },
+  {
+    "name": "tomato_leaf.JPG",
+    "label": "Tomato Leaf (Non-Potato)",
+    "badge": "Species Rejected",
+    "src": "/samples/tomato_leaf.JPG",
+    "category": "negative"
+  },
+  {
+    "name": "unrelated_object.JPEG",
+    "label": "Unrelated Non-Plant",
+    "badge": "Invalid Target",
+    "src": "/samples/unrelated_object.JPEG",
+    "category": "negative"
+  },
+  {
+    "name": "unclear_leaf.JPG",
+    "label": "Unclear / Blurry Leaf",
+    "badge": "Inconclusive Quality",
+    "src": "/samples/unclear_leaf.JPG",
+    "category": "uncertain"
   }
 ]

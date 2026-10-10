@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import CropSelector from './components/CropSelector';
 import DiagnosticStudio from './components/DiagnosticStudio';
 import DiagnosisResult from './components/DiagnosisResult';
+import ValidationRejectionCard from './components/ValidationRejectionCard';
 import ModelSpecs from './components/ModelSpecs';
 import Footer from './components/Footer';
 import { Clock, X } from 'lucide-react';
@@ -74,10 +75,17 @@ export default function App() {
         />
 
         {diagnosisResult && (
-          <DiagnosisResult
-            result={diagnosisResult}
-            apiBaseUrl={API_BASE_URL}
-          />
+          diagnosisResult.success ? (
+            <DiagnosisResult
+              result={diagnosisResult}
+              apiBaseUrl={API_BASE_URL}
+            />
+          ) : (
+            <ValidationRejectionCard
+              result={diagnosisResult}
+              onReset={handleReset}
+            />
+          )
         )}
 
         <ModelSpecs />

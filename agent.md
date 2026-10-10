@@ -1,341 +1,141 @@
 # Agent.md — Potato Doctor AI
-## Existing Workspace Training + Vercel Deployment
-
-### 1. Main Objective
-
-Build a complete AI-based Potato Leaf Disease Detection website using the dataset already stored inside the currently open Antigravity project folder.
-
-**Do not create a new project elsewhere. Do not download the dataset again. Do not ask for the dataset path unless the existing workspace inspection fails.**
-
-The application must:
-
-- Train a new Potato disease classification model using the existing dataset.
-- Detect Potato Early Blight, Potato Late Blight, and Potato Healthy leaves.
-- Provide evidence-based disease treatment and prevention guidance.
-- Display Tomato, Corn, and Pepper as Coming Soon only.
-- Be prepared for deployment on Vercel.
-- Run and be tested locally before deployment.
-
-Do not reuse the old broken `.pkl` models.
-
-### 2. Inspect the Currently Open Workspace
-
-Before changing any files:
-
-1. Inspect the current project root.
-2. Locate the dataset within the current workspace, including its subdirectories.
-3. Identify the actual image folders and their class labels.
-4. Count the images in each Potato class.
-5. Confirm that all three required classes are present.
-6. Inspect existing project code and configuration files.
-7. Identify existing frontend frameworks, dependencies, and Git configuration.
-8. Preserve the original dataset and unrelated project files.
-9. Show a short report of the detected dataset structure and image counts.
-
-Do not move or delete the dataset.
-
-Do not duplicate a large dataset unnecessarily.
-
-Do not assume folder names or invent missing classes.
-
-If the dataset is already extracted, use it directly.
-
-### 3. Current Crop Scope
-
-Only Potato disease detection is available in this version.
-
-Required classes:
-
-- Potato Early Blight
-- Potato Late Blight
-- Potato Healthy
-
-Verify the actual folder names and map them correctly.
-
-The website must also show:
-
-- Tomato — COMING SOON
-- Corn — COMING SOON
-- Pepper — COMING SOON
-
-Do not train or integrate Tomato, Corn, or Pepper models yet.
-
-Do not allow these upcoming crops to generate predictions.
-
-### 4. Training Requirements
-
-Use the dataset found in the current workspace.
-
-Create training scripts inside the existing project, preferably under `training/`, without creating another project root.
-
-Use Python and TensorFlow/Keras.
-
-Prefer MobileNetV2 transfer learning as the initial approach. Use another appropriate image-classification architecture only when justified by the environment and evaluation results.
-
-Training requirements:
-
-1. Verify image labels and class counts.
-2. Identify corrupted and unreadable images.
-3. Check for duplicate images and data leakage where practical.
-4. Split data into training, validation, and test sets, starting with 70%, 15%, and 15%.
-5. Keep the test set untouched until final evaluation.
-6. Use the correct model-specific preprocessing.
-7. Apply realistic augmentation only to training images.
-8. Use early stopping and model checkpointing.
-9. Monitor validation loss and accuracy.
-10. Save the best validated model.
-11. Save the exact class mapping and preprocessing configuration.
-12. Generate a training and evaluation report.
-
-Never claim 100% accuracy or fabricate metrics.
-
-If GPU access is unavailable, select reasonable batch sizes and image dimensions for the available hardware.
-
-Do not retrain repeatedly without investigating poor results.
-
-### 5. Model Artifacts
-
-Save the newly trained model and configuration in the existing project, using a structure such as:
-
-- `models/potato_model.keras`
-- `models/class_mapping.json`
-- `models/model_config.json`
-- `reports/dataset_summary.json`
-- `reports/classification_report.json`
-- `reports/confusion_matrix.png`
-
-Adapt paths to the current workspace where appropriate.
-
-Do not commit the entire dataset to GitHub.
-
-Do not place large model files in the frontend's public directory.
-
-Before deployment, check model size, runtime dependencies, cold-start behavior, and the target platform's deployment limits.
-
-### 6. Evaluation and Reliable Predictions
-
-Evaluate the final model on unseen test images.
-
-Report:
-
-- Test accuracy
-- Precision and recall for each class
-- F1-score for each class
-- Macro F1-score
-- Confusion matrix
-- Misclassified examples where practical
-
-Ensure that Early Blight, Late Blight, and Healthy use the correct labels.
-
-Use exactly the same image preprocessing during inference as during training.
-
-Prediction requirements:
-
-- Never hardcode Early Blight as the default result.
-- Do not show a prediction when no image has been uploaded.
-- Clear the previous result when a new image is uploaded.
-- Reject invalid and corrupted images.
-- Handle missing model files and inference errors explicitly.
-- Do not invent confidence values.
-- Do not treat high model confidence as proof of a correct diagnosis.
-- Do not silently classify unrelated images as confirmed Potato diseases.
-
-Evaluate performance on representative non-Potato images if implementing an image-relevance check.
-
-Document the limitations of PlantVillage-based training when applied to real-world field photographs.
-
-### 7. Vercel Deployment Architecture
-
-**The final website must be deployable through Vercel.**
-
-First inspect the existing workspace and select the simplest architecture that is genuinely compatible with Vercel.
-
-Preferred approach:
-
-- Frontend: React and Vite, or the existing compatible frontend framework.
-- Frontend hosting: Vercel.
-- Backend: use a Vercel-compatible Python function only if the trained model, required libraries, execution time, memory, request size, and model-loading behavior fit the applicable limits.
-- If TensorFlow inference does not fit Vercel's limits, deploy the Python inference API to a compatible external Python hosting service and deploy the frontend to Vercel.
-
-Do not force a large TensorFlow model into an incompatible Vercel serverless function.
-
-Do not pretend that a deployment is complete when the backend cannot run.
-
-Keep the deployment architecture as simple as possible and explain any external backend requirement.
-
-### 8. Model Size and Hosting
-
-Before choosing where inference runs:
-
-1. Measure the trained model's size.
-2. Check the selected platform's current function bundle, runtime, memory, execution-time, and request-size limits.
-3. Verify the availability of TensorFlow and its dependencies in the selected runtime.
-4. Estimate model-loading time and cold-start behavior.
-5. Choose a compatible hosting method.
-
-Do not upload the dataset to Vercel.
-
-Do not place private model files or secrets in publicly served frontend assets.
-
-If the model cannot fit within Vercel's limits, keep the frontend on Vercel and use an external inference API.
-
-### 9. Treatment Advice with OpenAI API
-
-After a Potato prediction, provide treatment and prevention guidance using the OpenAI API when configured.
-
-Use verified agricultural information as the source of treatment recommendations.
-
-The image classifier determines the predicted class. The language model explains the result and provides guidance; it must not invent or change the classifier's prediction.
-
-Provide:
-
-- Disease explanation
-- Common symptoms
-- Immediate practical steps
-- Prevention advice
-- Safe, evidence-based treatment guidance
-- When to consult an agricultural expert
-- Reliable information sources
-- A clear diagnostic disclaimer
-
-Do not invent pesticide products, dosages, mixing instructions, or waiting periods.
-
-Use a curated treatment knowledge base from reputable agricultural extension services, universities, or plant pathology resources.
-
-If the OpenAI API is unavailable or no API key is configured, display the curated treatment guidance instead.
-
-Keep `OPENAI_API_KEY` on the server side only. Never expose it in frontend code, public environment variables, or Git commits.
-
-If Vercel is hosting the API route, verify that the route and all its dependencies fit Vercel's limits. If not, host the API separately.
-
-### 10. Website Requirements
-
-Create a polished and responsive website named **Potato Doctor AI**.
-
-Include:
-
-- Homepage and navigation
-- Crop selection dashboard
-- Potato image upload and preview
-- Prediction button and loading state
-- Predicted disease and confidence information
-- Treatment and prevention guidance
-- Reset button
-- Helpful error messages
-- Mobile and desktop layouts
-- About and responsible-use sections
-
-Crop dashboard:
-
-**Potato**
-- Status: Available
-- Fully working disease detection
-
-**Tomato**
-- Status: Coming Soon
-- No prediction functionality
-
-**Corn**
-- Status: Coming Soon
-- No prediction functionality
-
-**Pepper**
-- Status: Coming Soon
-- No prediction functionality
-
-Do not show fake predictions for upcoming crops.
-
-### 11. API and Configuration
-
-If a separate inference backend is needed, implement suitable endpoints such as:
-
-- `GET /health`
-- `GET /classes`
-- `POST /predict`
-- `POST /advice`
-
-Validate uploaded files and requests.
-
-Return structured JSON and appropriate error codes.
-
-Use environment variables for the production API URL.
-
-Never hardcode localhost URLs in production.
-
-Configure CORS securely for the deployed frontend.
-
-Create `.env.example` without actual secrets.
-
-Do not expose stack traces, internal paths, or credentials.
-
-### 12. Testing
-
-Test the application locally before deployment.
-
-Verify:
-
-- Valid Early Blight image
-- Valid Late Blight image
-- Valid Healthy image
-- Missing image
-- Invalid file type
-- Corrupted image
-- Non-Potato image handling
-- Missing or incompatible model
-- OpenAI API unavailable
-- New image replacing an old prediction
-- Tomato, Corn, and Pepper Coming Soon cards
-- Frontend production build
-- Backend health and prediction endpoints
-- Production API connectivity after deployment
-
-Use real test images and report actual results.
-
-Do not hardcode predictions to make tests pass.
-
-### 13. Vercel Configuration and Deployment
-
-Inspect the existing project before creating or modifying deployment files.
-
-Configure the Vercel project for the actual frontend framework and repository structure.
-
-Requirements:
-
-- Correct build command
-- Correct output directory
-- Correct root directory
-- Correct environment variables
-- Correct production API URL
-- Secure handling of secrets
-- Compatible routing and error handling
-
-Do not add unnecessary configuration files.
-
-Do not overwrite working configuration without checking its purpose.
-
-Run the production build locally.
-
-Deploy only after verifying the frontend and the required backend architecture.
-
-If deployment requires credentials or account access that are unavailable, prepare the project and provide the exact remaining steps without claiming success.
-
-### 14. Final Report
-
-At completion, report:
-
-1. The dataset directory used from the currently open workspace.
-2. Actual image counts for the three Potato classes.
-3. Training configuration and model architecture.
-4. Actual test metrics.
-5. Files created or modified.
-6. Local test results.
-7. How to run the application.
-8. Vercel configuration and deployment status.
-9. Whether a separate Python backend is required.
-10. Any remaining limitations.
-
-Do not claim that training, testing, or deployment succeeded unless it was actually completed and verified.
-
-### Final Priority
-
-Use the dataset already in the open workspace. Train and evaluate the Potato model properly. Build a reliable application, keep Tomato, Corn, and Pepper as Coming Soon, protect API keys, and deploy the frontend to Vercel using an architecture that genuinely supports the model.
+## Comprehensive System Documentation & Two-Stage Botanical Validation
+
+---
+
+### 1. Main Objectives & Verification Summary
+
+Build and maintain an end-to-end, scientifically defensible AI-based Potato Leaf Pathology diagnostic system using the native dataset already stored inside the open workspace folder.
+
+**Strict Potato-Leaf Validation Mandate:**
+1. **Potato leaves only:** Disease prediction is strictly gated behind an independent binary botanical validator. Diseases are predicted **only** when the uploaded image is verified as an authentic potato leaf.
+2. **Separate validation model:** A standalone binary classifier (`models/potato_validator.keras`) differentiates `potato_leaf` vs `not_potato_leaf` independently of the 3-class disease classifier (`models/potato_model.keras`).
+3. **Prediction workflow:** Two-stage sequential pipeline:
+   - **Stage 1 (Botanical Validation):** Analyzes foliage morphology to verify *Solanum tuberosum*.
+   - **Stage 2 (Pathology Classification):** Executes **only** if Stage 1 passes with high confidence ($P(\text{potato}) \ge 0.80$).
+4. **Reject other plants:** If a tomato, corn, pepper, mango, or any non-potato leaf is uploaded, prediction is immediately halted with:
+   > **Potato Leaf Not Detected**  
+   > *“This image does not appear to show a potato leaf. Potato Doctor AI currently supports potato leaves only. Please upload a clear image of a potato leaf.”*
+5. **Uncertain images:** If leaf morphology cannot be verified with high certainty ($0.35 \le P(\text{potato}) < 0.80$), disease diagnosis is withheld with:
+   > **Unable to Verify Potato Leaf**  
+   > *“We could not confidently verify that this is a potato leaf. Please upload a clear, well-lit image showing the leaf.”*
+6. **Invalid images:** Blank/solid images, corrupt files, unsupported formats, and 0-byte uploads are cleanly intercepted and rejected with clear HTTP 400 error messages.
+7. **No false confidence:** Never rely on the disease classifier's confidence to confirm crop species. Both thresholds and error boundaries are calibrated using a dedicated held-out test split.
+
+---
+
+### 2. Dataset Architecture & Separation
+
+#### A. Native Potato Disease Dataset (Stage 2 Model)
+Preserved untouched in `Potato dataset/Potato Diseases/`:
+- **Total images:** 2,152 native images (256x256 RGB JPEG)
+- `Potato___Early_blight`: 1,000 images
+- `Potato___Late_blight`: 1,000 images
+- `Potato___healthy`: 152 images
+- **Splits:** 70% Train (1,506), 15% Val (322), 15% Held-Out Test (324).
+- **Test Set Accuracy:** **97.22%** (Macro F1: 0.9577).
+
+#### B. Curated Botanical Validation Dataset (Stage 1 Model)
+Stored in `validation_dataset/` and indexed in `reports/validator_dataset_splits.json`:
+- **Total images:** 820 balanced images (50% Potato, 50% Non-Potato)
+  - **Positive (`potato_leaf`):** 410 images sampled evenly across Early Blight, Late Blight, and Healthy from the native dataset.
+  - **Negative (`not_potato_leaf`):** 410 diverse samples:
+    - *Other crop leaves (255 images):* Tomato (Early Blight, Late Blight, Leaf Mold, Healthy), Pepper (Bacterial Spot, Healthy), Corn (Common Rust, Healthy), Apple (Scab), Grape (Black Rot), Peach (Bacterial Spot) from `spMohanty/PlantVillage-Dataset`.
+    - *Unrelated objects (130 images):* Real-world non-plant images (animals, vehicles, everyday objects, scenes) from `EliSchwartz/imagenet-sample-images`.
+    - *Synthetic / Edge cases (25 images):* Blank solids, noise patterns, screenshots, UI diagrams, color gradients.
+- **Stratified Splits:**
+  - **Train:** 574 samples (287 pos, 287 neg)
+  - **Validation:** 122 samples (61 pos, 61 neg)
+  - **Held-Out Test:** 124 samples (62 pos, 62 neg: 38 other plant leaves, 20 unrelated objects, 4 edge cases)
+
+---
+
+### 3. Model Architecture & Threshold Calibration
+
+#### Model Separation
+1. **Disease Classifier (`models/potato_model.keras`):**
+   - Size: 21.52 MB
+   - Backbone: MobileNetV2 with fine-tuned top layers.
+   - Classes: `Potato___Early_blight`, `Potato___Late_blight`, `Potato___healthy`.
+2. **Binary Validator (`models/potato_validator.keras`):**
+   - Size: 23.53 MB
+   - Backbone: MobileNetV2 with GlobalAveragePooling2D, BatchNorm, Dense(128, relu, l2=1e-4), Dropout(0.35), Dense(1, sigmoid).
+   - Output: $P(\text{potato\_leaf}) \in [0.0, 1.0]$.
+
+#### Evaluation Metrics (Held-Out Test Set: 124 Unseen Samples)
+- **ROC AUC:** **0.9971**
+- **Selected Operational Threshold Policy:**
+  - High Confidence Threshold ($\tau_{\text{high}}$): **0.80**
+  - Low Rejection Threshold ($\tau_{\text{low}}$): **0.35**
+- **Test Performance at High Threshold ($\tau = 0.80$):**
+  - Accuracy: **94.35%**
+  - Precision: **98.25%**
+- **Subtype Score Distribution:**
+  - `potato`: Mean score = 0.951. 90.32% passed $\ge 0.80$, 0.0% falsely rejected $< 0.35$.
+  - `other_plant_leaf`: Mean score = 0.140. 89.47% strictly rejected $< 0.35$, only 2.6% above 0.80.
+  - `unrelated_object`: Mean score = 0.009. 100.0% strictly rejected $< 0.35$, 0.0% false positives.
+  - `edge_synthetic`: Mean score = 0.000. 100.0% strictly rejected $< 0.35$, 0.0% false positives.
+
+---
+
+### 4. End-to-End Decision Workflow
+
+```mermaid
+graph TD
+    A["Uploaded Image File"] --> B{"Input Sanity Checks<br/>Ext, Size, Corrupt, Blank"}
+    B -- "Failed" --> C["HTTP 400 Bad Request<br/>Clear Rejection Detail"]
+    B -- "Passed" --> D["Stage 1: MobileNetV2 Validator<br/>potato_validator.keras"]
+    D --> E{"P(potato_leaf)"}
+    E -- "P < 0.35" --> F["Potato Leaf Not Detected<br/>Prediction Halted (No Disease Run)"]
+    E -- "0.35 <= P < 0.80" --> G["Unable to Verify Potato Leaf<br/>Prediction Halted (No Disease Run)"]
+    E -- "P >= 0.80" --> H["Stage 2: Pathology Classifier<br/>potato_model.keras"]
+    H --> I["Confirmed Diagnosis Result<br/>Early Blight / Late Blight / Healthy<br/>Confidence + Agronomic Guidance"]
+```
+
+---
+
+### 5. Frontend & UI Verification
+
+The Vite React frontend (`frontend/`) features:
+1. **Validation Rejection Cards (`frontend/src/components/ValidationRejectionCard.jsx`):**
+   - Renders **Potato Leaf Not Detected** with exact prompt wording when non-potato crops or unrelated objects are uploaded.
+   - Renders **Unable to Verify Potato Leaf** with exact prompt wording when blur/uncertainty threshold is triggered.
+   - Completely omits disease diagnosis, healthy badges, or treatment plans for unverified uploads.
+2. **State Reset Safety:**
+   - Any new image drop, upload, or preset selection immediately resets previous prediction state.
+3. **Quick Test Presets (`frontend/public/samples/samples.json`):**
+   - Real Early Blight (Potato) -> Confirmed Diagnosis
+   - Real Late Blight (Potato) -> Confirmed Diagnosis
+   - Real Healthy Leaf (Potato) -> Confirmed Diagnosis
+   - Tomato Leaf (Non-Potato) -> "Potato Leaf Not Detected"
+   - Unrelated Object (Non-Plant) -> "Potato Leaf Not Detected"
+   - Unclear / Blurry Leaf -> "Unable to Verify Potato Leaf"
+
+---
+
+### 6. Automated Integration Test Suite
+
+Automated verification in `tests/test_local_system.py` executes 13 rigorous integration tests against the live API:
+- `[TEST 1] GET /health`: Confirms both independent models loaded and operational.
+- `[TEST 2] GET /classes`: Confirms active Potato scope and locked Coming Soon guards.
+- `[TEST 3] POST /predict` (Potato Early Blight): Passed validation and diagnosed Early Blight (100%).
+- `[TEST 4] POST /predict` (Potato Late Blight): Passed validation and diagnosed Late Blight (100%, Critical).
+- `[TEST 5] POST /predict` (Potato Healthy): Passed validation and diagnosed Healthy (99.99%).
+- `[TEST 6] POST /predict` (Tomato Leaf): Rejected with **Potato Leaf Not Detected** and exact required message.
+- `[TEST 7] POST /predict` (Unrelated Object): Rejected with **Potato Leaf Not Detected**.
+- `[TEST 8] POST /predict` (Unclear Specimen): Halted with **Unable to Verify Potato Leaf** and exact required message.
+- `[TEST 9] POST /predict` (.txt file): Intercepted with HTTP 400 Bad Request.
+- `[TEST 10] POST /predict` (0 bytes): Intercepted with HTTP 400 Bad Request.
+- `[TEST 11] POST /predict` (Corrupted bytes): Intercepted with HTTP 400 Bad Request.
+- `[TEST 12] POST /predict` (Blank white image): Intercepted with HTTP 400 Bad Request.
+- `[TEST 13] Filesystem check`: Confirms separate models and configuration files.
+
+**Test Result:** **13/13 tests passed with 100% success.**
+
+---
+
+### 7. Deployment Configuration
+
+- **Frontend Deployment:** Vercel via root `vercel.json` pointing build commands to `npm --prefix frontend run build` and output to `frontend/dist`.
+- **Backend Deployment:** Decoupled FastAPI server deployable to Render, Railway, AWS ECS, or Hugging Face Spaces.
+- **Environment Variables:** `VITE_API_BASE_URL` in frontend; `CORS_ORIGINS` and optional `OPENAI_API_KEY` in backend.
