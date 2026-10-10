@@ -21,7 +21,16 @@ from PIL import Image
 import numpy as np
 
 WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
-MODELS_DIR = WORKSPACE_ROOT / "models"
+
+# Resolve models directory across diverse cloud/container environments (Docker, Render, Railway, local)
+_candidate_model_dirs = [
+    Path(os.environ["MODELS_DIR"]) if "MODELS_DIR" in os.environ else None,
+    WORKSPACE_ROOT / "models",
+    Path(__file__).resolve().parent / "models",
+    Path("models").resolve(),
+    Path("/app/models")
+]
+MODELS_DIR = next((d for d in _candidate_model_dirs if d and d.exists()), WORKSPACE_ROOT / "models")
 REPORTS_DIR = WORKSPACE_ROOT / "reports"
 KNOWLEDGE_BASE_PATH = Path(__file__).resolve().parent / "knowledge_base.json"
 
@@ -157,6 +166,16 @@ def startup_event():
     # Preload both independent models
     get_validator_model()
     get_model()
+
+@app.get("/")
+def root():
+    return {
+        "service": "Potato Doctor AI Inference API",
+        "status": "online",
+        "docs_url": "/docs",
+        "health_check": "/health",
+        "model_classes": "/classes"
+    }
 
 @app.get("/health")
 def health_check():
