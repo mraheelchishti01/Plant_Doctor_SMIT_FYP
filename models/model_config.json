@@ -1,0 +1,32 @@
+{
+  "model_name": "potato_doctor_mobilenetv2",
+  "architecture": "MobileNetV2 Transfer Learning + Custom Dense Classification Head",
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "preprocessing": {
+    "method": "tf.keras.applications.mobilenet_v2.preprocess_input",
+    "range": "[-1.0, 1.0]",
+    "resize_dims": [
+      224,
+      224
+    ]
+  },
+  "classes": {
+    "0": "Potato___Early_blight",
+    "1": "Potato___Late_blight",
+    "2": "Potato___healthy"
+  },
+  "class_weights": {
+    "0": 0.7171428571428572,
+    "1": 0.7171428571428572,
+    "2": 4.735849056603773
+  },
+  "parameters": {
+    "initial_learning_rate": 0.001,
+    "fine_tune_learning_rate": 0.0001,
+    "batch_size": 32
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "potato-doctor-ai",
+  "version": "1.0.0",
+  "description": "Potato Doctor AI - Precision Potato Leaf Pathology & Crop Disease Diagnostic System",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview"
+  },
+  "keywords": [
+    "potato-disease-detection",
+    "plant-pathology",
+    "agriculture-ai",
+    "mobilenetv2",
+    "vercel"
+  ],
+  "author": "Muhammad Raheel Chishti",
+  "license": "MIT"
+}

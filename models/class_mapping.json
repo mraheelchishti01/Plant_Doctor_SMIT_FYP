@@ -1,0 +1,17 @@
+{
+  "indices_to_classes": {
+    "0": "Potato___Early_blight",
+    "1": "Potato___Late_blight",
+    "2": "Potato___healthy"
+  },
+  "classes_to_indices": {
+    "Potato___Early_blight": 0,
+    "Potato___Late_blight": 1,
+    "Potato___healthy": 2
+  },
+  "friendly_names": {
+    "Potato___Early_blight": "Potato Early Blight",
+    "Potato___Late_blight": "Potato Late Blight",
+    "Potato___healthy": "Potato Healthy"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "Potato___Early_blight": {
+    "scientific_name": "Alternaria solani",
+    "common_name": "Potato Early Blight",
+    "crop": "Potato",
+    "severity": "Moderate to High",
+    "description": "Early blight is a prevalent fungal disease caused by Alternaria solani. It primarily attacks older potato foliage first, producing characteristic dark brown to black necrotic spots with distinct concentric rings creating a 'target board' or bullseye appearance.",
+    "symptoms": [
+      "Dark brown to black circular-to-angular spots on older lower leaves.",
+      "Concentric rings ('target-board' or bullseye pattern) within lesions.",
+      "Chlorotic (yellow) halos developing around spots as fungal toxins spread.",
+      "Premature leaf senescence, drying out, and leaf drop leading to defoliation.",
+      "In severe cases, dark, sunken, leathery lesions appear on potato stems."
+    ],
+    "immediate_actions": [
+      "Remove and safely destroy heavily infected lower foliage (do not compost diseased plant material).",
+      "Cease all overhead sprinkler irrigation immediately; water strictly at soil level early in the morning so canopy dries rapidly.",
+      "Ensure adequate physical spacing between potato plants to improve air circulation and decrease humidity in the microclimate.",
+      "Disinfect pruning shears, boots, and tools with 70% isopropyl alcohol or a 10% household bleach solution between plants."
+    ],
+    "prevention": [
+      "Implement a strict 3- to 4-year crop rotation with non-solanaceous crops (avoid planting after tomato, pepper, or eggplant).",
+      "Apply clean straw or plastic mulch around the base of vines to create a physical barrier preventing fungal spores from splashing up from the soil during rain.",
+      "Maintain balanced plant nutrition with adequate potassium and moderate nitrogen (stressed or senescing plants are much more susceptible).",
+      "Source certified disease-free seed tubers and select cultivars with documented tolerance."
+    ],
+    "treatments": {
+      "fungicides": [
+        "Preventative protectants: Chlorothalonil or Mancozeb applied before canopy closure and continued at 7- to 10-day intervals depending on disease pressure.",
+        "Targeted systemic fungicides: Azoxystrobin, Pyraclostrobin, or Difenoconazole rotated to adhere to FRAC guidelines and prevent resistance.",
+        "Organic / Bio-fungicides: Fixed copper fungicides (copper hydroxide/copper sulfate) or Bacillus subtilis (QST 713 strain)."
+      ],
+      "precautions": "Always adhere strictly to manufacturer label instructions, personal protective equipment (PPE) requirements, and local Pre-Harvest Intervals (PHI)."
+    },
+    "expert_consultation": "Consult a local university extension specialist or certified agronomist if defoliation exceeds 15% before tuber bulking or if high temperatures (24-30°C) coincide with frequent dew periods.",
+    "sources": [
+      "Cornell University Cooperative Extension - Vegetable MD Online",
+      "University of California Statewide Integrated Pest Management Program (UC IPM)",
+      "USDA Agricultural Research Service (ARS)"
+    ],
+    "disclaimer": "Diagnostic guidance is based on machine vision and agricultural extension literature. Verify locally with certified crop advisors and always comply with official pesticide regulations."
+  },
+  "Potato___Late_blight": {
+    "scientific_name": "Phytophthora infestans",
+    "common_name": "Potato Late Blight",
+    "crop": "Potato",
+    "severity": "CRITICAL / SEVERE",
+    "description": "Late blight is a devastating, fast-moving disease caused by the oomycete water mold Phytophthora infestans. Famous historically for causing the Great Irish Famine, it can destroy entire fields of potatoes within a few days under cool, wet weather conditions.",
+    "symptoms": [
+      "Pale green to water-soaked circular lesions that rapidly expand and turn purplish-brown or dark black.",
+      "Delicate white cottony/fuzzy fungal growth (sporangiophores) visible on the undersides of leaves and at lesion borders in humid conditions.",
+      "Water-soaked dark lesions rapidly girdling potato stems, causing plant collapse.",
+      "Infected tubers exhibit irregular, sunken, dry brown-to-purplish rot penetrating into the flesh.",
+      "Distinct foul, decaying odor in fields with advanced canopy destruction."
+    ],
+    "immediate_actions": [
+      "CRITICAL: Act immediately. Late blight produces billions of airborne sporangia that infect surrounding fields.",
+      "Carefully bag and destroy infected plants immediately (bury deeply or incinerate where permitted; never compost).",
+      "Completely halt overhead watering and reduce irrigation frequency to lower canopy moisture.",
+      "Kill vines (vine desiccation) 2-3 weeks prior to harvest if late blight is present to prevent spore wash-down onto tubers."
+    ],
+    "prevention": [
+      "Plant strictly certified disease-free seed potatoes from certified seed growers.",
+      "Eliminate all cull piles, volunteer potato plants, and wild solanaceous weeds (such as nightshade) around fields.",
+      "Provide wide row spacing (minimum 36 inches) oriented with prevailing winds to accelerate canopy drying.",
+      "Hill up soil generously (at least 8-10 cm cover over tubers) to create an effective soil buffer against spore penetration."
+    ],
+    "treatments": {
+      "fungicides": [
+        "Preventative protectants: Mancozeb, Chlorothalonil, or Fluazinam applied prior to infection or when local weather alerts (e.g. Blitecast) trigger warnings.",
+        "Systemic / Curative oomycides: Cymoxanil, Dimethomorph, Fluopicolide, or Mandipropamid used in alternation according to FRAC anti-resistance management.",
+        "Organic management: Fixed copper formulations applied strictly preventatively before infection occurs."
+      ],
+      "precautions": "Late blight pathogens develop resistance rapidly. Never apply single-site systemic fungicides alone; tank-mix or alternate with protectant fungicides."
+    },
+    "expert_consultation": "URGENT: Alert your local agricultural extension service or Department of Agriculture immediately upon suspected detection. Late blight is a community-level quarantine threat.",
+    "sources": [
+      "International Potato Center (CIP)",
+      "Cornell University Late Blight Decision Support System",
+      "Oregon State University Extension Service"
+    ],
+    "disclaimer": "Late blight is an aggressive, high-consequence plant disease. Adhere to statutory pest notifications in your jurisdiction and verify all management actions with regional crop specialists."
+  },
+  "Potato___healthy": {
+    "scientific_name": "Solanum tuberosum",
+    "common_name": "Potato Healthy",
+    "crop": "Potato",
+    "severity": "None - Optimal Health",
+    "description": "The inspected foliage shows vibrant, healthy characteristics with uniform chlorophyll pigmentation, intact leaf margins, and no visible necrotic lesions, chlorosis, or pathogen signs.",
+    "symptoms": [
+      "Uniform vibrant green coloration across upper and lower leaf surfaces.",
+      "Clean, smooth leaf margins without curling, speckling, or necrotic margins.",
+      "Turgid leaf structure and sturdy stems with no water-soaked streaks or fungal fuzz.",
+      "Vigorous canopy architecture supporting active photosynthesis."
+    ],
+    "immediate_actions": [
+      "Continue regular crop scouting: inspect lower canopy and leaf undersides at least twice weekly.",
+      "Ensure steady, regular irrigation matching the current growth stage (e.g., tuber initiation vs bulking).",
+      "Protect foliage from physical abrasion during weeding or tractor passes."
+    ],
+    "prevention": [
+      "Maintain soil organic matter and balanced N-P-K fertilizer applications based on regular soil testing.",
+      "Employ drip or furrow irrigation to keep foliage completely dry.",
+      "Clean tractors, cultivators, and hand tools before entering healthy fields from other plots.",
+      "Monitor local weather forecasts for extended high humidity and temperature drops that favor disease emergence."
+    ],
+    "treatments": {
+      "fungicides": [
+        "No chemical fungicide applications are required for healthy leaves.",
+        "In disease-endemic regions, preventative organic protective sprays (e.g. bio-stimulants or mild copper) may be scheduled prior to rainy seasons."
+      ],
+      "precautions": "Avoid over-applying nitrogen fertilizer, which creates overly lush foliage susceptible to sap-sucking pests and fungi."
+    },
+    "expert_consultation": "Routine agricultural extension updates are recommended to stay informed of regional pest and disease alerts.",
+    "sources": [
+      "Food and Agriculture Organization (FAO) Potato Crop Production Guide",
+      "UC IPM Potato Cultural Care Guidelines"
+    ],
+    "disclaimer": "Diagnostic evaluation reflects the visible characteristics of the uploaded specimen. Continue regular field scouting for early detection of potential stress."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "dataset_path": "D:\\SMIT FYP\\Potato dataset\\Potato Diseases",
+  "total_images": 2152,
+  "valid_images": 2152,
+  "corrupt_images": 0,
+  "classes": {
+    "Potato___Early_blight": {
+      "friendly_name": "Potato Early Blight",
+      "total_files": 1000,
+      "valid_images": 1000,
+      "corrupt_images": 0
+    },
+    "Potato___Late_blight": {
+      "friendly_name": "Potato Late Blight",
+      "total_files": 1000,
+      "valid_images": 1000,
+      "corrupt_images": 0
+    },
+    "Potato___healthy": {
+      "friendly_name": "Potato Healthy",
+      "total_files": 152,
+      "valid_images": 152,
+      "corrupt_images": 0
+    }
+  },
+  "duplicates_found": 0,
+  "resolutions": {
+    "256x256": 2152
+  },
+  "channels": {
+    "RGB": 2152
+  },
+  "formats": {
+    "JPEG": 2152
+  },
+  "split_counts": {
+    "train": {
+      "Potato___Early_blight": 700,
+      "Potato___Late_blight": 700,
+      "Potato___healthy": 106
+    },
+    "val": {
+      "Potato___Early_blight": 150,
+      "Potato___Late_blight": 150,
+      "Potato___healthy": 22
+    },
+    "test": {
+      "Potato___Early_blight": 150,
+      "Potato___Late_blight": 150,
+      "Potato___healthy": 24
+    }
+  },
+  "split_totals": {
+    "train": 1506,
+    "val": 322,
+    "test": 324
+  }
+}

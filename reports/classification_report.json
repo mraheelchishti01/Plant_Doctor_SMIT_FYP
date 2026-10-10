@@ -1,0 +1,179 @@
+{
+  "test_samples": 324,
+  "test_accuracy": 0.9722222222222222,
+  "classification_report": {
+    "Potato Early Blight": {
+      "precision": 0.9738562091503268,
+      "recall": 0.9933333333333333,
+      "f1-score": 0.9834983498349835,
+      "support": 150.0
+    },
+    "Potato Late Blight": {
+      "precision": 0.9795918367346939,
+      "recall": 0.96,
+      "f1-score": 0.9696969696969697,
+      "support": 150.0
+    },
+    "Potato Healthy": {
+      "precision": 0.9166666666666666,
+      "recall": 0.9166666666666666,
+      "f1-score": 0.9166666666666666,
+      "support": 24.0
+    },
+    "accuracy": 0.9722222222222222,
+    "macro avg": {
+      "precision": 0.9567049041838956,
+      "recall": 0.9566666666666666,
+      "f1-score": 0.9566206620662067,
+      "support": 324.0
+    },
+    "weighted avg": {
+      "precision": 0.9722753298850403,
+      "recall": 0.9722222222222222,
+      "f1-score": 0.9721583269438056,
+      "support": 324.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      149,
+      1,
+      0
+    ],
+    [
+      4,
+      144,
+      2
+    ],
+    [
+      0,
+      2,
+      22
+    ]
+  ],
+  "class_labels": [
+    "Potato Early Blight",
+    "Potato Late Blight",
+    "Potato Healthy"
+  ],
+  "num_misclassified": 9,
+  "misclassified_samples": [
+    {
+      "image_path": "Potato dataset/Potato Diseases/Potato___Early_blight/0e0a1b51-f61c-4934-bc57-a820af1faacb___RS_Early.B 7147.JPG",
+      "true_class": "Potato___Early_blight",
+      "true_friendly": "Potato Early Blight",
+      "pred_class": "Potato___Late_blight",
+      "pred_friendly": "Potato Late Blight",
+      "confidence": 0.5376856327056885,
+      "probabilities": {
+        "Potato___Early_blight": 0.46231430768966675,
+        "Potato___Late_blight": 0.5376856327056885,
+        "Potato___healthy": 1.9078974844433105e-08
+      }
+    },
+    {
+      "image_path": "Potato dataset/Potato Diseases/Potato___Late_blight/a6623827-bcdc-40ed-81e6-5cde1a1da997___RS_LB 3179.JPG",
+      "true_class": "Potato___Late_blight",
+      "true_friendly": "Potato Late Blight",
+      "pred_class": "Potato___healthy",
+      "pred_friendly": "Potato Healthy",
+      "confidence": 0.6699305176734924,
+      "probabilities": {
+        "Potato___Early_blight": 2.077082172036171e-05,
+        "Potato___Late_blight": 0.33004873991012573,
+        "Potato___healthy": 0.6699305176734924
+      }
+    },
+    {
+      "image_path": "Potato dataset/Potato Diseases/Potato___Late_blight/546fcdf5-862b-42fb-931d-a51a85dc843c___RS_LB 4403.JPG",
+      "true_class": "Potato___Late_blight",
+      "true_friendly": "Potato Late Blight",
+      "pred_class": "Potato___Early_blight",
+      "pred_friendly": "Potato Early Blight",
+      "confidence": 0.9719498157501221,
+      "probabilities": {
+        "Potato___Early_blight": 0.9719498157501221,
+        "Potato___Late_blight": 0.028050247579813004,
+        "Potato___healthy": 1.853987232833254e-12
+      }
+    },
+    {
+      "image_path": "Potato dataset/Potato Diseases/Potato___Late_blight/d3811753-f672-405c-afa3-8fbaa2715bf4___RS_LB 2720.JPG",
+      "true_class": "Potato___Late_blight",
+      "true_friendly": "Potato Late Blight",
+      "pred_class": "Potato___healthy",
+      "pred_friendly": "Potato Healthy",
+      "confidence": 0.5270680785179138,
+      "probabilities": {
+        "Potato___Early_blight": 4.10120228480082e-05,
+        "Potato___Late_blight": 0.4728909432888031,
+        "Potato___healthy": 0.5270680785179138
+      }
+    },
+    {
+      "image_path": "Potato dataset/Potato Diseases/Potato___Late_blight/841a4e5a-7aa6-4b32-a2b2-436874a48fdb___RS_LB 4469.JPG",
+      "true_class": "Potato___Late_blight",
+      "true_friendly": "Potato Late Blight",
+      "pred_class": "Potato___Early_blight",
+      "pred_friendly": "Potato Early Blight",
+      "confidence": 0.9471607804298401,
+      "probabilities": {
+        "Potato___Early_blight": 0.9471607804298401,
+        "Potato___Late_blight": 0.05283527076244354,
+        "Potato___healthy": 3.912330612365622e-06
+      }
+    },
+    {
+      "image_path": "Potato dataset/Potato Diseases/Potato___Late_blight/d992e6d3-25c9-4bbb-a806-8bc1455e5c40___RS_LB 4968.JPG",
+      "true_class": "Potato___Late_blight",
+      "true_friendly": "Potato Late Blight",
+      "pred_class": "Potato___Early_blight",
+      "pred_friendly": "Potato Early Blight",
+      "confidence": 0.8805789351463318,
+      "probabilities": {
+        "Potato___Early_blight": 0.8805789351463318,
+        "Potato___Late_blight": 0.1194210797548294,
+        "Potato___healthy": 3.537376825919064e-13
+      }
+    },
+    {
+      "image_path": "Potato dataset/Potato Diseases/Potato___Late_blight/613b5b7f-225d-4df8-8893-0f30111925ae___RS_LB 4243.JPG",
+      "true_class": "Potato___Late_blight",
+      "true_friendly": "Potato Late Blight",
+      "pred_class": "Potato___Early_blight",
+      "pred_friendly": "Potato Early Blight",
+      "confidence": 0.9736701250076294,
+      "probabilities": {
+        "Potato___Early_blight": 0.9736701250076294,
+        "Potato___Late_blight": 0.026329845190048218,
+        "Potato___healthy": 3.0230545844389667e-10
+      }
+    },
+    {
+      "image_path": "Potato dataset/Potato Diseases/Potato___healthy/14484ea5-9c34-427c-abe4-2743265aced0___RS_HL 4204.JPG",
+      "true_class": "Potato___healthy",
+      "true_friendly": "Potato Healthy",
+      "pred_class": "Potato___Late_blight",
+      "pred_friendly": "Potato Late Blight",
+      "confidence": 0.9956420660018921,
+      "probabilities": {
+        "Potato___Early_blight": 0.0009419085690751672,
+        "Potato___Late_blight": 0.9956420660018921,
+        "Potato___healthy": 0.003416043473407626
+      }
+    },
+    {
+      "image_path": "Potato dataset/Potato Diseases/Potato___healthy/5a3fc4bb-a78c-4276-8934-f0b037ffb860___RS_HL 5412.JPG",
+      "true_class": "Potato___healthy",
+      "true_friendly": "Potato Healthy",
+      "pred_class": "Potato___Late_blight",
+      "pred_friendly": "Potato Late Blight",
+      "confidence": 0.7449222803115845,
+      "probabilities": {
+        "Potato___Early_blight": 0.002699936041608453,
+        "Potato___Late_blight": 0.7449222803115845,
+        "Potato___healthy": 0.25237777829170227
+      }
+    }
+  ]
+}
