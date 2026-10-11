@@ -66,8 +66,308 @@ if "scans_count" not in st.session_state:
 
 is_dark = (st.session_state.theme == "dark")
 
-# Dynamic Theme Token Definition
-if is_dark:
+# ==================== DYNAMIC THEME STYLESHEET ====================
+if not is_dark:
+    # COMPREHENSIVE LIGHT THEME RULES (Pure White/Slate, Black Text, White Buttons & Navbar)
+    theme_css = """
+    :root {
+        --bg-page: #f8fafc;
+        --bg-surface: #ffffff;
+        --bg-card: #ffffff;
+        --bg-card-hover: #f1f5f9;
+        --bg-card-active: #ecfdf5;
+        --text-primary: #000000;
+        --text-secondary: #1e293b;
+        --text-muted: #475569;
+        --border-color: #cbd5e1;
+        --border-accent: #059669;
+        --navbar-bg: #ffffff;
+        --navbar-border: #cbd5e1;
+        --hero-bg: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 40%, #ffffff 100%);
+        --stat-bg: #ffffff;
+        --tab-bg: #e2e8f0;
+        --box-shadow: 0 4px 18px -2px rgba(0, 0, 0, 0.07);
+        --result-verified-bg: #ecfdf5;
+        --result-rejected-bg: #fef2f2;
+        --result-uncertain-bg: #fffbeb;
+    }
+
+    html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"] {
+        background-color: #f8fafc !important;
+        color: #000000 !important;
+    }
+
+    header[data-testid="stHeader"] {
+        background-color: #ffffff !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+    }
+
+    /* Force all text in Light Theme to black / dark charcoal */
+    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
+    .stApp p, .stApp span, .stApp div, .stApp label, .stApp li, .stApp a,
+    .stApp strong, .stApp b, .stMarkdown, .stText {
+        color: #000000 !important;
+    }
+
+    /* Top Navbar Row */
+    div[data-testid="stHorizontalBlock"]:has(#navbar-marker) {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 16px !important;
+        padding: 14px 22px !important;
+        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06) !important;
+        margin-bottom: 24px !important;
+        align-items: center !important;
+    }
+    .nav-link {
+        color: #000000 !important;
+        background: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        text-decoration: none !important;
+        font-weight: 700 !important;
+        font-size: 0.9rem !important;
+        padding: 6px 14px !important;
+        border-radius: 8px !important;
+        transition: all 0.2s ease !important;
+    }
+    .nav-link:hover {
+        color: #047857 !important;
+        background: #ecfdf5 !important;
+        border-color: #10b981 !important;
+    }
+
+    /* Sidebar in Light Mode */
+    [data-testid="stSidebar"], [data-testid="stSidebarContent"] {
+        background-color: #ffffff !important;
+        border-right: 1px solid #cbd5e1 !important;
+        color: #000000 !important;
+    }
+    [data-testid="stSidebar"] * {
+        color: #000000 !important;
+    }
+    [data-testid="stSidebar"] .stMarkdown p, [data-testid="stSidebar"] caption {
+        color: #334155 !important;
+    }
+
+    /* ALL BUTTONS IN LIGHT MODE: PURE WHITE WITH CRISP BORDER AND BLACK TEXT */
+    .stButton > button {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border: 1.5px solid #94a3b8 !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+        font-weight: 700 !important;
+        border-radius: 10px !important;
+    }
+    .stButton > button * {
+        color: #000000 !important;
+        font-weight: 700 !important;
+    }
+    .stButton > button:hover {
+        background-color: #ecfdf5 !important;
+        border-color: #10b981 !important;
+        box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2) !important;
+    }
+    .stButton > button:hover * {
+        color: #047857 !important;
+    }
+    .stButton > button:active {
+        background-color: #d1fae5 !important;
+    }
+
+    /* TABS IN LIGHT MODE */
+    .stTabs [data-baseweb="tab-list"] {
+        background-color: #e2e8f0 !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 12px !important;
+        padding: 6px !important;
+        gap: 8px !important;
+    }
+    .stTabs [data-baseweb="tab"] {
+        color: #000000 !important;
+        font-weight: 700 !important;
+        border-radius: 8px !important;
+        padding: 8px 18px !important;
+    }
+    .stTabs [data-baseweb="tab"] * {
+        color: #000000 !important;
+        font-weight: 700 !important;
+    }
+    .stTabs [aria-selected="true"] {
+        background-color: #ffffff !important;
+        color: #047857 !important;
+        border-bottom: none !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    }
+    .stTabs [aria-selected="true"] * {
+        color: #047857 !important;
+        font-weight: 800 !important;
+    }
+
+    /* FILE UPLOADER IN LIGHT MODE */
+    [data-testid="stFileUploader"] {
+        background-color: #ffffff !important;
+        border: 2px dashed #94a3b8 !important;
+        border-radius: 14px !important;
+        padding: 12px !important;
+    }
+    [data-testid="stFileUploader"] section {
+        background-color: #f8fafc !important;
+    }
+    [data-testid="stFileUploader"] * {
+        color: #000000 !important;
+    }
+    [data-testid="stFileUploader"] button {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border: 1px solid #94a3b8 !important;
+    }
+
+    /* CAMERA INPUT IN LIGHT MODE */
+    [data-testid="stCameraInput"] {
+        background-color: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 14px !important;
+        padding: 12px !important;
+    }
+    [data-testid="stCameraInput"] * {
+        color: #000000 !important;
+    }
+
+    /* RADIO BUTTONS IN LIGHT MODE */
+    div[data-testid="stRadio"] div[role="radiogroup"] {
+        background-color: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 10px !important;
+        padding: 4px !important;
+    }
+    div[data-testid="stRadio"] label, div[data-testid="stRadio"] span, div[data-testid="stRadio"] p {
+        color: #000000 !important;
+        font-weight: 700 !important;
+    }
+
+    /* EXPANDERS IN LIGHT MODE */
+    div[data-testid="stExpander"] {
+        background-color: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 12px !important;
+    }
+    div[data-testid="stExpander"] details summary {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+    div[data-testid="stExpander"] details summary * {
+        color: #000000 !important;
+        font-weight: 700 !important;
+    }
+    div[data-testid="stExpander"] [data-testid="stExpanderDetails"] {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+    div[data-testid="stExpander"] [data-testid="stExpanderDetails"] * {
+        color: #000000 !important;
+    }
+
+    /* CARDS IN LIGHT MODE */
+    .crop-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.06) !important;
+    }
+    .crop-card:hover {
+        background: #f8fafc !important;
+        border-color: #10b981 !important;
+    }
+    .crop-card.active {
+        background: #ecfdf5 !important;
+        border: 2px solid #10b981 !important;
+    }
+    .crop-card h3 {
+        color: #000000 !important;
+    }
+    .crop-card p, .crop-card ul, .crop-card li {
+        color: #1e293b !important;
+    }
+
+    /* HERO BANNER IN LIGHT MODE */
+    .hero-banner {
+        background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 40%, #ffffff 100%) !important;
+        border: 1px solid #a7f3d0 !important;
+        box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.05) !important;
+    }
+    .hero-banner h1, .hero-banner p {
+        color: #000000 !important;
+    }
+
+    /* STAT BOX IN LIGHT MODE */
+    .stat-box {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    }
+    .stat-box h4, .stat-box p, .stat-box div {
+        color: #000000 !important;
+    }
+
+    /* RESULT PANELS IN LIGHT MODE */
+    .result-verified {
+        background: #ecfdf5 !important;
+        border: 2px solid #10b981 !important;
+    }
+    .result-verified h1, .result-verified h2, .result-verified div {
+        color: #000000 !important;
+    }
+    .result-rejected {
+        background: #fef2f2 !important;
+        border: 2px solid #ef4444 !important;
+    }
+    .result-rejected h1, .result-rejected h2, .result-rejected div, .result-rejected p {
+        color: #000000 !important;
+    }
+    .result-uncertain {
+        background: #fffbeb !important;
+        border: 2px solid #f59e0b !important;
+    }
+    .result-uncertain h1, .result-uncertain h2, .result-uncertain div, .result-uncertain p {
+        color: #000000 !important;
+    }
+
+    /* BADGES */
+    .badge-online {
+        background: #ecfdf5 !important;
+        color: #047857 !important;
+        border: 1px solid #10b981 !important;
+    }
+    .badge-guard {
+        background: #eff6ff !important;
+        color: #1d4ed8 !important;
+        border: 1px solid #3b82f6 !important;
+    }
+    .badge-cloud {
+        background: #fbf5ff !important;
+        color: #7e22ce !important;
+        border: 1px solid #a855f7 !important;
+    }
+    .status-active {
+        background: #ecfdf5 !important;
+        color: #047857 !important;
+        border: 1px solid #10b981 !important;
+    }
+    .status-guarded {
+        background: #fffbeb !important;
+        color: #b45309 !important;
+        border: 1px solid #f59e0b !important;
+    }
+
+    /* PROGRESS METERS IN LIGHT MODE */
+    [data-testid="stProgress"] > div {
+        background-color: #cbd5e1 !important;
+    }
+    [data-testid="stProgress"] > div > div > div > div {
+        background-color: #10b981 !important;
+    }
+    """
+else:
+    # COMPREHENSIVE DARK THEME RULES (Obsidian & Emerald Glassmorphism)
     theme_css = """
     :root {
         --bg-page: #080c0a;
@@ -80,7 +380,7 @@ if is_dark:
         --text-muted: #9ca3af;
         --border-color: rgba(255, 255, 255, 0.08);
         --border-accent: rgba(52, 211, 153, 0.45);
-        --navbar-bg: rgba(13, 20, 16, 0.85);
+        --navbar-bg: rgba(13, 20, 16, 0.9);
         --navbar-border: rgba(52, 211, 153, 0.25);
         --hero-bg: radial-gradient(120% 120% at 50% 0%, rgba(16, 185, 129, 0.22) 0%, rgba(6, 78, 59, 0.12) 50%, rgba(8, 12, 10, 0.8) 100%);
         --stat-bg: rgba(15, 23, 20, 0.7);
@@ -90,46 +390,109 @@ if is_dark:
         --result-rejected-bg: linear-gradient(145deg, rgba(239, 68, 68, 0.15) 0%, rgba(153, 27, 27, 0.18) 100%);
         --result-uncertain-bg: linear-gradient(145deg, rgba(245, 158, 11, 0.15) 0%, rgba(180, 83, 9, 0.18) 100%);
     }
-    .stApp {
+
+    html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"] {
         background-color: #080c0a !important;
         color: #f3f4f6 !important;
     }
-    """
-else:
-    theme_css = """
-    :root {
-        --bg-page: #f8fafc;
-        --bg-surface: #ffffff;
-        --bg-card: linear-gradient(160deg, #ffffff 0%, #f1f5f9 100%);
-        --bg-card-hover: linear-gradient(160deg, #ffffff 0%, #e2e8f0 100%);
-        --bg-card-active: linear-gradient(160deg, #ecfdf5 0%, #d1fae5 100%);
-        --text-primary: #0f172a;
-        --text-secondary: #334155;
-        --text-muted: #64748b;
-        --border-color: rgba(0, 0, 0, 0.09);
-        --border-accent: #059669;
-        --navbar-bg: rgba(255, 255, 255, 0.95);
-        --navbar-border: rgba(16, 185, 129, 0.35);
-        --hero-bg: radial-gradient(120% 120% at 50% 0%, rgba(16, 185, 129, 0.15) 0%, rgba(209, 250, 229, 0.35) 50%, rgba(248, 250, 252, 0.95) 100%);
-        --stat-bg: #ffffff;
-        --tab-bg: #e2e8f0;
-        --box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.08);
-        --result-verified-bg: linear-gradient(145deg, #ecfdf5 0%, #f0fdf4 100%);
-        --result-rejected-bg: linear-gradient(145deg, #fef2f2 0%, #fff1f2 100%);
-        --result-uncertain-bg: linear-gradient(145deg, #fffbeb 0%, #fefce8 100%);
+
+    header[data-testid="stHeader"] {
+        background-color: #080c0a !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     }
-    .stApp {
-        background-color: #f8fafc !important;
-        color: #0f172a !important;
+
+    /* Top Navbar Row */
+    div[data-testid="stHorizontalBlock"]:has(#navbar-marker) {
+        background: rgba(13, 20, 16, 0.9) !important;
+        border: 1px solid rgba(52, 211, 153, 0.25) !important;
+        border-radius: 16px !important;
+        padding: 14px 22px !important;
+        box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.7) !important;
+        margin-bottom: 24px !important;
+        align-items: center !important;
     }
-    .stApp p, .stApp span, .stApp div, .stApp label, .stMarkdown {
-        color: #1e293b;
+    .nav-link {
+        color: #9ca3af !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+        padding: 6px 14px !important;
+        border-radius: 8px !important;
+        transition: all 0.2s ease !important;
     }
-    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
-        color: #0f172a !important;
+    .nav-link:hover {
+        color: #34d399 !important;
+        background: rgba(16, 185, 129, 0.15) !important;
+        border-color: #10b981 !important;
     }
-    .stMarkdown, .stText {
-        color: #1e293b !important;
+
+    /* Sidebar in Dark Mode */
+    [data-testid="stSidebar"], [data-testid="stSidebarContent"] {
+        background-color: #0b110e !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+        color: #f3f4f6 !important;
+    }
+
+    /* BUTTONS IN DARK MODE */
+    .stButton > button {
+        background-color: #111915 !important;
+        color: #f3f4f6 !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+        font-weight: 600 !important;
+        border-radius: 10px !important;
+    }
+    .stButton > button * {
+        color: #f3f4f6 !important;
+    }
+    .stButton > button:hover {
+        background-color: rgba(16, 185, 129, 0.2) !important;
+        border-color: #10b981 !important;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25) !important;
+    }
+    .stButton > button:hover * {
+        color: #34d399 !important;
+    }
+
+    /* TABS IN DARK MODE */
+    .stTabs [data-baseweb="tab-list"] {
+        background-color: rgba(17, 24, 20, 0.6) !important;
+        border: 1px solid rgba(255, 255, 255, 0.06) !important;
+        border-radius: 12px !important;
+        padding: 6px !important;
+        gap: 8px !important;
+    }
+    .stTabs [data-baseweb="tab"] {
+        color: #9ca3af !important;
+        border-radius: 8px !important;
+        padding: 8px 18px !important;
+    }
+    .stTabs [data-baseweb="tab"] * {
+        color: #9ca3af !important;
+    }
+    .stTabs [aria-selected="true"] {
+        background-color: rgba(16, 185, 129, 0.25) !important;
+        color: #34d399 !important;
+        border-bottom: none !important;
+    }
+    .stTabs [aria-selected="true"] * {
+        color: #34d399 !important;
+    }
+
+    /* CARDS IN DARK MODE */
+    .crop-card {
+        background: var(--bg-card) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+    .crop-card:hover {
+        background: var(--bg-card-hover) !important;
+        border-color: rgba(16, 185, 129, 0.45) !important;
+    }
+    .crop-card.active {
+        background: var(--bg-card-active) !important;
+        border: 2px solid #10b981 !important;
     }
     """
 
@@ -150,52 +513,23 @@ st.markdown(f"""
         max-width: 1300px;
     }}
 
-    /* Top Navigation Bar */
-    .navbar-container {{
-        background: var(--navbar-bg);
-        border: 1px solid var(--navbar-border);
-        border-radius: 16px;
-        padding: 12px 24px;
-        margin-bottom: 20px;
-        backdrop-filter: blur(14px);
-        box-shadow: var(--box-shadow);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-    }}
     .nav-links {{
         display: flex;
-        gap: 20px;
+        gap: 12px;
         align-items: center;
-    }}
-    .nav-link {{
-        text-decoration: none;
-        color: var(--text-muted);
-        font-weight: 600;
-        font-size: 0.92rem;
-        transition: all 0.2s ease;
-        padding: 6px 12px;
-        border-radius: 8px;
-    }}
-    .nav-link:hover {{
-        color: #10b981;
-        background: rgba(16, 185, 129, 0.1);
+        flex-wrap: wrap;
     }}
     .nav-divider {{
         height: 1px;
         background: var(--border-color);
-        margin: 16px 0 24px 0;
+        margin: 14px 0 24px 0;
     }}
 
     /* Hero Banner */
     .hero-banner {{
-        background: var(--hero-bg);
-        border: 1px solid var(--border-accent);
         border-radius: 20px;
         padding: 30px 36px;
         margin-bottom: 28px;
-        box-shadow: var(--box-shadow);
         position: relative;
         overflow: hidden;
     }}
@@ -209,21 +543,6 @@ st.markdown(f"""
         font-size: 0.8rem;
         font-weight: 700;
         letter-spacing: 0.02em;
-    }}
-    .badge-online {{
-        background: rgba(16, 185, 129, 0.2);
-        color: #059669;
-        border: 1px solid rgba(16, 185, 129, 0.5);
-    }}
-    .badge-guard {{
-        background: rgba(59, 130, 246, 0.18);
-        color: #3b82f6;
-        border: 1px solid rgba(59, 130, 246, 0.45);
-    }}
-    .badge-cloud {{
-        background: rgba(168, 85, 247, 0.18);
-        color: #9333ea;
-        border: 1px solid rgba(168, 85, 247, 0.45);
     }}
 
     /* Section Subheadings */
@@ -244,8 +563,6 @@ st.markdown(f"""
 
     /* Crop Card Components */
     .crop-card {{
-        background: var(--bg-card);
-        border: 1px solid var(--border-color);
         border-radius: 16px;
         padding: 20px;
         height: 100%;
@@ -254,17 +571,9 @@ st.markdown(f"""
         justify-content: space-between;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         backdrop-filter: blur(8px);
-        box-shadow: var(--box-shadow);
     }}
     .crop-card:hover {{
         transform: translateY(-4px);
-        background: var(--bg-card-hover);
-        border-color: rgba(16, 185, 129, 0.45);
-    }}
-    .crop-card.active {{
-        background: var(--bg-card-active);
-        border: 2px solid #10b981;
-        box-shadow: 0 12px 28px -6px rgba(16, 185, 129, 0.25), 0 0 18px rgba(16, 185, 129, 0.2);
     }}
 
     .crop-status-badge {{
@@ -276,16 +585,6 @@ st.markdown(f"""
         border-radius: 999px;
         display: inline-block;
     }}
-    .status-active {{
-        background: rgba(16, 185, 129, 0.25);
-        color: #059669;
-        border: 1px solid #10b981;
-    }}
-    .status-guarded {{
-        background: rgba(245, 158, 11, 0.18);
-        color: #d97706;
-        border: 1px solid rgba(245, 158, 11, 0.45);
-    }}
 
     /* Diagnosis Result Panels */
     .result-panel {{
@@ -295,54 +594,11 @@ st.markdown(f"""
         box-shadow: var(--box-shadow);
         backdrop-filter: blur(12px);
     }}
-    .result-verified {{
-        background: var(--result-verified-bg);
-        border: 2px solid #10b981;
-    }}
-    .result-rejected {{
-        background: var(--result-rejected-bg);
-        border: 2px solid #ef4444;
-    }}
-    .result-uncertain {{
-        background: var(--result-uncertain-bg);
-        border: 2px solid #f59e0b;
-    }}
 
     .stat-box {{
-        background: var(--stat-bg);
-        border: 1px solid var(--border-color);
         border-radius: 12px;
         padding: 14px 18px;
         margin-top: 10px;
-        box-shadow: var(--box-shadow);
-    }}
-
-    /* Tab enhancements */
-    .stTabs [data-baseweb="tab-list"] {{
-        gap: 8px;
-        background-color: var(--tab-bg);
-        padding: 6px;
-        border-radius: 12px;
-        border: 1px solid var(--border-color);
-    }}
-    .stTabs [data-baseweb="tab"] {{
-        border-radius: 8px;
-        padding: 8px 18px;
-        color: var(--text-muted);
-        font-weight: 600;
-        transition: all 0.2s ease;
-    }}
-    .stTabs [aria-selected="true"] {{
-        background-color: rgba(16, 185, 129, 0.25) !important;
-        color: #10b981 !important;
-        border-bottom-color: transparent !important;
-    }}
-
-    /* Buttons */
-    .stButton>button {{
-        border-radius: 10px;
-        font-weight: 600;
-        transition: all 0.2s ease;
     }}
 </style>
 """, unsafe_allow_html=True)
@@ -486,6 +742,9 @@ def analyze_leaf(pil_img: Image.Image):
         "guidance": knowledge_base.get(predicted_class, {})
     }
 
+def toggle_theme():
+    st.session_state.theme = "light" if st.session_state.theme == "dark" else "dark"
+
 # ==================== SIDEBAR ====================
 with st.sidebar:
     st.image("https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&auto=format&fit=crop&q=80", use_container_width=True)
@@ -496,20 +755,8 @@ with st.sidebar:
     
     # Theme Switcher in Sidebar
     st.markdown("### 🎨 Interface Theme")
-    if "sidebar_theme_toggle_radio" not in st.session_state:
-        st.session_state["sidebar_theme_toggle_radio"] = "Dark Mode 🌙" if is_dark else "Light Mode ☀️"
-        
-    theme_choice = st.radio(
-        "Theme Preference",
-        options=["Dark Mode 🌙", "Light Mode ☀️"],
-        horizontal=True,
-        label_visibility="collapsed",
-        key="sidebar_theme_toggle_radio"
-    )
-    new_theme = "dark" if "Dark" in theme_choice else "light"
-    if new_theme != st.session_state.theme:
-        st.session_state.theme = new_theme
-        st.rerun()
+    theme_btn_text = "☀️ Switch to Light Mode" if is_dark else "🌙 Switch to Dark Mode"
+    st.button(theme_btn_text, key="btn_sidebar_theme_toggle", on_click=toggle_theme, use_container_width=True)
 
     st.markdown("---")
     st.markdown("### 📡 System Diagnostics")
@@ -561,13 +808,14 @@ with navbar_container:
     
     with nav_col1:
         st.markdown(f"""
+        <span id="navbar-marker" style="display:none;"></span>
         <div style="display: flex; align-items: center; gap: 12px;">
             <span style="font-size: 2.1rem;">🥔</span>
             <div>
-                <div style="font-size: 1.3rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1.15;">
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1.15;">
                     Potato Doctor AI
                 </div>
-                <div style="font-size: 0.74rem; color: #10b981; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">
+                <div style="font-size: 0.74rem; color: #10b981; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">
                     Precision Leaf Pathology System
                 </div>
             </div>
@@ -590,11 +838,7 @@ with navbar_container:
             st.markdown('<span class="badge-pill badge-online">● Online</span>', unsafe_allow_html=True)
         with btn_c2:
             toggle_label = "☀️ Light" if is_dark else "🌙 Dark"
-            if st.button(toggle_label, key="btn_navbar_theme_toggle", help="Toggle between Light and Dark interface modes"):
-                new_theme = "light" if is_dark else "dark"
-                st.session_state.theme = new_theme
-                st.session_state["sidebar_theme_toggle_radio"] = "Light Mode ☀️" if new_theme == "light" else "Dark Mode 🌙"
-                st.rerun()
+            st.button(toggle_label, key="btn_navbar_theme_toggle", on_click=toggle_theme, help="Toggle between Light and Dark interface modes")
 
 st.markdown('<div class="nav-divider"></div>', unsafe_allow_html=True)
 
@@ -688,10 +932,10 @@ for idx, crop in enumerate(crops_data):
                     <span style="font-size: 2.2rem;">{crop['icon']}</span>
                     <span class="crop-status-badge {crop['status_class']}">{crop['badge_text']}</span>
                 </div>
-                <h3 style="margin: 0 0 2px 0; font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">{crop['name']}</h3>
-                <div style="font-size: 0.8rem; font-style: italic; color: #10b981; margin-bottom: 8px;">{crop['species']}</div>
+                <h3 style="margin: 0 0 2px 0; font-size: 1.25rem; font-weight: 800; color: var(--text-primary);">{crop['name']}</h3>
+                <div style="font-size: 0.8rem; font-style: italic; color: #10b981; margin-bottom: 8px; font-weight: 700;">{crop['species']}</div>
                 <p style="font-size: 0.84rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 12px;">{crop['desc']}</p>
-                <div style="font-size: 0.78rem; color: #10b981; font-weight: 700; margin-bottom: 6px;">Target Pathologies:</div>
+                <div style="font-size: 0.78rem; color: #10b981; font-weight: 800; margin-bottom: 6px;">Target Pathologies:</div>
                 <ul style="font-size: 0.78rem; color: var(--text-secondary); padding-left: 18px; margin: 0 0 16px 0;">
                     {''.join([f"<li>{p}</li>" for p in crop['pathologies']])}
                 </ul>
@@ -715,7 +959,7 @@ if st.session_state.selected_crop != "potato":
             <div style="display: flex; align-items: center; gap: 14px;">
                 <span style="font-size: 2.4rem;">{guarded_crop['icon']}</span>
                 <div>
-                    <h2 style="margin: 0; color: var(--text-primary); font-size: 1.4rem;">
+                    <h2 style="margin: 0; color: var(--text-primary); font-size: 1.4rem; font-weight: 800;">
                         {guarded_crop['name']} ({guarded_crop['species']}) — Guarded by Botanical Validator
                     </h2>
                     <p style="margin: 4px 0 0 0; color: var(--text-secondary); font-size: 0.95rem;">
@@ -723,7 +967,7 @@ if st.session_state.selected_crop != "potato":
                     </p>
                 </div>
             </div>
-            <span style="background: rgba(245, 158, 11, 0.25); color: #d97706; border: 1px solid #f59e0b; padding: 6px 14px; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">
+            <span style="background: rgba(245, 158, 11, 0.25); color: #b45309; border: 1px solid #f59e0b; padding: 6px 14px; border-radius: 999px; font-weight: 800; font-size: 0.85rem;">
                 🛡️ Cross-Crop False Inference Defense
             </span>
         </div>
@@ -826,11 +1070,11 @@ else:
             
             st.markdown(f"""
             <div class="stat-box">
-                <div style="font-size: 0.85rem; color: var(--text-muted);">Specimen Dimensions</div>
-                <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">
+                <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Specimen Dimensions</div>
+                <div style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary);">
                     {selected_image.size[0]} × {selected_image.size[1]} px
                 </div>
-                <div style="font-size: 0.8rem; color: #10b981; margin-top: 4px; font-weight: 600;">
+                <div style="font-size: 0.82rem; color: #10b981; margin-top: 4px; font-weight: 700;">
                     Color Mode: {selected_image.mode} | Format: {selected_image.format or 'Memory Image'}
                 </div>
             </div>
@@ -852,17 +1096,17 @@ else:
                         <span style="color: #ef4444; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
                             🛑 Botanical Guard Intercepted
                         </span>
-                        <span style="color: #ef4444; font-size: 0.88rem; background: rgba(239, 68, 68, 0.15); padding: 4px 12px; border-radius: 999px; font-weight: 700;">
+                        <span style="color: #ef4444; font-size: 0.88rem; background: rgba(239, 68, 68, 0.15); padding: 4px 12px; border-radius: 999px; font-weight: 800;">
                             Potato Probability: <strong>{result['confidence_pct']}%</strong> (&lt; 35%)
                         </span>
                     </div>
                     <h2 style="color: var(--text-primary); margin: 14px 0 10px 0; font-size: 1.85rem; font-weight: 800;">
                         {result['title']}
                     </h2>
-                    <div style="background: rgba(239, 68, 68, 0.1); padding: 16px 20px; border-left: 5px solid #ef4444; border-radius: 8px; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 16px; line-height: 1.5;">
+                    <div style="background: rgba(239, 68, 68, 0.1); padding: 16px 20px; border-left: 5px solid #ef4444; border-radius: 8px; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 16px; line-height: 1.5; font-weight: 600;">
                         "{result['message']}"
                     </div>
-                    <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                    <div style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.5;">
                         <strong>Why was disease prediction halted?</strong><br>
                         To prevent dangerous false inferences, Potato Doctor AI utilizes an independent botanical binary classifier. When leaves from other plant species (like tomato, corn, pepper) or non-plant objects are uploaded, disease diagnosis is halted immediately without generating misleading recommendations.
                     </div>
@@ -874,20 +1118,20 @@ else:
                 st.markdown(f"""
                 <div class="result-panel result-uncertain">
                     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                        <span style="color: #f59e0b; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                        <span style="color: #d97706; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
                             ⚠️ Validation: Inconclusive Morphology
                         </span>
-                        <span style="color: #d97706; font-size: 0.88rem; background: rgba(245, 158, 11, 0.15); padding: 4px 12px; border-radius: 999px; font-weight: 700;">
+                        <span style="color: #d97706; font-size: 0.88rem; background: rgba(245, 158, 11, 0.15); padding: 4px 12px; border-radius: 999px; font-weight: 800;">
                             Potato Probability: <strong>{result['confidence_pct']}%</strong> (35% - 80%)
                         </span>
                     </div>
                     <h2 style="color: var(--text-primary); margin: 14px 0 10px 0; font-size: 1.85rem; font-weight: 800;">
                         {result['title']}
                     </h2>
-                    <div style="background: rgba(245, 158, 11, 0.1); padding: 16px 20px; border-left: 5px solid #f59e0b; border-radius: 8px; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 16px; line-height: 1.5;">
+                    <div style="background: rgba(245, 158, 11, 0.1); padding: 16px 20px; border-left: 5px solid #f59e0b; border-radius: 8px; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 16px; line-height: 1.5; font-weight: 600;">
                         "{result['message']}"
                     </div>
-                    <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                    <div style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.5;">
                         <strong>Photography tips for reliable diagnosis:</strong><br>
                         • Ensure ample natural sunlight without strong harsh shadows.<br>
                         • Place the leaf flat on a neutral background or hold steady.<br>
@@ -911,14 +1155,14 @@ else:
                         <span style="color: #10b981; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
                             ✅ Verified Potato Leaf (Solanum tuberosum) — {result['validation_conf_pct']}%
                         </span>
-                        <span style="background: rgba(16, 185, 129, 0.15); border: 1px solid {accent_color}; color: {accent_color}; font-size: 0.82rem; font-weight: 700; padding: 4px 12px; border-radius: 999px;">
+                        <span style="background: rgba(16, 185, 129, 0.15); border: 1px solid {accent_color}; color: {accent_color}; font-size: 0.82rem; font-weight: 800; padding: 4px 12px; border-radius: 999px;">
                             Severity: {severity}
                         </span>
                     </div>
                     <h1 style="color: var(--text-primary); margin: 12px 0 4px 0; font-size: 2.25rem; font-weight: 800;">
                         {result['disease_name']}
                     </h1>
-                    <div style="color: #10b981; font-style: italic; margin-bottom: 16px; font-size: 0.95rem;">
+                    <div style="color: #10b981; font-style: italic; margin-bottom: 16px; font-size: 0.95rem; font-weight: 700;">
                         Scientific pathogen: <strong>{guidance.get('scientific_name', 'Solanum tuberosum')}</strong>
                     </div>
                     <div style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 8px;">
@@ -979,7 +1223,7 @@ else:
         with col_w1:
             st.markdown("""
             <div class="stat-box">
-                <h4 style="color: #10b981; margin: 0 0 6px 0;">1. Botanical Validation</h4>
+                <h4 style="color: #10b981; margin: 0 0 6px 0; font-weight: 800;">1. Botanical Validation</h4>
                 <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0; line-height: 1.45;">
                     The upload is first evaluated by a standalone binary MobileNetV2 classifier. Non-potato foliage (tomato, pepper, corn) and non-plant items are safely halted.
                 </p>
@@ -988,7 +1232,7 @@ else:
         with col_w2:
             st.markdown("""
             <div class="stat-box">
-                <h4 style="color: #3b82f6; margin: 0 0 6px 0;">2. Disease Pathology</h4>
+                <h4 style="color: #2563eb; margin: 0 0 6px 0; font-weight: 800;">2. Disease Pathology</h4>
                 <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0; line-height: 1.45;">
                     Once verified as <em>Solanum tuberosum</em> with high confidence (≥ 80%), the 3-class pathology model diagnoses Early Blight, Late Blight, or Healthy foliage.
                 </p>
@@ -997,7 +1241,7 @@ else:
         with col_w3:
             st.markdown("""
             <div class="stat-box">
-                <h4 style="color: #8b5cf6; margin: 0 0 6px 0;">3. FRAC Agronomy Guidance</h4>
+                <h4 style="color: #7c3aed; margin: 0 0 6px 0; font-weight: 800;">3. FRAC Agronomy Guidance</h4>
                 <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0; line-height: 1.45;">
                     Provides immediate 24-48h quarantine measures, FRAC-compliant fungicide rotation, biological controls (Bacillus subtilis), and cultural prevention.
                 </p>
