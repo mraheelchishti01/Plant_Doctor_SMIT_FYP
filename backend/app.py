@@ -130,14 +130,31 @@ def get_validator_config() -> Dict[str, Any]:
             }
     return _validator_config
 
+def _safe_load_model(model_path):
+    import tensorflow as tf
+    try:
+        return tf.keras.models.load_model(str(model_path), compile=False)
+    except Exception:
+        pass
+    try:
+        return tf.keras.models.load_model(str(model_path), compile=False, safe_mode=False)
+    except Exception:
+        pass
+    custom_objs = {
+        "SparseCategoricalCrossentropy": lambda **kwargs: None,
+        "sparse_categorical_crossentropy": lambda **kwargs: None,
+        "BinaryCrossentropy": lambda **kwargs: None,
+        "binary_crossentropy": lambda **kwargs: None
+    }
+    return tf.keras.models.load_model(str(model_path), compile=False, custom_objects=custom_objs)
+
 def get_model():
     """Load and cache the 3-class Potato Disease Classifier model"""
     global _tf_model
     if _tf_model is None and MODEL_PATH.exists():
         try:
-            import tensorflow as tf
             print(f"[Backend] Loading Disease Classifier from {MODEL_PATH}...")
-            _tf_model = tf.keras.models.load_model(str(MODEL_PATH))
+            _tf_model = _safe_load_model(MODEL_PATH)
             print("[Backend] Disease Classifier loaded successfully.")
         except Exception as e:
             print(f"[Backend Warning] Failed to load disease classifier: {e}")
@@ -149,9 +166,8 @@ def get_validator_model():
     global _validator_model
     if _validator_model is None and VALIDATOR_MODEL_PATH.exists():
         try:
-            import tensorflow as tf
             print(f"[Backend] Loading Binary Potato Validator from {VALIDATOR_MODEL_PATH}...")
-            _validator_model = tf.keras.models.load_model(str(VALIDATOR_MODEL_PATH))
+            _validator_model = _safe_load_model(VALIDATOR_MODEL_PATH)
             print("[Backend] Binary Potato Validator loaded successfully.")
         except Exception as e:
             print(f"[Backend Warning] Failed to load validator model: {e}")

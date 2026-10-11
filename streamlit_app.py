@@ -610,15 +610,38 @@ def load_models():
     disease_model = None
     validator_model = None
 
+    def _safe_load_model(model_path):
+        # 1. Primary: compile=False (Strictly required for inference; completely bypasses loss/optimizer deserialization)
+        try:
+            return tf.keras.models.load_model(str(model_path), compile=False)
+        except Exception:
+            pass
+        # 2. Secondary fallback: compile=False with safe_mode=False
+        try:
+            return tf.keras.models.load_model(str(model_path), compile=False, safe_mode=False)
+        except Exception:
+            pass
+        # 3. Tertiary fallback: custom objects lambda handler
+        try:
+            custom_objs = {
+                "SparseCategoricalCrossentropy": lambda **kwargs: None,
+                "sparse_categorical_crossentropy": lambda **kwargs: None,
+                "BinaryCrossentropy": lambda **kwargs: None,
+                "binary_crossentropy": lambda **kwargs: None
+            }
+            return tf.keras.models.load_model(str(model_path), compile=False, custom_objects=custom_objs)
+        except Exception as e:
+            raise e
+
     if DISEASE_MODEL_PATH.exists():
         try:
-            disease_model = tf.keras.models.load_model(str(DISEASE_MODEL_PATH))
+            disease_model = _safe_load_model(DISEASE_MODEL_PATH)
         except Exception as e:
             st.error(f"Error loading disease model: {e}")
 
     if VALIDATOR_MODEL_PATH.exists():
         try:
-            validator_model = tf.keras.models.load_model(str(VALIDATOR_MODEL_PATH))
+            validator_model = _safe_load_model(VALIDATOR_MODEL_PATH)
         except Exception as e:
             st.error(f"Error loading leaf validator model: {e}")
 
