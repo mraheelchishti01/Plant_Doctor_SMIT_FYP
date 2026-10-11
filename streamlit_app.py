@@ -51,194 +51,10 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom Styling (Dark Emerald Glassmorphism & High-End Aesthetic)
-st.markdown("""
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-
-    html, body, [class*="css"] {
-        font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    /* Main Container Padding */
-    .block-container {
-        padding-top: 1.8rem;
-        padding-bottom: 3rem;
-        max-width: 1300px;
-    }
-
-    /* Top Navigation & Hero Banner */
-    .hero-banner {
-        background: radial-gradient(120% 120% at 50% 0%, rgba(16, 185, 129, 0.22) 0%, rgba(6, 78, 59, 0.12) 50%, rgba(8, 12, 10, 0.8) 100%);
-        border: 1px solid rgba(52, 211, 153, 0.35);
-        border-radius: 20px;
-        padding: 32px 36px;
-        margin-bottom: 28px;
-        box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        position: relative;
-        overflow: hidden;
-    }
-    .hero-banner::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
-        pointer-events: none;
-    }
-
-    .badge-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 5px 14px;
-        border-radius: 999px;
-        font-size: 0.82rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-    }
-    .badge-online {
-        background: rgba(16, 185, 129, 0.18);
-        color: #34d399;
-        border: 1px solid rgba(52, 211, 153, 0.45);
-        box-shadow: 0 0 14px rgba(16, 185, 129, 0.25);
-    }
-    .badge-guard {
-        background: rgba(59, 130, 246, 0.18);
-        color: #93c5fd;
-        border: 1px solid rgba(96, 165, 250, 0.45);
-        box-shadow: 0 0 14px rgba(59, 130, 246, 0.2);
-    }
-    .badge-cloud {
-        background: rgba(168, 85, 247, 0.18);
-        color: #d8b4fe;
-        border: 1px solid rgba(192, 132, 252, 0.45);
-    }
-
-    /* Section Subheadings */
-    .section-title {
-        font-size: 1.35rem;
-        font-weight: 700;
-        color: #f3f4f6;
-        margin-bottom: 6px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .section-subtitle {
-        font-size: 0.92rem;
-        color: #9ca3af;
-        margin-bottom: 18px;
-    }
-
-    /* Crop Card Components */
-    .crop-card {
-        background: linear-gradient(160deg, rgba(20, 30, 24, 0.85) 0%, rgba(12, 18, 14, 0.85) 100%);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 20px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        backdrop-filter: blur(8px);
-    }
-    .crop-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(52, 211, 153, 0.4);
-        box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.5), 0 0 15px rgba(16, 185, 129, 0.15);
-    }
-    .crop-card.active {
-        background: linear-gradient(160deg, rgba(16, 185, 129, 0.16) 0%, rgba(6, 78, 59, 0.22) 100%);
-        border: 2px solid #10b981;
-        box-shadow: 0 12px 28px -6px rgba(16, 185, 129, 0.25), 0 0 20px rgba(16, 185, 129, 0.2);
-    }
-
-    .crop-status-badge {
-        font-size: 0.72rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        padding: 3px 10px;
-        border-radius: 999px;
-        display: inline-block;
-    }
-    .status-active {
-        background: rgba(16, 185, 129, 0.25);
-        color: #34d399;
-        border: 1px solid #10b981;
-    }
-    .status-guarded {
-        background: rgba(245, 158, 11, 0.18);
-        color: #fbbf24;
-        border: 1px solid rgba(245, 158, 11, 0.4);
-    }
-
-    /* Diagnosis Result Glassmorphic Panels */
-    .result-panel {
-        border-radius: 18px;
-        padding: 26px 30px;
-        margin: 16px 0 24px 0;
-        box-shadow: 0 14px 34px -8px rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(12px);
-    }
-    .result-verified {
-        background: linear-gradient(145deg, rgba(16, 185, 129, 0.14) 0%, rgba(6, 78, 59, 0.2) 100%);
-        border: 1px solid rgba(52, 211, 153, 0.5);
-    }
-    .result-rejected {
-        background: linear-gradient(145deg, rgba(239, 68, 68, 0.15) 0%, rgba(153, 27, 27, 0.18) 100%);
-        border: 1px solid rgba(248, 113, 113, 0.55);
-    }
-    .result-uncertain {
-        background: linear-gradient(145deg, rgba(245, 158, 11, 0.15) 0%, rgba(180, 83, 9, 0.18) 100%);
-        border: 1px solid rgba(251, 191, 36, 0.55);
-    }
-
-    /* Telemetry Info Stat Box */
-    .stat-box {
-        background: rgba(15, 23, 20, 0.7);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 12px;
-        padding: 14px 18px;
-        margin-top: 10px;
-    }
-
-    /* Tab enhancements */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 8px;
-        background-color: rgba(17, 24, 20, 0.6);
-        padding: 6px;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.06);
-    }
-    .stTabs [data-baseweb="tab"] {
-        border-radius: 8px;
-        padding: 8px 18px;
-        color: #9ca3af;
-        font-weight: 600;
-        transition: all 0.2s ease;
-    }
-    .stTabs [aria-selected="true"] {
-        background-color: rgba(16, 185, 129, 0.25) !important;
-        color: #34d399 !important;
-        border-bottom-color: transparent !important;
-    }
-
-    /* Buttons */
-    .stButton>button {
-        border-radius: 10px;
-        font-weight: 600;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-</style>
-""", unsafe_allow_html=True)
-
 # Session State Initialization
+if "theme" not in st.session_state:
+    st.session_state.theme = "dark"
+
 if "selected_crop" not in st.session_state:
     st.session_state.selected_crop = "potato"
 
@@ -247,6 +63,289 @@ if "selected_sample" not in st.session_state:
 
 if "scans_count" not in st.session_state:
     st.session_state.scans_count = 0
+
+is_dark = (st.session_state.theme == "dark")
+
+# Dynamic Theme Token Definition
+if is_dark:
+    theme_css = """
+    :root {
+        --bg-page: #080c0a;
+        --bg-surface: #0f1712;
+        --bg-card: linear-gradient(160deg, rgba(20, 30, 24, 0.85) 0%, rgba(12, 18, 14, 0.85) 100%);
+        --bg-card-hover: linear-gradient(160deg, rgba(24, 38, 30, 0.95) 0%, rgba(16, 24, 19, 0.95) 100%);
+        --bg-card-active: linear-gradient(160deg, rgba(16, 185, 129, 0.16) 0%, rgba(6, 78, 59, 0.22) 100%);
+        --text-primary: #ffffff;
+        --text-secondary: #d1d5db;
+        --text-muted: #9ca3af;
+        --border-color: rgba(255, 255, 255, 0.08);
+        --border-accent: rgba(52, 211, 153, 0.45);
+        --navbar-bg: rgba(13, 20, 16, 0.85);
+        --navbar-border: rgba(52, 211, 153, 0.25);
+        --hero-bg: radial-gradient(120% 120% at 50% 0%, rgba(16, 185, 129, 0.22) 0%, rgba(6, 78, 59, 0.12) 50%, rgba(8, 12, 10, 0.8) 100%);
+        --stat-bg: rgba(15, 23, 20, 0.7);
+        --tab-bg: rgba(17, 24, 20, 0.6);
+        --box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.7);
+        --result-verified-bg: linear-gradient(145deg, rgba(16, 185, 129, 0.14) 0%, rgba(6, 78, 59, 0.2) 100%);
+        --result-rejected-bg: linear-gradient(145deg, rgba(239, 68, 68, 0.15) 0%, rgba(153, 27, 27, 0.18) 100%);
+        --result-uncertain-bg: linear-gradient(145deg, rgba(245, 158, 11, 0.15) 0%, rgba(180, 83, 9, 0.18) 100%);
+    }
+    .stApp {
+        background-color: #080c0a !important;
+        color: #f3f4f6 !important;
+    }
+    """
+else:
+    theme_css = """
+    :root {
+        --bg-page: #f8fafc;
+        --bg-surface: #ffffff;
+        --bg-card: linear-gradient(160deg, #ffffff 0%, #f1f5f9 100%);
+        --bg-card-hover: linear-gradient(160deg, #ffffff 0%, #e2e8f0 100%);
+        --bg-card-active: linear-gradient(160deg, #ecfdf5 0%, #d1fae5 100%);
+        --text-primary: #0f172a;
+        --text-secondary: #334155;
+        --text-muted: #64748b;
+        --border-color: rgba(0, 0, 0, 0.09);
+        --border-accent: #059669;
+        --navbar-bg: rgba(255, 255, 255, 0.95);
+        --navbar-border: rgba(16, 185, 129, 0.35);
+        --hero-bg: radial-gradient(120% 120% at 50% 0%, rgba(16, 185, 129, 0.15) 0%, rgba(209, 250, 229, 0.35) 50%, rgba(248, 250, 252, 0.95) 100%);
+        --stat-bg: #ffffff;
+        --tab-bg: #e2e8f0;
+        --box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.08);
+        --result-verified-bg: linear-gradient(145deg, #ecfdf5 0%, #f0fdf4 100%);
+        --result-rejected-bg: linear-gradient(145deg, #fef2f2 0%, #fff1f2 100%);
+        --result-uncertain-bg: linear-gradient(145deg, #fffbeb 0%, #fefce8 100%);
+    }
+    .stApp {
+        background-color: #f8fafc !important;
+        color: #0f172a !important;
+    }
+    .stApp p, .stApp span, .stApp div, .stApp label, .stMarkdown {
+        color: #1e293b;
+    }
+    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
+        color: #0f172a !important;
+    }
+    .stMarkdown, .stText {
+        color: #1e293b !important;
+    }
+    """
+
+# Injected Modern Stylesheet
+st.markdown(f"""
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+    {theme_css}
+
+    html, body, [class*="css"] {{
+        font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }}
+
+    .block-container {{
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        max-width: 1300px;
+    }}
+
+    /* Top Navigation Bar */
+    .navbar-container {{
+        background: var(--navbar-bg);
+        border: 1px solid var(--navbar-border);
+        border-radius: 16px;
+        padding: 12px 24px;
+        margin-bottom: 20px;
+        backdrop-filter: blur(14px);
+        box-shadow: var(--box-shadow);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }}
+    .nav-links {{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }}
+    .nav-link {{
+        text-decoration: none;
+        color: var(--text-muted);
+        font-weight: 600;
+        font-size: 0.92rem;
+        transition: all 0.2s ease;
+        padding: 6px 12px;
+        border-radius: 8px;
+    }}
+    .nav-link:hover {{
+        color: #10b981;
+        background: rgba(16, 185, 129, 0.1);
+    }}
+    .nav-divider {{
+        height: 1px;
+        background: var(--border-color);
+        margin: 16px 0 24px 0;
+    }}
+
+    /* Hero Banner */
+    .hero-banner {{
+        background: var(--hero-bg);
+        border: 1px solid var(--border-accent);
+        border-radius: 20px;
+        padding: 30px 36px;
+        margin-bottom: 28px;
+        box-shadow: var(--box-shadow);
+        position: relative;
+        overflow: hidden;
+    }}
+
+    .badge-pill {{
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }}
+    .badge-online {{
+        background: rgba(16, 185, 129, 0.2);
+        color: #059669;
+        border: 1px solid rgba(16, 185, 129, 0.5);
+    }}
+    .badge-guard {{
+        background: rgba(59, 130, 246, 0.18);
+        color: #3b82f6;
+        border: 1px solid rgba(59, 130, 246, 0.45);
+    }}
+    .badge-cloud {{
+        background: rgba(168, 85, 247, 0.18);
+        color: #9333ea;
+        border: 1px solid rgba(168, 85, 247, 0.45);
+    }}
+
+    /* Section Subheadings */
+    .section-title {{
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }}
+    .section-subtitle {{
+        font-size: 0.92rem;
+        color: var(--text-muted);
+        margin-bottom: 18px;
+    }}
+
+    /* Crop Card Components */
+    .crop-card {{
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(8px);
+        box-shadow: var(--box-shadow);
+    }}
+    .crop-card:hover {{
+        transform: translateY(-4px);
+        background: var(--bg-card-hover);
+        border-color: rgba(16, 185, 129, 0.45);
+    }}
+    .crop-card.active {{
+        background: var(--bg-card-active);
+        border: 2px solid #10b981;
+        box-shadow: 0 12px 28px -6px rgba(16, 185, 129, 0.25), 0 0 18px rgba(16, 185, 129, 0.2);
+    }}
+
+    .crop-status-badge {{
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 3px 10px;
+        border-radius: 999px;
+        display: inline-block;
+    }}
+    .status-active {{
+        background: rgba(16, 185, 129, 0.25);
+        color: #059669;
+        border: 1px solid #10b981;
+    }}
+    .status-guarded {{
+        background: rgba(245, 158, 11, 0.18);
+        color: #d97706;
+        border: 1px solid rgba(245, 158, 11, 0.45);
+    }}
+
+    /* Diagnosis Result Panels */
+    .result-panel {{
+        border-radius: 18px;
+        padding: 26px 30px;
+        margin: 16px 0 24px 0;
+        box-shadow: var(--box-shadow);
+        backdrop-filter: blur(12px);
+    }}
+    .result-verified {{
+        background: var(--result-verified-bg);
+        border: 2px solid #10b981;
+    }}
+    .result-rejected {{
+        background: var(--result-rejected-bg);
+        border: 2px solid #ef4444;
+    }}
+    .result-uncertain {{
+        background: var(--result-uncertain-bg);
+        border: 2px solid #f59e0b;
+    }}
+
+    .stat-box {{
+        background: var(--stat-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 14px 18px;
+        margin-top: 10px;
+        box-shadow: var(--box-shadow);
+    }}
+
+    /* Tab enhancements */
+    .stTabs [data-baseweb="tab-list"] {{
+        gap: 8px;
+        background-color: var(--tab-bg);
+        padding: 6px;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+    }}
+    .stTabs [data-baseweb="tab"] {{
+        border-radius: 8px;
+        padding: 8px 18px;
+        color: var(--text-muted);
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }}
+    .stTabs [aria-selected="true"] {{
+        background-color: rgba(16, 185, 129, 0.25) !important;
+        color: #10b981 !important;
+        border-bottom-color: transparent !important;
+    }}
+
+    /* Buttons */
+    .stButton>button {{
+        border-radius: 10px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }}
+</style>
+""", unsafe_allow_html=True)
 
 # Model & Metadata Loading with Caching
 @st.cache_resource(show_spinner="Initializing TensorFlow Neural Vision Pipeline...")
@@ -394,6 +493,25 @@ with st.sidebar:
     st.caption("Precision Botanical Pathology & Agronomic Defense")
     
     st.markdown("---")
+    
+    # Theme Switcher in Sidebar
+    st.markdown("### 🎨 Interface Theme")
+    if "sidebar_theme_toggle_radio" not in st.session_state:
+        st.session_state["sidebar_theme_toggle_radio"] = "Dark Mode 🌙" if is_dark else "Light Mode ☀️"
+        
+    theme_choice = st.radio(
+        "Theme Preference",
+        options=["Dark Mode 🌙", "Light Mode ☀️"],
+        horizontal=True,
+        label_visibility="collapsed",
+        key="sidebar_theme_toggle_radio"
+    )
+    new_theme = "dark" if "Dark" in theme_choice else "light"
+    if new_theme != st.session_state.theme:
+        st.session_state.theme = new_theme
+        st.rerun()
+
+    st.markdown("---")
     st.markdown("### 📡 System Diagnostics")
     
     both_ready = (disease_model is not None) and (validator_model is not None)
@@ -436,22 +554,64 @@ with st.sidebar:
     """)
     st.caption("Native Streamlit Cloud Architecture")
 
-# ==================== MAIN USER INTERFACE ====================
+# ==================== TOP NAVIGATION BAR ====================
+navbar_container = st.container()
+with navbar_container:
+    nav_col1, nav_col2, nav_col3 = st.columns([4.2, 4.4, 2.4], vertical_alignment="center")
+    
+    with nav_col1:
+        st.markdown(f"""
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 2.1rem;">🥔</span>
+            <div>
+                <div style="font-size: 1.3rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; line-height: 1.15;">
+                    Potato Doctor AI
+                </div>
+                <div style="font-size: 0.74rem; color: #10b981; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">
+                    Precision Leaf Pathology System
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with nav_col2:
+        st.markdown("""
+        <div class="nav-links">
+            <a href="#crops" class="nav-link">🌾 Crops</a>
+            <a href="#studio" class="nav-link">🔬 Diagnostic Studio</a>
+            <a href="#pipeline" class="nav-link">🧬 Pipeline</a>
+            <a href="#protocols" class="nav-link">📋 Protocols</a>
+        </div>
+        """, unsafe_allow_html=True)
+        
+    with nav_col3:
+        btn_c1, btn_c2 = st.columns([1.1, 1.1], vertical_alignment="center")
+        with btn_c1:
+            st.markdown('<span class="badge-pill badge-online">● Online</span>', unsafe_allow_html=True)
+        with btn_c2:
+            toggle_label = "☀️ Light" if is_dark else "🌙 Dark"
+            if st.button(toggle_label, key="btn_navbar_theme_toggle", help="Toggle between Light and Dark interface modes"):
+                new_theme = "light" if is_dark else "dark"
+                st.session_state.theme = new_theme
+                st.session_state["sidebar_theme_toggle_radio"] = "Light Mode ☀️" if new_theme == "light" else "Dark Mode 🌙"
+                st.rerun()
 
-# 1. Hero Header Banner
+st.markdown('<div class="nav-divider"></div>', unsafe_allow_html=True)
+
+# ==================== MAIN HERO BANNER ====================
 st.markdown("""
 <div class="hero-banner">
     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
-        <div style="max-width: 780px;">
+        <div style="max-width: 820px;">
             <div style="display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
                 <span class="badge-pill badge-online">● Neural Models Online</span>
                 <span class="badge-pill badge-guard">🛡️ 2-Stage Botanical Guard Active</span>
                 <span class="badge-pill badge-cloud">☁️ Streamlit Cloud Native</span>
             </div>
-            <h1 style="margin: 0; font-size: 2.35rem; font-weight: 800; color: #ffffff; letter-spacing: -0.02em;">
-                Potato Doctor AI <span style="font-weight: 300; color: #6ee7b7;">| Leaf Pathology Studio</span>
+            <h1 style="margin: 0; font-size: 2.35rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
+                Potato Doctor AI <span style="font-weight: 300; color: #10b981;">| Leaf Pathology Studio</span>
             </h1>
-            <p style="margin: 10px 0 0 0; color: #d1fae5; font-size: 1.05rem; line-height: 1.5;">
+            <p style="margin: 10px 0 0 0; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.5;">
                 State-of-the-art Deep Vision system trained on native potato crops. Deploys an independent botanical validator to verify <em>Solanum tuberosum</em> foliage before executing disease classification and FRAC-compliant recovery plans.
             </p>
         </div>
@@ -459,13 +619,12 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# 2. Four Crop Portfolio Cards (User Requirement: "crops k 4 cards use krna")
-st.markdown('<div class="section-title">🌾 Select Agricultural Crop Portfolio</div>', unsafe_allow_html=True)
-st.markdown('<div class="section-subtitle">Choose a crop to activate its diagnostic studio or view botanical safety guard specifications:</div>', unsafe_allow_html=True)
+# ==================== FOUR CROP PORTFOLIO CARDS ====================
+st.markdown('<div id="crops" class="section-title">🌾 Agricultural Crop Portfolio (4 Channels)</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-subtitle">Choose a crop to activate its diagnostic studio or inspect its botanical safety guard:</div>', unsafe_allow_html=True)
 
 crop_cols = st.columns(4)
 
-# Define the 4 Crops
 crops_data = [
     {
         "id": "potato",
@@ -529,11 +688,11 @@ for idx, crop in enumerate(crops_data):
                     <span style="font-size: 2.2rem;">{crop['icon']}</span>
                     <span class="crop-status-badge {crop['status_class']}">{crop['badge_text']}</span>
                 </div>
-                <h3 style="margin: 0 0 2px 0; font-size: 1.25rem; font-weight: 700; color: #ffffff;">{crop['name']}</h3>
-                <div style="font-size: 0.8rem; font-style: italic; color: #a7f3d0; margin-bottom: 8px;">{crop['species']}</div>
-                <p style="font-size: 0.84rem; color: #9ca3af; line-height: 1.4; margin-bottom: 12px;">{crop['desc']}</p>
-                <div style="font-size: 0.78rem; color: #6ee7b7; font-weight: 600; margin-bottom: 6px;">Target Pathologies:</div>
-                <ul style="font-size: 0.78rem; color: #d1d5db; padding-left: 18px; margin: 0 0 16px 0;">
+                <h3 style="margin: 0 0 2px 0; font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">{crop['name']}</h3>
+                <div style="font-size: 0.8rem; font-style: italic; color: #10b981; margin-bottom: 8px;">{crop['species']}</div>
+                <p style="font-size: 0.84rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 12px;">{crop['desc']}</p>
+                <div style="font-size: 0.78rem; color: #10b981; font-weight: 700; margin-bottom: 6px;">Target Pathologies:</div>
+                <ul style="font-size: 0.78rem; color: var(--text-secondary); padding-left: 18px; margin: 0 0 16px 0;">
                     {''.join([f"<li>{p}</li>" for p in crop['pathologies']])}
                 </ul>
             </div>
@@ -547,26 +706,24 @@ for idx, crop in enumerate(crops_data):
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# 3. Dynamic Crop View Handling
+# Dynamic Crop View Handling
 if st.session_state.selected_crop != "potato":
-    # Non-Potato Crop Guard Presentation
     guarded_crop = next((c for c in crops_data if c["id"] == st.session_state.selected_crop), None)
     st.markdown(f"""
-    <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(180, 83, 9, 0.05) 100%);
-                border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 16px; padding: 24px 28px; margin-bottom: 24px;">
+    <div style="background: var(--result-uncertain-bg); border: 2px solid #f59e0b; border-radius: 16px; padding: 24px 28px; margin-bottom: 24px; box-shadow: var(--box-shadow);">
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
             <div style="display: flex; align-items: center; gap: 14px;">
                 <span style="font-size: 2.4rem;">{guarded_crop['icon']}</span>
                 <div>
-                    <h2 style="margin: 0; color: #fef3c7; font-size: 1.4rem;">
+                    <h2 style="margin: 0; color: var(--text-primary); font-size: 1.4rem;">
                         {guarded_crop['name']} ({guarded_crop['species']}) — Guarded by Botanical Validator
                     </h2>
-                    <p style="margin: 4px 0 0 0; color: #fde68a; font-size: 0.95rem;">
+                    <p style="margin: 4px 0 0 0; color: var(--text-secondary); font-size: 0.95rem;">
                         To safeguard against false positives, Potato Doctor AI enforces strict botanical gates. Uploads of {guarded_crop['name']} foliage are safely halted by the Two-Stage Validator.
                     </p>
                 </div>
             </div>
-            <span style="background: rgba(245, 158, 11, 0.25); color: #fbbf24; border: 1px solid #f59e0b; padding: 6px 14px; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">
+            <span style="background: rgba(245, 158, 11, 0.25); color: #d97706; border: 1px solid #f59e0b; padding: 6px 14px; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">
                 🛡️ Cross-Crop False Inference Defense
             </span>
         </div>
@@ -599,7 +756,7 @@ if st.session_state.selected_crop != "potato":
 
 else:
     # Active Potato Diagnostic Studio
-    st.markdown('<div class="section-title">🔬 Potato Leaf Diagnostic Studio</div>', unsafe_allow_html=True)
+    st.markdown('<div id="studio" class="section-title">🔬 Potato Leaf Diagnostic Studio</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-subtitle">Upload a potato leaf photo, choose a calibrated test preset, or use your live camera:</div>', unsafe_allow_html=True)
 
     tab_upload, tab_sample, tab_camera = st.tabs([
@@ -669,11 +826,11 @@ else:
             
             st.markdown(f"""
             <div class="stat-box">
-                <div style="font-size: 0.85rem; color: #9ca3af;">Specimen Dimensions</div>
-                <div style="font-size: 1.1rem; font-weight: 700; color: #f3f4f6;">
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Specimen Dimensions</div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">
                     {selected_image.size[0]} × {selected_image.size[1]} px
                 </div>
-                <div style="font-size: 0.8rem; color: #34d399; margin-top: 4px;">
+                <div style="font-size: 0.8rem; color: #10b981; margin-top: 4px; font-weight: 600;">
                     Color Mode: {selected_image.mode} | Format: {selected_image.format or 'Memory Image'}
                 </div>
             </div>
@@ -695,17 +852,17 @@ else:
                         <span style="color: #ef4444; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
                             🛑 Botanical Guard Intercepted
                         </span>
-                        <span style="color: #fca5a5; font-size: 0.88rem; background: rgba(239, 68, 68, 0.2); padding: 4px 12px; border-radius: 999px;">
+                        <span style="color: #ef4444; font-size: 0.88rem; background: rgba(239, 68, 68, 0.15); padding: 4px 12px; border-radius: 999px; font-weight: 700;">
                             Potato Probability: <strong>{result['confidence_pct']}%</strong> (&lt; 35%)
                         </span>
                     </div>
-                    <h2 style="color: #ffffff; margin: 14px 0 10px 0; font-size: 1.85rem; font-weight: 800;">
+                    <h2 style="color: var(--text-primary); margin: 14px 0 10px 0; font-size: 1.85rem; font-weight: 800;">
                         {result['title']}
                     </h2>
-                    <div style="background: rgba(0,0,0,0.4); padding: 16px 20px; border-left: 5px solid #ef4444; border-radius: 8px; font-size: 1.05rem; color: #fecaca; margin-bottom: 16px; line-height: 1.5;">
+                    <div style="background: rgba(239, 68, 68, 0.1); padding: 16px 20px; border-left: 5px solid #ef4444; border-radius: 8px; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 16px; line-height: 1.5;">
                         "{result['message']}"
                     </div>
-                    <div style="font-size: 0.9rem; color: #d1d5db; line-height: 1.5;">
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
                         <strong>Why was disease prediction halted?</strong><br>
                         To prevent dangerous false inferences, Potato Doctor AI utilizes an independent botanical binary classifier. When leaves from other plant species (like tomato, corn, pepper) or non-plant objects are uploaded, disease diagnosis is halted immediately without generating misleading recommendations.
                     </div>
@@ -720,17 +877,17 @@ else:
                         <span style="color: #f59e0b; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
                             ⚠️ Validation: Inconclusive Morphology
                         </span>
-                        <span style="color: #fde68a; font-size: 0.88rem; background: rgba(245, 158, 11, 0.2); padding: 4px 12px; border-radius: 999px;">
+                        <span style="color: #d97706; font-size: 0.88rem; background: rgba(245, 158, 11, 0.15); padding: 4px 12px; border-radius: 999px; font-weight: 700;">
                             Potato Probability: <strong>{result['confidence_pct']}%</strong> (35% - 80%)
                         </span>
                     </div>
-                    <h2 style="color: #ffffff; margin: 14px 0 10px 0; font-size: 1.85rem; font-weight: 800;">
+                    <h2 style="color: var(--text-primary); margin: 14px 0 10px 0; font-size: 1.85rem; font-weight: 800;">
                         {result['title']}
                     </h2>
-                    <div style="background: rgba(0,0,0,0.4); padding: 16px 20px; border-left: 5px solid #f59e0b; border-radius: 8px; font-size: 1.05rem; color: #fef3c7; margin-bottom: 16px; line-height: 1.5;">
+                    <div style="background: rgba(245, 158, 11, 0.1); padding: 16px 20px; border-left: 5px solid #f59e0b; border-radius: 8px; font-size: 1.05rem; color: var(--text-primary); margin-bottom: 16px; line-height: 1.5;">
                         "{result['message']}"
                     </div>
-                    <div style="font-size: 0.9rem; color: #d1d5db; line-height: 1.5;">
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
                         <strong>Photography tips for reliable diagnosis:</strong><br>
                         • Ensure ample natural sunlight without strong harsh shadows.<br>
                         • Place the leaf flat on a neutral background or hold steady.<br>
@@ -747,25 +904,24 @@ else:
                 is_late = "late" in result["predicted_class"].lower()
 
                 accent_color = "#10b981" if is_healthy else ("#ef4444" if is_late else "#f59e0b")
-                accent_glow = "rgba(16, 185, 129, 0.25)" if is_healthy else ("rgba(239, 68, 68, 0.25)" if is_late else "rgba(245, 158, 11, 0.25)")
 
                 st.markdown(f"""
-                <div class="result-panel result-verified" style="border-color: {accent_color}; box-shadow: 0 12px 32px {accent_glow};">
+                <div class="result-panel result-verified" style="border-color: {accent_color};">
                     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                        <span style="color: #34d399; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                        <span style="color: #10b981; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
                             ✅ Verified Potato Leaf (Solanum tuberosum) — {result['validation_conf_pct']}%
                         </span>
-                        <span style="background: rgba(0,0,0,0.4); border: 1px solid {accent_color}; color: {accent_color}; font-size: 0.82rem; font-weight: 700; padding: 4px 12px; border-radius: 999px;">
+                        <span style="background: rgba(16, 185, 129, 0.15); border: 1px solid {accent_color}; color: {accent_color}; font-size: 0.82rem; font-weight: 700; padding: 4px 12px; border-radius: 999px;">
                             Severity: {severity}
                         </span>
                     </div>
-                    <h1 style="color: #ffffff; margin: 12px 0 4px 0; font-size: 2.25rem; font-weight: 800;">
+                    <h1 style="color: var(--text-primary); margin: 12px 0 4px 0; font-size: 2.25rem; font-weight: 800;">
                         {result['disease_name']}
                     </h1>
-                    <div style="color: #a7f3d0; font-style: italic; margin-bottom: 16px; font-size: 0.95rem;">
+                    <div style="color: #10b981; font-style: italic; margin-bottom: 16px; font-size: 0.95rem;">
                         Scientific pathogen: <strong>{guidance.get('scientific_name', 'Solanum tuberosum')}</strong>
                     </div>
-                    <div style="font-size: 1.15rem; color: #f3f4f6; margin-bottom: 8px;">
+                    <div style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 8px;">
                         Pathology Diagnostic Confidence: <strong style="color: {accent_color}; font-size: 1.55rem;">{result['confidence_pct']}%</strong>
                     </div>
                 </div>
@@ -782,7 +938,7 @@ else:
 
                 # Comprehensive Agronomic Protocols
                 st.markdown("---")
-                st.markdown("### 📋 Evidence-Based Agronomic Management Protocol")
+                st.markdown('<div id="protocols" class="section-title">📋 Evidence-Based Agronomic Management Protocol</div>', unsafe_allow_html=True)
 
                 tab_act, tab_treat, tab_prev, tab_sym = st.tabs([
                     "⚡ Immediate Actions (24-48h)", 
@@ -818,13 +974,13 @@ else:
         # Default Instructional Guide when no image is loaded
         st.info("👆 Upload an image, choose a calibrated 1-click test preset, or use your camera to begin instant diagnosis.")
 
-        st.markdown("### 🧬 How Potato Doctor AI's Two-Stage Pipeline Works")
+        st.markdown('<div id="pipeline" class="section-title">🧬 How Potato Doctor AI\'s Two-Stage Pipeline Works</div>', unsafe_allow_html=True)
         col_w1, col_w2, col_w3 = st.columns(3)
         with col_w1:
             st.markdown("""
             <div class="stat-box">
-                <h4 style="color: #34d399; margin: 0 0 6px 0;">1. Botanical Validation</h4>
-                <p style="color: #d1d5db; font-size: 0.88rem; margin: 0; line-height: 1.45;">
+                <h4 style="color: #10b981; margin: 0 0 6px 0;">1. Botanical Validation</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0; line-height: 1.45;">
                     The upload is first evaluated by a standalone binary MobileNetV2 classifier. Non-potato foliage (tomato, pepper, corn) and non-plant items are safely halted.
                 </p>
             </div>
@@ -832,8 +988,8 @@ else:
         with col_w2:
             st.markdown("""
             <div class="stat-box">
-                <h4 style="color: #60a5fa; margin: 0 0 6px 0;">2. Disease Pathology</h4>
-                <p style="color: #d1d5db; font-size: 0.88rem; margin: 0; line-height: 1.45;">
+                <h4 style="color: #3b82f6; margin: 0 0 6px 0;">2. Disease Pathology</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0; line-height: 1.45;">
                     Once verified as <em>Solanum tuberosum</em> with high confidence (≥ 80%), the 3-class pathology model diagnoses Early Blight, Late Blight, or Healthy foliage.
                 </p>
             </div>
@@ -841,8 +997,8 @@ else:
         with col_w3:
             st.markdown("""
             <div class="stat-box">
-                <h4 style="color: #a78bfa; margin: 0 0 6px 0;">3. FRAC Agronomy Guidance</h4>
-                <p style="color: #d1d5db; font-size: 0.88rem; margin: 0; line-height: 1.45;">
+                <h4 style="color: #8b5cf6; margin: 0 0 6px 0;">3. FRAC Agronomy Guidance</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0; line-height: 1.45;">
                     Provides immediate 24-48h quarantine measures, FRAC-compliant fungicide rotation, biological controls (Bacillus subtilis), and cultural prevention.
                 </p>
             </div>
@@ -851,7 +1007,7 @@ else:
 # Footer
 st.markdown("---")
 st.markdown("""
-<div style="text-align: center; color: #9ca3af; font-size: 0.85rem; padding: 12px 0;">
+<div style="text-align: center; color: var(--text-muted); font-size: 0.85rem; padding: 12px 0;">
     Potato Doctor AI • SMIT Final Year Project • Developed by <strong>Muhammad Raheel Chishti</strong><br>
     <em>Solanum tuberosum</em> Deep Leaf Pathology & Botanical Safeguard System • Streamlit Community Cloud Native
 </div>
