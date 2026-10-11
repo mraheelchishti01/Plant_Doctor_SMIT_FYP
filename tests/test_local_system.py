@@ -9,7 +9,9 @@ from PIL import Image
 import numpy as np
 
 WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
-SAMPLES_DIR = WORKSPACE_ROOT / "frontend" / "public" / "samples"
+SAMPLES_DIR = WORKSPACE_ROOT / "samples"
+if not SAMPLES_DIR.exists():
+    SAMPLES_DIR = WORKSPACE_ROOT / "frontend" / "public" / "samples"
 MODELS_DIR = WORKSPACE_ROOT / "models"
 API_URL = "http://127.0.0.1:8000"
 

@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image, ImageFilter
 
 WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
-PUB_SAMPLES = WORKSPACE_ROOT / "frontend" / "public" / "samples"
+PUB_SAMPLES = WORKSPACE_ROOT / "samples"
 VAL_DIR = WORKSPACE_ROOT / "validation_dataset"
 
 PUB_SAMPLES.mkdir(parents=True, exist_ok=True)
